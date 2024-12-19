@@ -1,5 +1,5 @@
 const { i18n } = require('./next-i18next.config');
-const redirects = require('./public/redirects.json');
+//const redirects = require('./public/redirects.json');
 
 // default to limiting cpu count to 1 (least pressure on backend gql service)
 // cpu tests on 6/27/2022
@@ -95,9 +95,9 @@ var nextConfig = {
 	experimental: experimentalSettings,
 	reactStrictMode: true,
 	swcMinify: true, // use Rust compiler for minifications - 7x faster than Terser
-	async redirects() {
-		return redirects;
-	},
+	//async redirects() {
+	//	return redirects;
+	//},
 	// trailingSlash: true,
 	images: {
 		domains: [

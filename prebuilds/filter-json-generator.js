@@ -1,4 +1,4 @@
-const fetch = require('node-fetch');
+
 const fs = require('fs').promises;
 const GlobalConstants = require('../GlobalConstants');
 const transformRestToJson = require('../data-mediators/FormatRestToJson');
@@ -81,38 +81,17 @@ async function generateJsonFiles() {
 		await Promise.all(promises);
 	}
 
-	const endpoint = 'https://tricentistest.wpenginepowered.com/wp-json/wp/v2/posts';
-
 	async function fetchAllRest(endpoint, page = 1, results = []) {
-	  try {
-		console.log(`Fetching data from: ${endpoint}&page=${page}`);
 		const response = await fetch(`${endpoint}&page=${page}`, { method: 'GET' });
-	
-		if (!response.ok) {
-		  throw new Error(`HTTP error! status: ${response.status}`);
-		}
-	
 		const data = await response.json();
 		results.push(...data);
-	
-		const totalPages = parseInt(response.headers.get('x-wp-totalpages') || '1', 10);
-	
+		const totalPages = response.headers.get('x-wp-totalpages');
 		if (page < totalPages) {
-		  return fetchAllRest(endpoint, page + 1, results);
+			return fetchAllRest(endpoint, page + 1, results);
 		} else {
-		  return results;
+			return results;
 		}
-	  } catch (error) {
-		console.error(`Error fetching data: ${error.message}`);
-		return results;
-	  }
 	}
-	
-	// Call the function with the posts endpoint
-	fetchAllRest(endpoint)
-	  .then((results) => console.log('Fetched Results:', results))
-	  .catch((error) => console.error('Error:', error));
-	
 
 	const allRestUrls = [
 		{

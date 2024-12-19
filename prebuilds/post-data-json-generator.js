@@ -79,7 +79,7 @@ async function generateJsonFiles() {
 		await Promise.all(
 			locales.map(async (locale) => {
 				const postsDataJSON = JSON.stringify(postTypeData[locale], null, 2); // Pretty-print JSON
-				const fileName = locale === 'en' ? 'public/recentPosts.json' : `public/recentPosts-${locale}.json`;
+				//const fileName = locale === 'en' ? 'public/recentPosts.json' : `public/recentPosts-${locale}.json`;
 				console.log(`Generating file: ${fileName}`);
 				await fs.writeFile(fileName, postsDataJSON);
 			})

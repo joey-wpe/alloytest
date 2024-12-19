@@ -1,6 +1,6 @@
 import GlobalConstants from '../GlobalConstants';
 import CachedGlobalSettingsResponse from './cached-responses/GlobalSettingsResponse';
-import MenusData from '../public/menusData.json';
+//import MenusData from '../public/menusData.json';
 import { importPublicJsonFileDynamically } from './util';
 
 export async function getGlobalSettings(isPreview = false, locale = 'en-US') {
@@ -23,6 +23,6 @@ export async function getGlobalSettings(isPreview = false, locale = 'en-US') {
 
 	return {
 		globalSettings,
-		menus: MenusData,
+		//menus: MenusData,
 	};
 }
