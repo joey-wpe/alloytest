@@ -366,7 +366,7 @@ export const fetchModulePostsDetail = async (modules, locale) => {
 		case_study: `caseStudies-posts${fileByLocale}`,
 		resource: `resources-posts${fileByLocale}`,
 		testimonial: `testimonials-posts${fileByLocale}`,
-		logo: `logos-posts${fileByLocale}`,
+	//	logo: `logos-posts${fileByLocale}`,
 		post: `blog-posts${fileByLocale}`,
 	};
 
