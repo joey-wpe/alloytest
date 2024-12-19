@@ -320,7 +320,7 @@ export async function getPostTypeData(locale) {
 	//const RECENT_POSTS_FILE = 'recentPosts';
 
 	try {
-		const fileName = locale === DEFAULT_LOCALE ? RECENT_POSTS_FILE : `${RECENT_POSTS_FILE}-${locale}`;
+		//const fileName = locale === DEFAULT_LOCALE ? RECENT_POSTS_FILE : `${RECENT_POSTS_FILE}-${locale}`;
 		const localeData = await importPublicJsonFileDynamically(fileName);
 
 		const {
