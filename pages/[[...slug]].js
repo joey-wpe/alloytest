@@ -12,7 +12,7 @@ import { pageHeaderToGlobalAlert } from '../data-mediators/PageHeaderToGlobalAle
 import { globalSettingsAndPageFooterToPageCTAData } from '../data-mediators/PageFooterAndSettingsToPageCTA';
 import { mainMenuToMenu } from '../components/template-parts/Header/Header.datamediator';
 import GlobalConstants from '../GlobalConstants';
-import { getPostsFromJson } from '../wplib/util';
+//import { getPostsFromJson } from '../wplib/util';
 import { taxSelector } from '../components/page-templates/ArchiveTemplate/ArchiveTemplateTaxSelector';
 import { parsePostTypes } from '../components/page-templates/ArchiveTemplate/ArchiveTemplateTaxSelector';
 

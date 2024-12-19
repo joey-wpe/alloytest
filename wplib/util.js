@@ -317,7 +317,7 @@ export async function importPublicJsonFileDynamically(fileName) {
 // It is utilized in all page templates as well as detail pages.
 export async function getPostTypeData(locale) {
 	const DEFAULT_LOCALE = 'en-US';
-	const RECENT_POSTS_FILE = 'recentPosts';
+	//const RECENT_POSTS_FILE = 'recentPosts';
 
 	try {
 		const fileName = locale === DEFAULT_LOCALE ? RECENT_POSTS_FILE : `${RECENT_POSTS_FILE}-${locale}`;
