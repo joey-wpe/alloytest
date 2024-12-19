@@ -366,7 +366,7 @@ const getPageDetailByDatabaseID = async (id, isPreview, token, locale) => {
 export async function getPageTemplateDataByDatabaseID(id, isPreview, token, locale) {
 	try {
 		const basicPageData = await getPageDetailByDatabaseID(id, isPreview, token, locale);
-		const postTypeData = await getPostTypeData(locale);
+		const postTypeData = {};
 
 		const templateName = basicPageData?.templateName ?? null;
 		if (!templateName) {
