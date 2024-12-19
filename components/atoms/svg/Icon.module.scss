@@ -1,0 +1,58 @@
+@import '../../../styles/baseline/_styles';
+
+:global(.accessibility-colors .light-theme),
+:global(.accessibility-colors .dark-theme .light-theme),
+:global(.accessibility-colors .midtone-theme .light-theme),
+:global(.accessibility-colors) {
+	.blaze {
+		fill: $blaze-color;
+	}
+	.tricentis-blue {
+		fill: $tricentis-dark;
+	}
+	.blue {
+		fill: $tricentis-dark;
+	}
+	.accelerate {
+		fill: $accelerate-dark;
+	}
+	.warp {
+		fill: $warp-dark;
+	}
+
+	.thruster {
+		fill: $truster-color;
+	}
+	.bolt {
+		fill: $bolt-color;
+	}
+	.white {
+		fill: $white-color;
+	}
+}
+
+.blaze {
+	fill: $blaze-color;
+}
+.tricentis-blue {
+	fill: $tricentis-color;
+}
+.blue {
+	fill: $tricentis-color;
+}
+.accelerate {
+	fill: $accelerate-color;
+}
+.warp {
+	fill: $warp-color;
+}
+
+.thruster {
+	fill: $truster-color;
+}
+.bolt {
+	fill: $bolt-color;
+}
+.white {
+	fill: $white-color;
+}

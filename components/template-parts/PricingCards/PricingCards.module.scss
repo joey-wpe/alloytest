@@ -1,0 +1,27 @@
+@import '../../../styles/baseline/__styles';
+
+.pricing-cards {
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 32px 24px;
+
+		@include respond-to($bp-lg) {
+			grid-template-columns: repeat(2, 1fr);
+
+			.card {
+				max-width: initial;
+			}
+		}
+
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+
+		}
+	}
+
+	&__background {
+		max-height: rem-calc(800);
+		max-width: rem-calc(900);
+	}
+}

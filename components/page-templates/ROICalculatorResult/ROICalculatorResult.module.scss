@@ -1,0 +1,166 @@
+@import '../../../styles/baseline/__styles';
+$background-slide-hover-duration: $duration-xlong;
+
+.content-copy {
+	padding-top: 92px;
+	padding-bottom: 476px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+
+	@include respond-to($bp-xl) {
+		padding-bottom: 340px;
+	}
+
+	@include respond-to($bp-md) {
+		flex-direction: column;
+		align-items: initial;
+
+		&__button-share {
+			margin-top: 35px;
+		}
+	}
+
+	@include respond-to($bp-sm) {
+		padding-bottom: 220px;
+	}
+
+	&__information {
+		display: flex;
+		flex-direction: column;
+		max-width: 708px;
+		width: 100%;
+
+		.sub-p {
+			color: $bolt-color;
+		}
+	}
+
+	&__button-share {
+		padding: 16px 33px;
+		background-color: $accelerate-color;
+		position: relative;
+		overflow: hidden;
+
+		span {
+			color: $white-color;
+			font-weight: $bold;
+			font-size: 16px;
+			position: relative;
+			z-index: 5;
+		}
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			transition: all $background-slide-hover-duration;
+			transform: skewX(-45deg) translateX(-120%);
+		}
+
+		&:hover {
+			&::after {
+				width: 140%;
+				transform: skewX(-45deg) translateX(0);
+				background-color: mix(black, $accelerate-color, 20%);
+			}
+		}
+	}
+}
+
+.container-results-cards {
+	display: flex;
+	gap: 30px;
+	margin-top: -27%;
+	position: relative;
+
+	@media (min-width: 1440px) {
+		margin-top: -300px;
+	}
+
+	@include respond-to($bp-xl) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__card {
+		background-color: $white-color;
+		max-width: 396px;
+		width: 100%;
+		font-weight: $bold;
+		font-size: 18px;
+		line-height: 22px;
+		color: $charcoal-color;
+		box-shadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+
+		@include respond-to($bp-lg) {
+			max-width: initial;
+		}
+
+		&__heading {
+			background: linear-gradient(263.52deg, #59C8E6 28.58%, #0087AE 74.7%);
+			display: flex;
+			padding: 32px 38px;
+
+
+			h2 {
+				margin-left: 25px;
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 24px;
+				color: $white-color;
+			}
+		}
+
+		&__result-content {
+			padding: 62px 24px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+
+			h3 {
+				font-weight: $bold;
+				font-size: 48px;
+				line-height: 22px;
+				color: $warp-color;
+				margin-bottom: 20px;
+			}
+
+			h4 {
+				color: $charcoal-color;
+				font-weight: $bold;
+				font-size: 18px;
+				line-height: 22px;
+			}
+		}
+
+		.line-separator {
+			margin-top: 52px;
+			margin-bottom: 40px;
+			background-color: #D6D9DD;
+			height: 1px;
+			width: 100%;
+			max-width: 300px;
+
+			@include respond-to($bp-lg) {
+				max-width: initial;
+			}
+		}
+
+		.second-result {
+			margin-bottom: 50px;
+		}
+	}
+}
+
+.info-estimated {
+	margin-top: 40px;
+
+	p {
+		text-align: end;
+	}
+}

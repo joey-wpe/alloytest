@@ -1,0 +1,83 @@
+@import '../../../styles/baseline/_styles';
+
+.container {
+	overflow-x: clip;
+}
+
+.content-copy {
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 60px;
+
+	.prehead {
+		font-weight: $bold;
+		font-size: 14px;
+		line-height: 24px;
+		color: $warp-color;
+	}
+}
+
+.component-filter {
+	background-color: rgba(215, 226, 240, 0.2);
+	display: flex;
+	justify-content: space-between;
+	padding: 21px 32px;
+	margin-bottom: 50px;
+
+	@include respond-to($bp-lg) {
+		flex-direction: column;
+		width: 100%;
+		padding: 32px 15px 8px;
+	}
+
+	.subhead-container {
+		color: $blaze-color;
+		display: flex;
+		align-items: center;
+
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+		}
+	}
+
+	.subhead {
+		margin-right: 5px;
+		font-size: 14px;
+		color: $blaze-color;
+		letter-spacing: 0.8px;
+	}
+
+	.search-bar {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		font-weight: $semibold;
+		font-size: 14px;
+		line-height: 21px;
+
+		@include respond-to($bp-lg) {
+			padding: 15px;
+		}
+
+		input {
+			border: none;
+			width: 0;
+			max-width: 100px;
+			transition: all $duration-short;
+
+			@include respond-to($bp-lg) {
+				max-width: initial;
+				width: 100%;
+				padding-left: initial;
+			}
+		}
+
+		.input-open {
+			width: 100%;
+		}
+
+		::placeholder {
+			color: $charcoal-color;
+		}
+	}
+}

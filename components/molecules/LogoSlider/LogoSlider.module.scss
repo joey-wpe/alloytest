@@ -1,0 +1,61 @@
+@import '../../../styles/baseline/_styles';
+
+.slider-wrapper {
+	display: block;
+
+	@include respond-to($bp-lg) {
+		min-height: 111px;
+	}
+	img {
+		object-fit: contain;
+		min-height: 11px;
+	}
+}
+.slick-slide {
+	display: inline-block;
+}
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.next-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 0;
+	color: $accelerate-color;
+	cursor: pointer;
+	z-index: 11;
+	@include respond-to($bp-lg) {
+		top: unset;
+		right: calc(50% - 63px);
+		bottom: -40px;
+	}
+}
+.prev-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	color: $accelerate-color;
+	cursor: pointer;
+	z-index: 11;
+
+	@include respond-to($bp-lg) {
+		top: unset;
+		left: calc(50% - 63px);
+		bottom: -40px;
+	}
+}
+.next-arrow,
+.prev-arrow {
+	transition: all 0.5 ease;
+	&:hover {
+		opacity: 0.85;
+	}
+}

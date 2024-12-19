@@ -1,0 +1,591 @@
+@import '../../../styles/baseline/__styles';
+
+.left-right {
+  overflow: hidden;
+}
+
+%gridTemplateImage {
+  display: grid;
+  grid-template-columns: 502px 590px;
+  gap: 105px;
+  align-items: center;
+  @include respond-to($bp-xl) {
+    grid-template-columns: 375px 485px;
+  }
+  @include respond-between($bp-xl, 1250px) {
+    grid-template-columns: 460px 590px;
+  }
+  @include respond-to($bp-lg) {
+    grid-template-columns: 100% !important;
+    justify-items: center;
+    gap: 40px;
+  }
+
+  .content-image {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+
+    @include respond-to($bp-lg) {
+      max-width: calc(100% - 6%);
+    }
+    &::after {
+      content: '';
+      width: 180px;
+      height: 180px;
+      display: block;
+      background-image: url('/img/blue-angle-bottom-left-mobile.svg');
+      position: absolute;
+      left: -44px;
+      bottom: -50px;
+
+      @include respond-to($bp-md) {
+        width: 120px;
+        height: 120px;
+        left: -25px;
+        bottom: -25px;
+        background-size: contain;
+      }
+    }
+
+    span {
+      position: relative !important;
+      width: 100% !important;
+    }
+
+    .image {
+      position: relative !important;
+      object-position: left bottom;
+      height: initial !important;
+      width: 100% !important;
+      max-height: 506px !important;
+    }
+  }
+
+  .content-image-without-angle{
+    @extend .content-image;
+
+    @include respond-to($bp-lg) {
+      max-width:100%;
+    }
+    &::after {
+      content: '';
+      display: none;
+    }
+
+    .image {
+      max-height: 550px !important;
+    }
+  }
+}
+
+.container {
+  overflow: hidden;
+}
+
+%gridTemplateVideoForm {
+  display: grid;
+  grid-template-columns: 502px 655px;
+  gap: 105px;
+  align-items: center;
+
+  @media (max-width: 1350px) {
+    gap: 45px;
+  }
+
+  @include respond-to($bp-xl) {
+    grid-template-columns: 480px 447px !important;
+    gap: 40px;
+  }
+
+  @include respond-to($bp-lg) {
+    grid-template-columns: 100% !important;
+    justify-items: center;
+  }
+}
+
+.prehead-bold {
+  color: $bolt-color !important;
+}
+
+.subhead {
+  margin-bottom: 5px;
+}
+
+.h2 {
+  margin-bottom: 15px;
+}
+
+.content-button {
+  justify-content: flex-start;
+  padding-top: 42px;
+  padding-bottom: 0;
+
+  @include respond-to($bp-sm) {
+    justify-content: center;
+  }
+}
+
+.content-form__form {
+}
+
+.media-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  &-form {
+    justify-content: initial;
+
+    @include respond-to($bp-lg) {
+      justify-content: center;
+    }
+  }
+}
+
+//Image Module
+.image-module {
+  @extend %gridTemplateImage;
+
+  .media-container {
+    padding-bottom: 44px;
+  }
+
+  @include respond-to($bp-lg) {
+    .media-container {
+      width: 100%;
+      justify-content: flex-end;
+    }
+  }
+  @include respond-to($bp-md) {
+    .media-container {
+      padding-bottom: 25px;
+    }
+  }
+}
+
+.image-module-right {
+  @extend %gridTemplateImage;
+  grid-template-columns: 635px 502px;
+  @include respond-between($bp-xl, 1250px) {
+    grid-template-columns: 590px 470px;
+  }
+  .media-container {
+    padding-bottom: 44px;
+  }
+
+  @include respond-to($bp-xl) {
+    grid-template-columns: 485px 375px;
+  }
+
+  @include respond-to($bp-lg) {
+    .media-container {
+      width: 100%;
+      justify-content: flex-start;
+    }
+  }
+  @include respond-to($bp-md) {
+    .media-container {
+      padding-bottom: 25px;
+    }
+  }
+  .text-content {
+    order: 2;
+
+    @include respond-to($bp-lg) {
+      order: 0;
+    }
+  }
+
+  .content-image {
+    .image {
+      position: relative !important;
+      object-position: right bottom;
+      height: initial !important;
+      width: 100% !important;
+    }
+    &::after {
+      left: initial;
+      right: -45px;
+      transform: rotateY(180deg);
+
+      @include respond-to($bp-md) {
+        right: -25px;
+      }
+    }
+  }
+}
+
+.content-information {
+  @extend %gridTemplateVideoForm;
+}
+
+.content-information-right {
+  @extend %gridTemplateVideoForm;
+  grid-template-columns: 655px 475px;
+
+  .text-content {
+    order: 2;
+
+    @include respond-to($bp-lg) {
+      order: 0;
+    }
+  }
+}
+
+//Video Module
+.content-video-right {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  padding-bottom: 45px;
+
+  .video {
+    max-width: 93%;
+    max-height: 94%;
+    align-self: flex-end;
+    z-index: 1;
+
+    iframe {
+      height: 100% !important;
+    }
+
+    @include respond-to($bp-xl) {
+      max-width: 90%;
+    }
+  }
+
+  @include respond-to($bp-lg) {
+    width: 100%;
+
+    .video {
+      width: 100% !important;
+      max-width: 94%;
+      align-self: flex-end;
+
+      iframe {
+        height: 100% !important;
+      }
+    }
+  }
+
+  @include respond-to($bp-md) {
+    width: 100%;
+    max-width: 684px;
+    padding-bottom: 30px;
+
+    .video {
+      max-width: 95%;
+      align-self: flex-end;
+    }
+  }
+
+  @include respond-to($bp-sm) {
+    width: 100%;
+
+    .video {
+      width: 100%;
+      max-width: 94%;
+      align-self: flex-end;
+      max-height: 80%;
+
+      iframe {
+        height: 100% !important;
+      }
+    }
+  }
+
+  &__mask-line {
+    position: absolute;
+    right: 0;
+    rotate: 270deg;
+    bottom: 0;
+    background-size: contain;
+    z-index: 0;
+
+    @include respond-to($bp-lg) {
+      right: 8px;
+    }
+
+    @include respond-to($bp-md) {
+      right: 0;
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.content-video-left {
+  @extend .content-video-right;
+
+  justify-content: flex-start;
+
+  @include respond-to($bp-lg) {
+    justify-content: flex-end;
+  }
+
+  .video {
+    max-width: 90%;
+    max-height: 93%;
+    z-index: 1;
+
+    @include respond-to($bp-xl) {
+      max-width: 100%;
+      max-height: 70%;
+    }
+
+    @include respond-to($bp-lg) {
+      max-width: 94%;
+      max-height: 100%;
+    }
+
+    @include respond-to($bp-md) {
+      max-width: 94%;
+      max-height: 100%;
+    }
+  }
+
+  &__mask-line {
+    position: absolute;
+    bottom: 0;
+    background-size: contain;
+    left: -44px;
+    rotate: 0deg;
+    z-index: 0;
+
+    @include respond-to($bp-lg) {
+      left: 8px;
+    }
+
+    @include respond-to($bp-md) {
+      left: 0;
+      width: 120px;
+      height: 120px;
+    }
+  }
+}
+
+.content-video-without-angle {
+  & .video {
+    max-width: 100%;
+    @include respond-to($bp-sm) {
+      max-width: 100%;
+    }
+  }
+
+  & .__mask-line {
+    display: none;
+  }
+}
+
+//Form Module
+
+.content-form-left {
+  position: relative;
+  width: 100%;
+  max-width: 606px;
+
+  &::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    display: block;
+    background-image: url('/img/blue-angle-bottom-left-mobile.svg');
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotateY(180deg);
+
+    @include respond-to($bp-md) {
+      right: 0;
+    }
+
+    @include respond-to($bp-sm) {
+      display: none;
+    }
+  }
+
+  .content-form__form {
+    padding-bottom: 40px;
+    width: 94%;
+
+    > div {
+      padding: initial !important;
+      margin-left: initial;
+
+      @include respond-to($bp-md) {
+        max-width: 94%;
+        margin-right: auto;
+      }
+
+      @include respond-to($bp-sm) {
+        max-width: initial;
+      }
+    }
+
+    @include respond-to($bp-xl) {
+      width: 92%;
+    }
+
+    @include respond-to($bp-lg) {
+      width: 94%;
+    }
+
+    @include respond-to($bp-sm) {
+      width: initial;
+    }
+  }
+
+  @include respond-to($bp-lg) {
+    max-width: 606px;
+    margin: 0 auto;
+  }
+
+  @include respond-to($bp-md) {
+    max-width: initial;
+  }
+}
+
+.content-form-left-without-angle{
+  @extend .content-form-left;
+  &::after {
+    content: '';
+    display: none;
+  }
+}
+
+.content-form-right {
+  position: relative;
+  width: 100%;
+
+  &::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    display: block;
+    background-image: url('/img/blue-angle-bottom-left-mobile.svg');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    @include respond-to($bp-xl) {
+      // left: -45px;
+    }
+  }
+
+  .content-form__form {
+    padding-bottom: 44px;
+    padding-left: 30px;
+
+    .form {
+      padding: initial !important;
+    }
+
+    @include respond-to($bp-xl) {
+      padding-left: 44px;
+    }
+  }
+
+  @include respond-to($bp-lg) {
+    max-width: 606px;
+    margin: 0 auto;
+  }
+}
+
+.content-form-right-without-angle {
+  @extend .content-form-right;
+  &::after {
+    content: '';
+    display: none;
+  }
+}
+
+.primary-bullet-style {
+  align-items: flex-start;
+  @include respond-between(1250px, 1270px) {
+    grid-template-columns: 460px 590px;
+  }
+  .content-image {
+    @include respond-to(1400px) {
+      margin-right: 43px;
+    }
+    @include respond-to($bp-md) {
+      margin-right: 25px;
+    }
+    &::after {
+      right: -50px;
+      left: unset;
+      bottom: -50px;
+      transform: rotate(270deg);
+
+      @include respond-to($bp-md) {
+        right: -25px;
+        bottom: -25px;
+        background-size: contain;
+      }
+    }
+  }
+  ul,
+  ol {
+    margin-bottom: 20px;
+  }
+  .subhead {
+    font-size: rem-calc(14);
+    letter-spacing: rem-calc(0.5);
+    line-height: rem-calc(24);
+    color: $preheader-color;
+    font-weight: $bold;
+  }
+}
+:global(.midtone-theme),
+:global(.dark-theme) {
+  .subhead {
+    color: $bolt-color !important;
+  }
+}
+.thank-you-wrapper {
+  background-color: #ffffff;
+  padding: 48px;
+  box-shadow: 2px 5px 20px rgb(6 39 57 / 20%);
+  align-self: stretch;
+  position: relative;
+  max-width: 606px;
+  width: 100%;
+
+  @media (max-width: 442px) {
+    max-width: 260px;
+    padding: 48px 25px;
+  }
+
+  &::after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    display: block;
+    background-image: url('/img/blue-angle-bottom-left-mobile.svg');
+    position: absolute;
+    right: -45px;
+    top: -50px;
+    transform: rotate(180deg);
+  }
+
+  > h4 {
+    margin-bottom: 45px;
+    color: $blaze-color !important;
+  }
+  .body-p {
+    color: $charcoal-color;
+  }
+}
+
+.breadcrumb {
+  &-padding-top {
+    padding-top: 1rem;
+  }
+  &-padding-bottom {
+    padding-bottom: 3rem;
+  }
+}

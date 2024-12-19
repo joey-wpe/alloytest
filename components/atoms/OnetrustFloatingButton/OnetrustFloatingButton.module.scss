@@ -1,0 +1,22 @@
+@import '../../../styles/baseline/_styles';
+
+// Onetrust Floating Button - Do not remove !important.
+.onetrust-floating-button {
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	z-index: 1000;
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 50% !important;
+	background-image: url('../../../public/icons/cookie.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: unset !important;
+	color: transparent !important;
+	@include respond-to($bp-sm) {
+		bottom: 15px;
+		left: 15px;
+	}
+}

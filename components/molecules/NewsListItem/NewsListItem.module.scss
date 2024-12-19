@@ -1,0 +1,24 @@
+@import '../../../styles/baseline/_styles';
+
+.content-list-news {
+
+	.news {
+		max-width: 405px;
+		width: 100%;
+		padding: 10px;
+		border-bottom: 1px solid #D7E2F0;
+	}
+
+	span {
+		color: $tricentis-color;
+		font-weight: $bold;
+	}
+
+	.h5 {
+		color: $blaze-color;
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 6px;
+	}
+
+}

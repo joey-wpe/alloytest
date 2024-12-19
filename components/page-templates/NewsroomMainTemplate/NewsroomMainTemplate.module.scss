@@ -1,0 +1,17 @@
+@import "../../../styles/baseline/_styles";
+
+
+//News
+.content-news {
+	.last-news {
+		&>div {
+			border: none;
+			padding-bottom: initial;
+		}
+	}
+}
+
+//disruptor
+.content-disruptor {
+	padding-bottom: 60px;
+}

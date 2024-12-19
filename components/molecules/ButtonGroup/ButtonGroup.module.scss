@@ -1,0 +1,26 @@
+@import '../../../styles/baseline/_styles';
+
+.button-group {
+	display: flex;
+	flex: 1;
+	padding: 2rem 0 0;
+	gap: 20px 40px;
+	justify-content: center;
+
+	@include respond-to($bp-md) {
+		flex-wrap: wrap;
+		margin: 0 0px 10px;
+	}
+}
+
+.align-left {
+	justify-content: start;
+}
+
+.align-center {
+	justify-content: center;
+}
+
+.align-right {
+	justify-content: end;
+}

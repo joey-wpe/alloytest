@@ -1,0 +1,185 @@
+@import '../../../styles/baseline/__styles';
+.m-pricing-table {
+	padding-bottom: 32px;
+
+	@include respond-to($bp-sm) {
+		padding-bottom: 24px;
+	}
+}
+
+.background-content-card {
+	max-height: 560px;
+	margin-bottom: 160px;
+
+	@include respond-to($bp-xl) {
+		margin-bottom: 240px;
+	}
+
+	@include respond-to($bp-lg) {
+		margin-bottom: 380px;
+	}
+
+	@include respond-to($bp-md) {
+		margin-bottom: 70%;
+	}
+
+	@include respond-to($bp-md) {
+		max-height: fit-content;
+		margin-bottom: 45px;
+	}
+}
+.wysiwyg {
+	* {
+		color: inherit !important;
+	}
+}
+.m-price-content {
+	padding-top: 100px;
+	display: grid;
+	grid-template-columns: 270px 74%;
+	gap: 44px;
+
+	@include respond-to($bp-xl) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include respond-to($bp-lg) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	@include respond-to($bp-sm) {
+		max-width: 371px;
+		display: block;
+	}
+
+	&__information {
+		max-width: 270px;
+
+		@include respond-to($bp-lg) {
+			max-width: initial;
+		}
+		.p {
+			margin: 32px 0;
+		}
+
+		.content-btn {
+			@include respond-to($bp-sm) {
+				margin-bottom: 100px;
+			}
+		}
+	}
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 21px;
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		.card {
+			@include respond-to($bp-md) {
+				max-width: 226px;
+				& > div {
+					padding-left: 11px;
+					padding-right: 11px;
+				}
+			}
+			@include respond-to($bp-md) {
+				display: none;
+			}
+		}
+	}
+}
+
+.content-mobile__cards {
+	display: none;
+
+	@include respond-to($bp-md) {
+		margin-top: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.card {
+			max-width: initial;
+			display: none;
+		}
+	}
+	.card-active {
+		display: block;
+	}
+}
+
+//Tab
+
+.tab-card-table {
+	display: none;
+	@include respond-to($bp-md) {
+		padding-top: 20px;
+		display: flex;
+		justify-content: center;
+		gap: 7px;
+		margin-top: -111px;
+		position: sticky;
+		top: 72px;
+		z-index: 10;
+	}
+
+	@include respond-to(400px) {
+		flex-direction: column;
+	}
+
+	.title-tab {
+		background-color: $warp-color;
+		margin: initial;
+		padding: 10px;
+		width: 117px;
+		color: $white-color;
+		text-align: center;
+		font-weight: $bold;
+		@include respond-to(400px) {
+			width: 100%;
+		}
+	}
+	.tab-card-active {
+		background-color: $white-color !important;
+		color: $blaze-color;
+	}
+}
+.active-bg-bar {
+	background-image: url('/img/backgrounds/pattern-blue.svg');
+	background-size: auto;
+	background-position: bottom;
+}
+.card:nth-child(1) {
+	h4 {
+		color: $mist-color;
+	}
+}
+.card:nth-child(2) {
+	h4 {
+		color: $truster-color;
+	}
+}
+.card:nth-child(3) {
+	h4 {
+		color: $bolt-color;
+	}
+}
+
+.logo-container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	height: fit-content;
+
+	span {
+		position: relative !important;
+	}
+
+	.logo-container__logo {
+		position: relative !important;
+		object-position: left;
+		height: initial !important;
+		width: 100% !important;
+	}
+}

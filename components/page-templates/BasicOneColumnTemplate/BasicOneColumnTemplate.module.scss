@@ -1,0 +1,17 @@
+@import '../../../styles/baseline/_styles';
+
+.container {
+	padding: 90px 16px;
+}
+
+.wysiwyg {
+	max-width: rem-calc(1018);
+	margin: 0 auto;
+
+	p {
+		letter-spacing: initial;
+	}
+	ul {
+		padding-top: 0 !important;
+	}
+}

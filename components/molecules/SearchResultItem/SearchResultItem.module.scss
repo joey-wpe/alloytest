@@ -1,0 +1,52 @@
+@import '../../../styles/baseline/_styles';
+
+.result-item {
+	padding-top: rem-calc(48);
+
+	&:first-child {
+		padding-top: initial;
+	}
+
+	&:last-child {
+		hr {
+			display: none;
+		}
+	}
+
+	&__subhead + .result-item__title {
+		margin-top: rem-calc(8);
+	}
+
+	&__subhead {
+		font-size: rem-calc(12);
+		line-height: rem-calc(14);
+		text-transform: uppercase;
+		font-weight: $bold;
+		letter-spacing: rem-calc(0.5);
+	}
+
+	&__title {
+		line-height: rem-calc(36);
+	}
+
+	.wysiwyg {
+		font-size: rem-calc(14);
+		line-height: rem-calc(24);
+		margin-top: rem-calc(10);
+		max-width: rem-calc(750);
+
+		* {
+			font-size: inherit;
+			line-height: inherit;
+		}
+	}
+
+	&__cta {
+		margin-top: rem-calc(13);
+	}
+
+	hr {
+		margin-top: rem-calc(37);
+		border-top: 1px solid $mist-color;
+	}
+}

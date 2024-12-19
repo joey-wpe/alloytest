@@ -1,0 +1,27 @@
+@import '../../../styles/baseline/_styles';
+
+@include respond-above($bp-lg) {
+	.grid-logo-wrapper {
+		margin-bottom: rem-calc(32);
+	}
+
+	.logos-5 {
+		width: 20%;
+	}
+
+	.logos-4 {
+		width: 25%;
+	}
+
+	.logos-3 {
+		width: 33.3%;
+	}
+
+	.logos-2 {
+		width: 50%;
+	}
+
+	.slider-wrapper {
+		margin-bottom: 0;
+	}
+}

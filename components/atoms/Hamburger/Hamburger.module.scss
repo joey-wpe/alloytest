@@ -1,0 +1,19 @@
+@import '../../../styles/baseline/_styles';
+
+.hamburger {
+	position: relative;
+	cursor: pointer;
+
+	&__hamburger {
+		transition: all $hover-duration ease-in;
+	}
+
+	&__close {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		transition: all $hover-duration ease-in;
+		pointer-events: none;
+	}
+}

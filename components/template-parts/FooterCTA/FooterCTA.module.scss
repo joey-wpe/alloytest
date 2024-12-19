@@ -1,0 +1,93 @@
+@import '../../../styles/baseline/_styles';
+
+.footer-cta-wrapper {
+	padding: 90px 0 0;
+	@include respond-to($bp-md) {
+		padding: 60px 0 0;
+	}
+}
+
+.cta-wrapper {
+	padding: 60px 0 60px 103px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+
+	@include respond-to($bp-md) {
+		padding: 60px 0 60px 38px;
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.background-image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+
+		@include respond-to($bp-md) {
+			top: unset;
+			height: 180px;
+			bottom: 0;
+
+			> div {
+				background-position: right;
+			}
+		}
+
+		> div {
+			height: 100%;
+		}
+	}
+
+	.h3 {
+		margin-bottom: 15px;
+		@include respond-to($bp-md) {
+			font-size: rem-calc(28);
+			line-height: rem-calc(34);
+		}
+	}
+
+	.flag {
+		z-index: 11;
+
+		@include respond-to($bp-md) {
+			margin-top: 67px;
+		}
+	}
+
+	.button-group {
+		@include respond-above($bp-xl) {
+			margin-right: 85px;
+		}
+
+		@include respond-to($bp-md) {
+			margin: 0 38px 0 0;
+		}
+
+		@include respond-to($bp-lg) {
+			> div {
+				flex-direction: column;
+			}
+		}
+	}
+}
+
+.cta-content {
+	max-width: 487px;
+	position: relative;
+	z-index: 11;
+
+	@include respond-to($bp-xl) {
+		max-width: 48%;
+		margin-right: 20px;
+	}
+
+	@include respond-to($bp-md) {
+		max-width: 100%;
+		margin: 0 38px 0 0;
+	}
+}

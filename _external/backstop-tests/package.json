@@ -1,0 +1,28 @@
+{
+  "name": "tricentis-backstop",
+  "private": true,
+  "description": "Tricentis Backstop JS",
+  "version": "0.1.0",
+  "author": "Narwhal Digital",
+  "dependencies": {
+    "backstopjs": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "sitemapper": "^3.1.12"
+  },
+  "keywords": [
+    "backstopjs",
+    "tricentis",
+    "regression"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "config": "node backstop.config.js",
+    "test": "backstop test",
+    "reference": "backstop reference",
+    "approve": "backstop approve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/narwhal-digital/st-backstop-tests/"
+  }
+}

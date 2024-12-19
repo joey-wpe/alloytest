@@ -1,0 +1,13 @@
+@import '../../../styles/baseline/_styles';
+
+.container {
+	padding: 84px 110px 79px;
+
+	@include respond-to($bp-md) {
+		padding: 65px;
+	}
+	
+	@include respond-to($bp-sm) {
+		padding: 60px 15px 79px;
+	}
+}

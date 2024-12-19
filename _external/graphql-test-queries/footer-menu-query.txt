@@ -1,0 +1,21 @@
+query FooterMenuQuery {
+  footerMenu: menu(id: "Footer Menu", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+          }
+        }
+      }
+    }
+  }
+}

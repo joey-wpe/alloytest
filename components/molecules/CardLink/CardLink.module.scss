@@ -1,0 +1,100 @@
+@import '../../../styles/baseline/_styles';
+
+$expand-duration: $duration-long;
+
+.card {
+	max-width: 397px;
+	max-height: 540px;
+	display: block;
+	position: relative;
+
+	&:hover {
+
+		.sub-p {
+			transition: all $expand-duration ease-in-out;
+			opacity: 1;
+			max-height: 300px;
+		}
+	}
+
+	@include respond-to($bp-md) {
+		max-width: initial;
+		width: 100%;
+	}
+}
+
+.card-tappable {
+	cursor: pointer;
+}
+
+.card-information {
+	padding: 37px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+	background: linear-gradient(180deg, rgba(16, 17, 17, 0) 0%, #030303 130%);
+	width: 100%;
+	
+	@include respond-to($bp-sm) {
+		padding: 27px;
+	}
+
+	.h4,
+	.sub-p {
+		color: $white-color;
+	}
+
+	.h4 {
+		line-height: 36px;
+		margin-bottom: 13px;
+	}
+
+	.sub-p {
+		transition: all $expand-duration ease-in-out;
+		opacity: 0;
+		max-height: 0;
+
+		@include respond-to($bp-sm) {
+			max-height: 100px;
+			opacity: 1;
+		}
+	}
+}
+
+.button-content {
+
+	a {
+		color: $accelerate-color;
+
+		svg {
+			path {
+				fill: $accelerate-color !important;
+			}
+		}
+	}
+
+	&:hover {
+		a {
+			border-color: $accelerate-color !important;
+		}
+	}
+}
+
+.featured {
+	max-width: 606px;
+	max-height: 540px;
+
+	img {
+		width: 606px !important;
+		height: 540px !important;
+	}
+}
+
+.bg-content-image{
+	span{
+		@include respond-to($bp-md) {
+			width: 100% !important;
+		}
+	}
+}

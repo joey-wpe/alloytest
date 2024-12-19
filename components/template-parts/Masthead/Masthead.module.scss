@@ -1,0 +1,117 @@
+@import '../../../styles/baseline/__styles';
+
+.masthead {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	position: relative;
+	overflow: hidden;
+
+	@include respond-to($bp-md) {
+		padding-top: 60px;
+		padding-bottom: 67px;
+	}
+}
+
+.content {
+	display: grid;
+	grid-template-columns: 500px 1fr;
+	align-items: center;
+	gap: 100px;
+
+	@include respond-to($bp-xl) {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 50px;
+	}
+
+	@include respond-to($bp-md) {
+		grid-template-columns: 1fr;
+		gap: 10px;
+	}
+}
+.content-logo{
+	max-width: 350px;
+}
+
+.h1 {
+	margin-top: initial;
+	margin-bottom: 20px;
+
+	overflow-wrap: anywhere;
+	word-break: normal;
+
+	@include respond-to($bp-md) {
+		margin-bottom: 24px;
+	}
+}
+
+/*
+  Removes 1px white vertical line on left edge of Safari on iPhone (ref: TR2-717)
+  The issue was occurring on iOS devices due to the Masthead Image. 
+  Specifically, using layout="responsive" with the <Image> component causes 
+  the image to automatically resize on small screens, which increases the 
+  image size and results in extra margin on iOS.
+*/
+@supports (-webkit-touch-callout: none) {
+   .media-content {
+      @include respond-to($bp-sm) {
+         margin-left: -1px;
+      }
+   }
+}
+
+.video {
+	width: 100% !important;
+
+	iframe {
+		height: 100% !important;
+	}
+}
+
+.button-container {
+	div {
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+			width: fit-content;
+
+			div {
+				width: 100%;
+			}
+		}
+
+		@include respond-to($bp-md){
+			margin: 0 auto;
+		}
+	}
+}
+
+.partner-certificates{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	background-color: #F7F9FC;
+	margin: 30px 0;
+	padding: 7px 15px;
+
+	&--content {
+		color: $blaze-color;
+		margin-left: 10px;
+		font-size: 11px;
+		font-weight: 400;
+
+		& > div:first-child {
+			font-size: 13px;
+			font-style: italic;
+			font-weight: 600;
+			line-height: normal;
+        }
+	}
+}
+
+// Dark mode
+:global(.midtone-theme),
+:global(.dark-theme) {
+	.description {
+		color: $white-color !important;
+	}
+}

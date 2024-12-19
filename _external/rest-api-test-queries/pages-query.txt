@@ -1,0 +1,8 @@
+/wp-json/wp/v2/pages
+
+works:
+https://be.tricentis.com/wp-json/wp/v2/pages/?slug=homepage
+
+fail:
+https://be.tricentis.com/wp-json/wp/v2/pages/?slug=products
+https://be.tricentis.com/wp-json/wp/v2/pages/?slug=company

@@ -1,0 +1,377 @@
+query FullGlobalQuery {
+  themeGeneralSettings {
+    settingsAlerts {
+      globalAlertDisplay
+      alertGroup {
+        globalAlertContentMessage
+        globalAlertContentAlertType
+        globalAlertContentActions {
+          adaText
+          function
+          seoText
+          link {
+            target
+            title
+            url
+          }
+        }
+      }
+    }
+    settingsSocial {
+      globalSocialChannels {
+        title
+        website
+      }
+    }
+    settingsFooter {
+      globalFooterCtaDisplay
+      callToActionGroup {
+        titleText
+        backgroundColor
+        backgroundPattern
+        backgroundType
+        backgroundImage {
+          image {
+            altText
+            mediaItemUrl
+          }
+          mobileImage {
+            altText
+            mediaItemUrl
+          }
+        }
+        description
+        paddingBottom
+        paddingTop
+        actions {
+          adaText
+          seoText
+          display
+          function
+          link {
+            target
+            title
+            url
+          }
+        }
+      }
+      footerGroup {
+        adaText
+        seoText
+        footerDescription
+        function
+        link {
+          target
+          title
+          url
+        }
+      }
+    }
+    settingsHeader {
+      globalHeaderColorLogo {
+        mediaItemUrl
+        altText
+      }
+      globalHeaderLogo {
+        altText
+        mediaItemUrl
+      }
+      flagCta {
+        target
+        title
+        url
+      }
+    }
+  }
+  footerMenu: menu(id: "Footer Menu", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+          }
+        }
+      }
+    }
+  }
+  secondaryFooterMenu: menu(id: "Secondary Footer Menu", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        label
+        id
+        url
+        target
+      }
+    }
+  }
+  topMenu: menu(id: "Top Menu", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        label
+        id
+        url
+        target
+      }
+    }
+  }
+  menu_products: menu(id: "Products", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+            childItems {
+              nodes {
+                url
+                label
+                target
+                parentId
+                ProductMenuLinkDescription {
+                  description
+                }
+                cssClasses
+              }
+            }
+          }
+        }
+      }
+    }
+    FeaturedArticle {
+      manualFields {
+        excerpt
+        prehead
+        title
+        url
+        backgroundImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
+    MenusACF {
+      globalCta {
+        target
+        title
+        url
+      }
+    }
+  }
+  menu_solutions: menu(id: "Solutions", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+            childItems {
+              nodes {
+                url
+                label
+                target
+                parentId
+                ProductMenuLinkDescription {
+                  description
+                }
+                cssClasses
+              }
+            }
+          }
+        }
+      }
+    }
+    FeaturedArticle {
+      manualFields {
+        excerpt
+        prehead
+        title
+        url
+        backgroundImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
+    MenusACF {
+      globalCta {
+        target
+        title
+        url
+      }
+    }
+  }
+  menu_services: menu(id: "Services", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+            childItems {
+              nodes {
+                url
+                label
+                target
+                parentId
+                ProductMenuLinkDescription {
+                  description
+                }
+                cssClasses
+              }
+            }
+          }
+        }
+      }
+    }
+    FeaturedArticle {
+      manualFields {
+        excerpt
+        prehead
+        title
+        url
+        backgroundImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
+    MenusACF {
+      globalCta {
+        target
+        title
+        url
+      }
+    }
+  }
+  menu_resources: menu(id: "Resources", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+            childItems {
+              nodes {
+                url
+                label
+                target
+                parentId
+                ProductMenuLinkDescription {
+                  description
+                }
+                cssClasses
+              }
+            }
+          }
+        }
+      }
+    }
+    FeaturedArticle {
+      manualFields {
+        excerpt
+        prehead
+        title
+        url
+        backgroundImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
+    MenusACF {
+      globalCta {
+        target
+        title
+        url
+      }
+    }
+  }
+  menu_pricing: menu(id: "Pricing", idType: NAME) {
+    menuId
+    menuItems(where: {parentId: "NULL"}) {
+      nodes {
+        cssClasses
+        label
+        id
+        parentId
+        childItems {
+          nodes {
+            url
+            label
+            target
+            parentId
+            childItems {
+              nodes {
+                url
+                label
+                target
+                parentId
+                ProductMenuLinkDescription {
+                  description
+                }
+                cssClasses
+              }
+            }
+          }
+        }
+      }
+    }
+    FeaturedArticle {
+      manualFields {
+        excerpt
+        prehead
+        title
+        url
+        backgroundImage {
+          altText
+          mediaItemUrl
+        }
+      }
+    }
+    MenusACF {
+      globalCta {
+        target
+        title
+        url
+      }
+    }
+  }
+}

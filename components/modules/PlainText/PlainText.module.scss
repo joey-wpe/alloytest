@@ -1,0 +1,400 @@
+@import '../../../styles/baseline/__styles';
+
+.plain-text {
+	text-align: center;
+	z-index: 11;
+}
+
+.text-wrapper {
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.darkBlue {
+	background-color: $blaze-color;
+	background-image: none;
+	color: $white-color;
+}
+
+.backgroundImage {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.h2 {
+	margin-bottom: 16px;
+	margin-top: 0;
+
+	@include respond-to($bp-md) {
+		margin-bottom: 20px;
+	}
+}
+
+.span {
+	font-family: $font-family-subhead;
+	font-size: rem-calc(14);
+	letter-spacing: rem-calc(0.5);
+	line-height: 24px;
+	font-weight: $bold;
+	margin-bottom: 2px;
+	display: block;
+}
+
+.bgWhite {
+	background-color: transparent;
+	background-image: none;
+}
+
+.p {
+	p,
+	ul {
+		margin-bottom: 20px;
+	}
+
+	&.blue {
+		color: $charcoal-color;
+	}
+}
+
+.primary {
+	color: $white-color;
+	border: none;
+}
+
+.noBorder {
+	border: none;
+}
+
+.secondary {
+	color: $blaze-color;
+	border: none;
+}
+
+.footer a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.logo {
+	height: 1em;
+	margin-left: 0.5rem;
+}
+
+.align-left {
+	text-align: left;
+}
+
+// Styles for embedded Trustradius review widget
+.plain-text {
+	:global(div, .trustradius-tqw) {
+		background-color: transparent !important;
+		color: inherit !important;
+		font-family: inherit !important;
+		margin: 120px 0;
+		overflow: visible;
+
+		:global(:is(div, p, span, img, .tr-fancy, .tr-fancy .tr-reviews-viewport, .tr-fancy
+					.tr-header
+					.tr-banner
+					.tr-banner-tagline)) {
+			background-color: transparent !important;
+			color: inherit !important;
+			font-family: inherit !important;
+		}
+
+		:global(:is(a)) {
+			background-color: transparent !important;
+			color: inherit !important;
+			font-family: inherit !important;
+		}
+
+		:global(.tr-container-fluid) {
+			// padding: 0;
+		}
+
+		:global(.tr-fancy .tr-header) {
+			padding: 0 !important;
+
+			:global(.tr-banner) {
+				font-weight: $bold;
+				font-size: rem-calc(24);
+				line-height: rem-calc(36);
+				padding: 0;
+				margin-bottom: 60px;
+
+				:global(.tr-banner-tagline) {
+					font-weight: $bold;
+					bottom: 0;
+				}
+
+				img {
+					vertical-align: baseline;
+				}
+			}
+		}
+
+		:global(:is(div.tr-fancy)) {
+			:global(.tr-review-summary) {
+				padding: 0 !important;
+				margin-bottom: 40px;
+				border: none;
+
+				:global(.tr-col-xs-3) {
+					width: 100%;
+				}
+			}
+
+			:global(.tr-reviews-viewport) {
+				display: flex;
+				gap: 20px;
+				margin: 0 -20px;
+			}
+
+			:global(.tr-card) {
+				padding: 0 20px !important;
+				width: calc(33% - 5px);
+
+				@include respond-to($bp-xl) {
+					width: calc(50% - 5px);
+				}
+
+				@include respond-to($bp-md) {
+					width: 100%;
+				}
+			}
+
+			:global(.tr-col-lg-6) {
+				padding: 0;
+			}
+
+			:global(:is(div.tr-review-title)) {
+				:is(a) {
+					cursor: pointer;
+					font-weight: $bold;
+					font-size: rem-calc(20) !important;
+					line-height: rem-calc(30);
+					background-color: transparent !important;
+					color: $blaze-color !important;
+					white-space: normal;
+
+					&:hover {
+						color: $accelerate-color !important;
+					}
+				}
+			}
+
+			:global(.tr-rating) {
+				margin-bottom: 5px;
+				display: inline-block;
+			}
+
+			:global(:is(.tr-glyphicon-star, .tr-glyphicon-star-half, .tr-glyphicon-star-empty)):before {
+				font-family: 'Glyphicons Regular' !important;
+				color: $accelerate-color;
+			}
+
+			:global(.incentivized) {
+				font-size: rem-calc(12);
+				font-style: italic;
+				font-weight: $regular;
+				line-height: rem-calc(12);
+				white-space: nowrap;
+				display: inline-block;
+				transform: translateY(-2px);
+			}
+
+			:global(.tr-review-date) {
+				font-size: rem-calc(12) !important;
+				line-height: rem-calc(12);
+				font-style: italic;
+				font-weight: $bold;
+				color: $charcoal-color;
+				margin-bottom: 10px;
+			}
+
+			:global(.tr-reviewer) {
+				position: relative;
+				padding-left: 28px;
+
+				:global(.tr-review-teaser) {
+					p {
+						font-size: rem-calc(16);
+						line-height: rem-calc(26);
+					}
+
+					&:before {
+						position: absolute;
+						top: 0;
+						left: 0;
+						margin-top: 4px;
+						width: 16px;
+						height: 10px;
+						color: $charcoal-color !important;
+						content: '';
+						background-image: url('/icons/small-quote.svg');
+					}
+				}
+			}
+
+			:global(.tr-review-byline) {
+				:global(:is(.tr-author, .tr-job-description, .tr-company-description, .tr-company-description)) {
+					font-size: rem-calc(16);
+					line-height: rem-calc(22);
+					font-weight: $regular;
+					font-style: italic;
+					display: block;
+				}
+
+				:global(.tr-author) {
+					margin-bottom: 10px;
+				}
+
+				:global(.tr-job-description) {
+					font-weight: $bold;
+				}
+			}
+
+			:global(.tr-read-all-link) {
+				color: $accelerate-color !important;
+				cursor: pointer;
+				font-size: rem-calc(16);
+				line-height: rem-calc(24);
+				font-weight: $bold;
+				position: relative;
+				bottom: 0 !important;
+				float: none !important;
+				padding: 0 !important;
+
+				&:before {
+					content: '';
+					position: absolute;
+					bottom: -2px;
+					height: 2px;
+					width: 0;
+					transition: all 0.2s ease-in-out;
+					background-color: $accelerate-color;
+				}
+
+				&:hover {
+					text-decoration: none;
+					color: mix(black, $accelerate-color, 20%) !important;
+
+					&:before {
+						width: 100%;
+						background-color: mix(black, $accelerate-color, 20%);
+					}
+				}
+			}
+		}
+
+		:global(.tr-left-navigation),
+		:global(.tr-right-navigation) {
+			opacity: 1 !important;
+
+			a,
+			span {
+				cursor: pointer;
+			}
+
+			:global(.tr-glyphicon):before {
+				content: '';
+				display: block;
+				width: 12px;
+				height: 25px;
+				cursor: pointer;
+			}
+
+			&:hover {
+				opacity: 0.65 !important;
+			}
+		}
+
+		:global(.tr-left-navigation) {
+			left: -23px;
+		}
+
+		:global(.tr-right-navigation) {
+			right: -23px;
+		}
+
+		:global(.tr-glyphicon-chevron-left):before {
+			background: url('/icons/arrow-prev.svg') no-repeat;
+		}
+
+		:global(.tr-glyphicon-chevron-right):before {
+			background: url('/icons/arrow-next.svg') no-repeat;
+		}
+
+		:global(.tr-card-quotes) {
+			&:after {
+				display: none;
+			}
+
+			:global(.tr-card-quotes-after-outline) {
+				display: none !important;
+			}
+		}
+
+		:global(.tr-card-read-more) {
+			margin-top: 10px;
+			padding-top: 10px;
+
+			a {
+				cursor: pointer;
+			}
+		}
+	}
+}
+// Styles for embedded OneTrust content
+.plain-text {
+	:global(.otnotice) {
+		:global(.otnotice-content) {
+			position: relative;
+			display: flex;
+			@include respond-to($bp-md) {
+				display: block;
+			}
+		}
+		:global(.otnotice-sections) {
+			width: calc(100% - 310px) !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+			@include respond-to($bp-md) {
+				width: 100% !important;
+			}
+		}
+		:global(.otnotice-section) {
+			scroll-margin-top: 100px !important;
+		}
+		:global(.otnotice-menu) {
+			@include respond-to($bp-lg) {
+				position: sticky;
+				height: fit-content;
+			}
+		}
+		:global(.otnotice-menu-mobile) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	:global(.otnotice-section-header) {
+		@include respond-to($bp-md) {
+			margin-left: 0;
+		}
+	}
+
+	:global(.otnotice-section-content):has(table) {
+		@include respond-to($bp-md) {
+			margin-left: 0;
+		}
+
+		@include respond-to($bp-lg) {
+			font-size: 10px;
+			line-height: 1.2;
+			margin-bottom: 2rem;
+		}
+	}
+}

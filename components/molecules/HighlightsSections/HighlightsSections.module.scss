@@ -1,0 +1,107 @@
+@import '../../../styles/baseline/_styles';
+
+.container-override {
+	@include respond-to($bp-md) {
+		overflow-x: unset;
+	}
+}
+.content-wrapper {
+	padding: 0 0 86px;
+	position: relative;
+	top: -138px;
+	@include respond-to($bp-lg) {
+		padding: 0 0 65px;
+		top: -100px;
+		@include respond-to($bp-md) {
+			top: -40px;
+		}
+	}
+	&.next-section-without-image {
+		display: block;
+		padding-bottom: 0;
+		@include respond-to($bp-md) {
+			padding-bottom: 65px;
+		}
+	}
+	&.next-section-with-image {
+		display: block;
+	}
+	&.no-image {
+		padding-top: 86px;
+		top: 0;
+		padding-bottom: 220px;
+		@include respond-to($bp-lg) {
+			padding-bottom: 150px;
+		}
+		@include respond-to($bp-md) {
+			padding-bottom: 100px;
+		}
+		&.next-section-without-image {
+			padding-bottom: 86px;
+		}
+	}
+	.content-image {
+		padding-bottom: 86px;
+		@include respond-to($bp-lg) {
+			padding-bottom: 44px;
+		}
+	}
+}
+
+//repeaterSections
+.repeaterSection {
+	position: relative;
+	display: grid;
+	grid-template-columns: calc(100% - 387px) 337px;
+	gap: 50px;
+
+	@include respond-to($bp-md) {
+		grid-template-columns: 100%;
+		gap: 30px;
+	}
+}
+
+.repeater-image {
+	position: relative;
+	max-width: 100%;
+	// top: -50px;
+	@include respond-to($bp-xl) {
+		margin-top: initial;
+	}
+}
+
+.contetnt-only-description {
+	position: relative;
+}
+
+.repeaterSectionRight {
+	ul {
+		list-style: none;
+	}
+
+	.list {
+		padding: 0px 0 50px 90px;
+		border-left: 1px solid rgba(215, 226, 240, 0.5);
+
+		@include respond-to($bp-md) {
+			border-left: none;
+			border-top: 1px solid rgba(215, 226, 240, 0.5);
+			padding: 30px 0 0;
+		}
+
+		li {
+			display: flex;
+			margin-bottom: 30px;
+
+			span {
+				margin-right: 11px;
+				max-width: 10px;
+				width: 100%;
+			}
+
+			&:last-child {
+				margin-bottom: initial;
+			}
+		}
+	}
+}

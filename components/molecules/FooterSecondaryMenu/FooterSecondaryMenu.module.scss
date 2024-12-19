@@ -1,0 +1,66 @@
+@import '../../../styles/baseline/_styles';
+
+.footer-secondary-menu {
+	background-color: #162d51;
+	padding: 18px 0;
+
+	@include respond-to($bp-lg) {
+		padding: 23px 0;
+	}
+}
+
+.content {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+
+	@include respond-to($bp-md) {
+		gap: 8px;
+	}
+}
+
+.text {
+	font-size: rem-calc(11);
+	line-height: rem-calc(24);
+	font-weight: $semibold;
+	color: #a7bbd0;
+}
+
+.link {
+	line-height: rem-calc(20);
+	border-bottom: 2px solid transparent;
+
+	&:hover {
+		color: $white-color;
+		border-color: $white-color;
+	}
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: initial;
+	padding: initial;
+	gap: 5px 28px;
+	margin-left: auto;
+	margin-right: 32px;
+
+	@include respond-to($bp-lg) {
+		order: 3;
+		width: 100%;
+	}
+}
+
+.language-selection {
+	display: flex;
+	gap: 5px;
+}
+
+.language {
+	font-size: rem-calc(14);
+	line-height: rem-calc(24);
+	font-weight: $regular;
+	color: #a7bbd0;
+}

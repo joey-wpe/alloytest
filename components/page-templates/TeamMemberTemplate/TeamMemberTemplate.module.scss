@@ -1,0 +1,114 @@
+@import '../../../styles/baseline/_styles';
+
+$lines-opacity: 0.5;
+$lines-color: $mist-color;
+
+.team-member {
+	display: flex;
+	padding-top: rem-calc(71);
+	padding-bottom: rem-calc(111);
+
+	@include respond-to($bp-md) {
+		flex-direction: column;
+	}
+
+	.h3 {
+		font-weight: $bold;
+		margin-top: rem-calc(9);
+	}
+
+	&__meta {
+		padding-right: rem-calc(50);
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 1px;
+			height: 100%;
+			max-height: rem-calc(516);
+			background-color: $lines-color;
+			opacity: $lines-opacity;
+
+			@include respond-to($bp-md) {
+				display: none;
+			}
+		}
+
+		@include respond-to($bp-md) {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-right: initial;
+			margin-bottom: rem-calc(50);
+		}
+	}
+
+	&__avatar {
+		@include respond-to($bp-sm) {
+			margin-right: initial;
+			max-width: initial;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		margin-top: rem-calc(11);
+		padding-top: rem-calc(38);
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			opacity: $lines-opacity;
+			background-color: $lines-color;
+		}
+	}
+
+	&__info {
+		padding-left: rem-calc(55);
+		width: 100%;
+		max-width: rem-calc(864);
+
+		.h3 {
+			margin-bottom: 9px;
+		}
+
+		@include respond-to($bp-md) {
+			padding-left: initial;
+		}
+	}
+}
+
+.primary-typography {
+	p {
+		letter-spacing: initial;
+	}
+}
+
+.sticky-container {
+	position: sticky;
+	top: 82px;
+}
+
+.team-member__socials {
+	a {
+		@extend .hover-animation-basic;
+
+		&:hover {
+			svg {
+				path {
+					fill: $accelerate-light;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+@import '../../../styles/baseline/__styles';
+
+//Table
+
+.table-tabs {
+	width: 100%;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: $blaze-color;
+
+	& > div {
+		padding: 20px;
+	}
+
+	@include respond-to($bp-md) {
+		display: block;
+	}
+}
+
+.table-tabs-mobile {
+	display: none;
+	@include respond-to($bp-md) {
+		background-image: url(/img/backgrounds/pattern-blaze.svg);
+		display: block;
+		padding: 20px;
+		font-size: 1.125rem;
+		line-height: 1.5rem;
+	}
+
+	.tab-container {
+		background: white;
+		display: flex;
+		justify-content: space-between;
+
+		.tab-list {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			gap: 15px;
+
+			&.expanded {
+				.tab-item {
+					display: block;
+				}
+			}
+
+			.tab-item {
+				cursor: pointer;
+				width: 100%;
+				display: none;
+
+				&.active {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+.table-tabs-desktop {
+	display: grid;
+	gap: 21px;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+
+	@include respond-to($bp-lg) {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+
+		.spacer {
+			display: none;
+		}
+	}
+
+	@include respond-to($bp-md) {
+		display: none;
+	}
+}
+
+.table-check-desktop {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	grid-auto-flow: column;
+	grid-auto-rows: max-content;
+	gap: 21px;
+
+	.table-list,
+	.table {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+	@include respond-to($bp-lg) {
+		display: none;
+	}
+
+	.table-list {
+		@include respond-to($bp-lg) {
+			display: none;
+		}
+	}
+}
+.table-tablet {
+	display: none;
+	@include respond-to($bp-lg) {
+		display: grid;
+		grid-auto-flow: column;
+		grid-auto-rows: max-content;
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-gap: 21px;
+		gap: 21px;
+		.items-tablet {
+			&:first-child {
+				min-height: 242px;
+			}
+		}
+	}
+
+	@include respond-to($bp-md) {
+		display: none;
+	}
+}
+.table-mobile {
+	display: none;
+	@include respond-to($bp-md) {
+		display: block;
+		padding-bottom: 55px;
+	}
+}

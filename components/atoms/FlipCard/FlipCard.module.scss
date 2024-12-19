@@ -1,0 +1,196 @@
+@import '../../../styles/baseline/_styles';
+
+.flip-card {
+	perspective: 1000px;
+	transition: transform 0.6s;
+	width: 100%;
+	min-height: 276px;
+	transform-style: preserve-3d;
+	-webkit-transform-origin-z: 0;
+	perspective: 1000px;
+	> div {
+		height: 100%;
+	}
+	&:hover {
+		.flip-card-inner {
+			transform: rotateX(180deg);
+			.flip-card-front {
+				transform: translate3d(0, 0, 0);
+			}
+		}
+	}
+
+	.flip-card-inner {
+		position: relative;
+		min-height: 276px;
+		width: 100%;
+		height: 100%;
+		text-align: center;
+		transition: transform 0.6s;
+		transform-style: preserve-3d;
+		box-shadow: 0 4px 8px 0 rgba(black, 0.2);
+	}
+	.flip-card-front {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		-webkit-perspective: 0;
+		backface-visibility: hidden;
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		&::after {
+			position: absolute;
+			content: '';
+			width: 42.78px;
+			height: 85.17px;
+			bottom: -56px;
+			right: -7px;
+			background: $accelerate-color;
+			transform: rotate(-135deg);
+			transition: all 200ms ease-in;
+		}
+		> div {
+			width: 100%;
+			height: 100%;
+			padding: initial;
+		}
+		.front-inner {
+			padding: 62px 48px;
+			@include respond-to($bp-md) {
+				padding: 50px 31px;
+			}
+		}
+
+		.bg-image {
+			z-index: initial;
+			opacity: 0.2;
+		}
+	}
+	.flip-card-back {
+		box-shadow: 2px 5px 20px $shadow-dark;
+		width: 100%;
+		height: 100%;
+		-webkit-backface-visibility: hidden;
+		-webkit-transform-origin-z: -5px;
+		backface-visibility: hidden;
+		transform: rotateX(180deg);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		> div {
+			width: 100%;
+			height: 100%;
+		}
+		.back-inner {
+			padding: 48px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100%;
+			@include respond-to($bp-md) {
+				padding: 50px 31px;
+			}
+		}
+
+		.button-wrapper {
+			> div {
+				margin: 0 auto;
+				color: $white-color;
+				&:hover {
+					&::after {
+						width: 100%;
+						background-color: $white-color;
+					}
+				}
+				&:focus {
+					color: $mist-color;
+
+					svg {
+						path {
+							fill: $mist-color;
+						}
+					}
+
+					&::after {
+						background-color: $mist-color;
+					}
+				}
+			}
+		}
+		&::after {
+			position: absolute;
+			content: '';
+			width: 22.37px;
+			height: 44.53px;
+			top: -15px;
+			right: -7px;
+			background: $swift-color;
+			transform: matrix(-0.71, 0.71, 0.71, 0.71, 0, 0);
+			transition: all 200ms ease-in;
+			z-index: 11;
+		}
+	}
+	.h4 {
+		line-height: 28px;
+		position: relative;
+		font-size: 22px;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+	}
+	.sub-p {
+		color: $white-color;
+		margin-bottom: 5px;
+	}
+	.flip-icon {
+		width: 68px;
+		height: 68px;
+		margin: 0 auto 30px;
+		position: relative;
+		z-index: 5;
+	}
+	.h5 {
+		position: relative;
+	}
+	.front-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	.warp {
+		background-color: $warp-color;
+	}
+	.tricentis_blue,
+	.tricentis-blue {
+		background-color: $tricentis-color;
+	}
+	.velocity {
+		background-color: $velocity-color;
+	}
+	.blaze {
+		background-color: $blaze-color;
+	}
+	.white {
+		background-color: $white-color;
+	}
+	.blue {
+		background-color: $tricentis-color;
+	}
+	.text-blue {
+		color: $blaze-color;
+	}
+	.text-white {
+		color: $white-color;
+	}
+}

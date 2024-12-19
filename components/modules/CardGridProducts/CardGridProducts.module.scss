@@ -1,0 +1,129 @@
+@import '../../../styles/baseline/_styles';
+
+.content-information {
+	padding-bottom: 65px;
+
+	.preheader-warp {
+		span,
+		h3 {
+			color: $bolt-color;
+		}
+	}
+}
+
+.card {
+	background-color: $white-color;
+}
+
+.one-column {
+	.grid-product {
+		display: flex;
+		flex-direction: column;
+		gap: 23px;
+		align-items: center;
+
+		.card {
+			width: 100%;
+		}
+	}
+}
+
+.two-columns {
+	.grid-product {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}
+
+.text-orientatio-left {
+	text-align: left;
+}
+
+.text-orientation-center {
+	text-align: center;
+	margin: 0 auto;
+	max-width: 812px;
+}
+
+.three-columns {
+	.content-information {
+		max-width: 812px;
+	}
+
+	.grid-product {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 23px;
+
+		.card {
+			h3 {
+				font-size: 24px;
+				line-height: 34px;
+				margin-bottom: 16px;
+			}
+		}
+
+		@include respond-to($bp-md) {
+			grid-template-columns: repeat(2, 1fr);
+
+			.card {
+				padding: 60px 20px;
+			}
+		}
+
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+
+			.card {
+				padding: 60px 32px;
+			}
+		}
+	}
+}
+
+.four-columns {
+	.content-information {
+		max-width: 812px;
+	}
+
+	.grid-product {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 23px;
+
+		.card {
+			padding: 48px;
+
+			h3 {
+				font-size: 18px;
+				line-height: 24px;
+				margin-bottom: 11px;
+			}
+
+			p {
+				margin-bottom: 23px;
+			}
+		}
+
+		@include respond-to($bp-md) {
+			grid-template-columns: repeat(2, 1fr);
+
+			.card {
+				padding: 60px 20px;
+			}
+		}
+
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+
+			.card {
+				padding: 60px 32px;
+			}
+		}
+	}
+}

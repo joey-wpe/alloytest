@@ -1,0 +1,21 @@
+@import '../../../styles/baseline/_styles';
+
+.social-media {
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		display: inline-flex;
+		margin-right: rem-calc(27);
+
+		svg {
+			path {
+				fill: $accelerate-color;
+			}
+		}
+
+		&:last-child {
+			margin-right: initial;
+		}
+	}
+}

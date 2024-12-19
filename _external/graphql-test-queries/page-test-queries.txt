@@ -1,0 +1,91 @@
+query PageByUri {
+  page(id: "cG9zdDoy", asPreview: true) {
+    slug
+    title
+    uri
+    isPreview
+  }
+}
+
+-----------
+lookup by DATABASE_ID:
+
+
+query MyQuery {
+  page(id: "2", asPreview: true, idType: DATABASE_ID) {
+    title
+    uri
+    slug
+  }
+}
+
+
+-----------
+
+
+query MyQuery {
+  pageBy(uri: "/sample-page/") {
+    id
+    menuOrder
+    slug
+    title
+    uri
+    template {
+      ... on Template_Modular {
+        templateName
+        contentBlocksModules {
+          modules {
+            ... on ModularTemplate_Contentblocksmodules_Modules_LeftRight {
+              additionalClasses
+              anchor
+              contentSide
+              contentSize
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+----------
+
+query MyQuery {
+  pageBy(uri: "/sample-page/") {
+    children {
+      edges {
+        node {
+          id
+          slug
+          uri
+          ... on Page {
+            id
+            title
+          }
+        }
+      }
+    }
+    id
+    menuOrder
+    slug
+    title
+    uri
+    template {
+      ... on ModularTemplate {
+        templateName
+        contentBlocksModules {
+          modules {
+            ... on ModularTemplate_Contentblocksmodules_Modules_LeftRight {
+              additionalClasses
+              anchor
+              contentSide
+              contentSize
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}

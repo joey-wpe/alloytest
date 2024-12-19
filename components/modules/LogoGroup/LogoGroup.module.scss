@@ -1,0 +1,61 @@
+@import '../../../styles/baseline/__styles';
+.plain-text {
+	text-align: center;
+	z-index: 11;
+}
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+}
+.h2 {
+	margin-bottom: 8px;
+	margin-top: 0;
+	font-size: rem-calc(30);
+	line-height: rem-calc(40);
+	@include respond-to($bp-md) {
+		margin-bottom: 20px;
+		font-size: rem-calc(28);
+		line-height: rem-calc(34);
+	}
+}
+.span {
+	font-family: $font-family-subhead;
+	font-size: rem-calc(14);
+	letter-spacing: rem-calc(0.5);
+	line-height: 24px;
+	font-weight: $bold;
+	margin-bottom: 2px;
+	display: block;
+}
+.p {
+	@include respond-to($bp-sm) {
+		font-size: rem-calc(14);
+		line-height: rem-calc(24);
+	}
+}
+
+.p.blue {
+	color: $charcoal-color;
+}
+.primary {
+	color: $white-color;
+	border: none;
+}
+.secondary {
+	color: $blaze-color;
+	border: none;
+}
+
+.logo {
+	height: 1em;
+	margin-left: 0.5rem;
+}
+
+.carousel-wrapper {
+	@include respond-above($bp-lg) {
+		padding: rem-calc(32) 83px;
+		max-width: 1439px;
+	}
+	padding: rem-calc(38) 0;
+	margin: 0 auto;
+}

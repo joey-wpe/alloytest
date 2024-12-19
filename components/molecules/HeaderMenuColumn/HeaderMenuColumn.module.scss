@@ -1,0 +1,112 @@
+@import '../../../styles/baseline/_styles';
+
+.heading {
+	margin-bottom: rem-calc(24);
+	line-height: 1rem;
+	p {
+		color: $velocity-color;
+	}
+	a {
+		color: $velocity-color;
+		font-size: rem-calc(14);
+		line-height: rem-calc(16);
+		text-transform: uppercase;
+	}
+
+	@include respond-to($bp-md) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.title {
+	font-size: rem-calc(14);
+	line-height: rem-calc(19);
+	font-weight: $bold;
+	letter-spacing: rem-calc(0.5);
+	color: $warp-color;
+	text-transform: uppercase;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	transition: all 0.5s ease;
+	padding: initial;
+	margin: initial;
+
+	@include respond-to($bp-xl) {
+		gap: 18px;
+	}
+
+	@include respond-to($bp-lg) {
+		gap: 16px;
+	}
+}
+
+.text-link {
+	font-size: rem-calc(15);
+	font-weight: $bold !important;
+
+	&__hover {
+		border: none;
+	}
+
+	&--button {
+		padding-top: initial !important;
+		padding-bottom: 2px !important;
+
+		&::after {
+			bottom: 0 !important;
+		}
+	}
+}
+
+.description {
+	font-size: rem-calc(13);
+	line-height: rem-calc(20);
+	color: $charcoal-color;
+}
+
+.gridRowStartOne {
+	grid-row-start: 1;
+}
+.gridRowStartTwo {
+	grid-row-start: 2;
+}
+.gridRowStartThree {
+	grid-row-start: 3;
+}
+.gridRowStartFour {
+	grid-row-start: 4;
+}
+
+.gridColumnStartOne {
+	grid-column-start: 1;
+}
+.gridColumnStartTwo {
+	grid-column-start: 2;
+}
+.gridColumnStartThree {
+	grid-column-start: 3;
+}
+.gridColumnStartFour {
+	grid-column-start: 4;
+}
+
+.sparkle {
+	display: flex;
+	&:after {
+		background-image: url(/icons/sparkle.svg);
+		background-position: center center;
+		background-size: cover;
+		content: '';
+		display: inline-block;
+		height: 17px;
+		margin-left: 3px;
+		margin-top: 2px;
+		width: 18px;
+	}
+}

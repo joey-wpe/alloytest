@@ -1,0 +1,653 @@
+{
+  "casperFlags": [
+    ""
+  ],
+  "debug": false,
+  "asyncCaptureLimit": 4,
+  "paths": {
+    "casper_scripts": "",
+    "bitmaps_reference": "results/backstop_data/bitmaps_reference",
+    "bitmaps_test": "results/backstop_data/bitmaps_test",
+    "engine_scripts": "engine_scripts",
+    "html_report": "results/backstop_data/html_report",
+    "json_report": "results/backstop_data/json_report",
+    "ci_report": "results/backstop_data/ci_report"
+  },
+  "scenarios": [
+    {
+      "label": "/",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "removeSelectors": [
+        "#notarealremoveselector"
+      ],
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/?__backstop_test=1",
+      "hideSelectors": [
+        "#notarealhideselector"
+      ]
+    },
+    {
+      "label": "/academy/thank-you",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/academy/thank-you?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/academy/thank-you?__backstop_test=1"
+    },
+    {
+      "label": "/legal-information",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/legal-information?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/legal-information?__backstop_test=1"
+    },
+    {
+      "label": "/locations",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/locations?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/locations?__backstop_test=1"
+    },
+    {
+      "label": "/software-testing-tool-trial-demo/servicenow-trial",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/software-testing-tool-trial-demo/servicenow-trial?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/software-testing-tool-trial-demo/servicenow-trial?__backstop_test=1"
+    },
+    {
+      "label": "/learn/web-stress-testing-tool",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/learn/web-stress-testing-tool?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/learn/web-stress-testing-tool?__backstop_test=1"
+    },
+    {
+      "label": "/learn/software-testing-lifecycle",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/learn/software-testing-lifecycle?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/learn/software-testing-lifecycle?__backstop_test=1"
+    },    
+    {
+      "label": "/salesforce",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/salesforce?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/salesforce?__backstop_test=1"
+    },
+    {
+      "label": "/products/data-integrity/pricing",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/products/data-integrity/pricing?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/products/data-integrity/pricing?__backstop_test=1"
+    },
+    {
+      "label": "/sap/test-automation",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/sap/test-automation?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/sap/test-automation?__backstop_test=1"
+    },    
+    {
+      "label": "/news",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news?__backstop_test=1"
+    },
+    {
+      "label": "/partners",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/partners?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/partners?__backstop_test=1"
+    },
+
+
+
+    {
+      "label": "/academy/training-certifications/qtest-trial",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/academy/training-certifications/qtest-trial?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/academy/training-certifications/qtest-trial?__backstop_test=1"
+    },
+    {
+      "label": "/software-testing-tool-trial-demo/tosca-trial",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/software-testing-tool-trial-demo/tosca-trial?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/software-testing-tool-trial-demo/tosca-trial?__backstop_test=1"
+    },
+    {
+      "label": "/team",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/team?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/team?__backstop_test=1"
+    },
+    {
+      "label": "/qtest-login",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/qtest-login?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/qtest-login?__backstop_test=1"
+    },
+    {
+      "label": "/case-studies",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/case-studies?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/case-studies?__backstop_test=1"
+    },
+    {
+      "label": "/resources",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/resources?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/resources?__backstop_test=1"
+    },
+    {
+      "label": "/blog",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/blog?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/blog?__backstop_test=1"
+    },
+    {
+      "label": "/resources-devops",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/resources-devops?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/resources-devops?__backstop_test=1"
+    },
+    {
+      "label": "/test-automation-roi",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/test-automation-roi?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/test-automation-roi?__backstop_test=1"
+    },
+    {
+      "label": "/test-automation-roi-results",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/test-automation-roi-results?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/test-automation-roi-results?__backstop_test=1"
+    },
+    {
+      "label": "/blog/evolve-your-sap-qa",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/blog/evolve-your-sap-qa?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/blog/evolve-your-sap-qa?__backstop_test=1"
+    },    
+    {
+      "label": "/blog/defining-your-test-strategy",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/blog/defining-your-test-strategy?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/blog/defining-your-test-strategy?__backstop_test=1"
+    },
+    {
+      "label": "/blog/whats-new-q2-2022-release",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/blog/whats-new-q2-2022-release?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/blog/whats-new-q2-2022-release?__backstop_test=1"
+    },
+    {
+      "label": "/case-studies/faster-more-reliable-performance-testing-shift-left-transformation",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/case-studies/faster-more-reliable-performance-testing-shift-left-transformation?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/case-studies/faster-more-reliable-performance-testing-shift-left-transformation?__backstop_test=1"
+    },
+    {
+      "label": "/case-studies/twinformatics-uses-neoload-tosca-minimize-business-risk",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/case-studies/twinformatics-uses-neoload-tosca-minimize-business-risk?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/case-studies/twinformatics-uses-neoload-tosca-minimize-business-risk?__backstop_test=1"
+    },
+    {
+      "label": "/case-studies/swiss-re",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/case-studies/swiss-re?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/case-studies/swiss-re?__backstop_test=1"
+    },
+    {
+      "label": "/events/accelerate-2023",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/events/accelerate-2023?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/events/accelerate-2023?__backstop_test=1"
+    },
+    {
+      "label": "/events/neoload-webinar-telia",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/events/neoload-webinar-telia?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/events/neoload-webinar-telia?__backstop_test=1"
+    },
+    {
+      "label": "/events/oracle-cloud-readiness",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/events/oracle-cloud-readiness?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/events/oracle-cloud-readiness?__backstop_test=1"
+    },
+    {
+      "label": "/lp/mqad-tricentis-qtest-tosca-demo",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/lp/mqad-tricentis-qtest-tosca-demo?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/lp/mqad-tricentis-qtest-tosca-demo?__backstop_test=1"
+    },
+    {
+      "label": "/lp/mqa-speed-up-sap-innovation",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/lp/mqa-speed-up-sap-innovation?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/lp/mqa-speed-up-sap-innovation?__backstop_test=1"
+    },
+    {
+      "label": "/lp/mqad-tricentis-tosca-hub",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/lp/mqad-tricentis-tosca-hub?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/lp/mqad-tricentis-tosca-hub?__backstop_test=1"
+    },
+    {
+      "label": "/news/tricentis-amplifies-dolbys-testing-success-leveraging-servicenow-automation",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news/tricentis-amplifies-dolbys-testing-success-leveraging-servicenow-automation?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news/tricentis-amplifies-dolbys-testing-success-leveraging-servicenow-automation?__backstop_test=1"
+    },
+    {
+      "label": "/news/tricentis-expands-in-czech-republic",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news/tricentis-expands-in-czech-republic?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news/tricentis-expands-in-czech-republic?__backstop_test=1"
+    },
+    {
+      "label": "/news/tricentis-appoints-chris-collins-chief-customer-officer",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news/tricentis-appoints-chris-collins-chief-customer-officer?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news/tricentis-appoints-chris-collins-chief-customer-officer?__backstop_test=1"
+    },
+    {
+      "label": "/news/all-news",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news/all-news?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news/all-news?__backstop_test=1"
+    },    
+    {
+      "label": "/news/all-press-releases",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/news/all-press-releases?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/news/all-press-releases?__backstop_test=1"
+    },
+    {
+      "label": "/partners/hike2",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/partners/hike2?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/partners/hike2?__backstop_test=1"
+    },
+    {
+      "label": "/partners/rackspace",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/partners/rackspace?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/partners/rackspace?__backstop_test=1"
+    },
+    {
+      "label": "/partners/mobile-labs",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/partners/mobile-labs?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/partners/mobile-labs?__backstop_test=1"
+    },
+    {
+      "label": "/resources/tosca-sap",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/resources/tosca-sap?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/resources/tosca-sap?__backstop_test=1"
+    },
+    {
+      "label": "/resources/sap-migration-trends-survey",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/resources/sap-migration-trends-survey?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/resources/sap-migration-trends-survey?__backstop_test=1"
+    },
+    {
+      "label": "/resources/qtest-product-tour-video",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/resources/qtest-product-tour-video?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/resources/qtest-product-tour-video?__backstop_test=1"
+    },
+    {
+      "label": "/team/kevin-thompson",
+      "readyEvent": "",
+      "delay": 500,
+      "misMatchThreshold": 0.16,
+      "onBeforeScript": "",
+      "onReadyScript": "",
+      "selectors": [
+        "document"
+      ],
+      "url": "https://6402161669b8b9336bbf8c4b--nd-tricentis-live-full.netlify.app/team/kevin-thompson?__backstop_test=1",
+      "referenceUrl": "https://hgz3dh8po22gky8sy6ec4aoba.js.wpenginepowered.com/team/kevin-thompson?__backstop_test=1"
+    }
+  ],
+  "report": [
+    "CLI",
+    "browser"
+  ],
+  "onBeforeScript": "onBeforeScriptGlobal.js",
+  "onReadyScript": "onReadyScriptGlobal.js",
+  "engine": "puppeteer",
+  "port": 3001,
+  "viewports": [
+    {
+      "name": "desktop-small",
+      "width": 1280,
+      "height": 720,
+      "vIndex": 0
+    },
+    {
+      "name": "iphone-x",
+      "width": 375,
+      "height": 812,
+      "vIndex": 2
+    },
+    {
+      "name": "ipad-v",
+      "width": 768,
+      "height": 1024,
+      "vIndex": 3
+    }
+  ]
+}

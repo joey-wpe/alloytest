@@ -1,0 +1,38 @@
+query SampleModuleQuery {
+  page(id: "cG9zdDoy2", idType: ID) {
+    title
+    contentBlocksModules {
+      modules {
+        ... on ContentNode_Contentblocksmodules_Modules_PlainText {
+          additionalClasses
+          anchor
+          backgroundColor
+          solidColor
+          pattern
+          description
+          preheadText
+          preheadType
+          titleText
+          titleType
+          actions {
+            adaText
+            display
+            color
+            function
+            link {
+              target
+              title
+              url
+            }
+            seoText
+          }
+          contentAlignment
+        }
+        ... on ContentNode_Contentblocksmodules_Modules_Faqs {
+          additionalClasses
+          anchor
+        }
+      }
+    }
+  }
+}

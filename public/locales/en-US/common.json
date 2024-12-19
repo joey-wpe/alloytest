@@ -1,0 +1,184 @@
+{
+	"generic.readMore": "Read more",
+	"generic.showMore": "Show more",
+	"generic.loadMore": "Load more",
+	"generic.learnMore": "Learn more",
+	"generic.Submit": "Submit",
+	"generic.view": "View",
+	"generic.email": "Email",
+	"generic.tel": "Tel",
+	"generic.download": "Download",
+	"generic.tricentis": "Tricentis",
+	"generic.explore": "Explore the platform",
+	"generic.thankYou": "Thank you!",
+	"generic.thankYouMessage": "Someone will be in touch shortly.",
+	"generic.noResultsFound": "No Results Found",
+
+	"accessibilityToggle.turnContrastOn": "Turn on high contrast mode",
+	"accessibilityToggle.turnContrastOff": "Turn off high contrast mode",
+
+	"breadcrumb.home": "Home",
+	"breadcrumb.caseStudies": "Case Studies",
+	"breadcrumb.team": "Team",
+
+	"blogSection.inThisArticle": "In this article",
+	"blogSection.authorTitle": "Author",
+	"blogSection.date": "Date",
+	"blogSection.getDemo": "Get a demo",
+
+	"calculatorResult.prehead": "Tricentis",
+	"calculatorResult.title": "Expected results",
+	"calculatorResult.description": "According to industry metrics and Tricentis’ results with similar organizations, you can gain the following benefits by automating testing with Tricentis:",
+	"calculatorResult.btnTitle": "Share results",
+
+	"card.logoImageAlt": "Logo image",
+
+	"cardSelector.cardCTA": "View details",
+	"cardSelector.featuredImageAlt": "Featured image",
+
+	"caseStudiesMain.title": "How Tricentis helps customers like you succeed",
+
+	"caseStudy.companyOverview": "Company overview",
+	"caseStudy.companyIndustryString": "Industry: ",
+	"caseStudy.companyLocationString": "Organization size: ",
+	"caseStudy.companySizeString": "Location: ",
+	"caseStudy.companyProductString": "Products: ",
+	"caseStudy.companyUseCaseString": "Use Case: ",
+	"caseStudy.preHead": "Success stories",
+
+	"caseStudySlider.altTextFallback": "Case study feature image",
+	"caseStudySlider.viewMore": "View more success stories",
+	"caseStudySlider.keyOutcomes": "Key outcomes",
+	"caseStudySlider.postPreHead": "Case study",
+
+	"eventDetail.sideRailTitle": "Event details",
+	"eventDetail.sideRailWhen": "When",
+	"eventDetail.sideRailWhere": "Where",
+
+	"filterBar.textInputSearch": "Search",
+	"filterBar.titleFilter": "Filter by:",
+	"filterBar.selectText": "All",
+	"filterBar.searchIconAlt": "Search icon",
+
+	"filterSearch.noResults": "No <lowercaseText> {{postTypeLabel}} </lowercaseText> found. Try <searchLink>searching</searchLink> the entire site",
+
+	"flagCTA.trialsDemo": "Trials & demos",
+
+	"footer.tricentisLogo": "Tricentis logo",
+	"footer.footerCtaText": "Send your testing into overdrive",
+	"footer.footerCtaTitle": "Get a demo or trial",
+
+	"nav.arrowDown": "Down arrow",
+
+	"newsDetail.prehead": "News",
+
+	"newsRoomMain.btnTextPressSetting": "View all press releases",
+	"newsRoomMain.btnTextNewsSetting": "View all news",
+	"newsRoomMain.prehead": "Tricentis",
+	"newsRoomMain.mainTitle": "Newsroom",
+	"newsRoomMain.featured": "Featured",
+	"newsRoomMain.awards": "Awards and recognition",
+	"newsRoomMain.news": "In the news",
+	"newsRoomMain.release": "Press releases",
+	"newsRoomMain.mediaKit": "Media kit",
+	"newsRoomMain.release_anchor": "press-releases",
+	"newsRoomMain.news_anchor": "in-the-news",
+	"newsRoomMain.awards_anchor": "awards-and-recognition",
+	"newsRoomMain.mediaKit_anchor": "media-kit",
+
+	"partner.copyTitle": "Find a partner",
+
+	"postType.resources": "Resources",
+	"postType.caseStudies": "Case studies",
+	"postType.events": "Events",
+	"postType.partners": "Partners",
+	"postType.posts": "Posts",
+
+	"pressReleases.dateArchiveTitle": "Date archive",
+
+	"pricingMain.prehead": "Tricentis pricing",
+	"pricingMain.mainTitle": "Simple, transparent, flexible and predictable pricing",
+
+	"productDemo.title": "Stronger insights, better testing",
+	"productDemo.description": "Speed matters, which is why Tricentis prioritizes it. AI-driven, codeless, and fully automated, our continuous testing platform helps you accelerate software delivery and reduce costs along the way.",
+	"productDemo.content": "Complete the form below to schedule a demo. See how qTest can help you increase software testing speed, efficiency and collaboration.",
+
+	"productDetail.demoVideo": "Demo video",
+
+	"resourceDetail.thankYouMessage": "Your resource is available below.",
+
+	"resourceGrid.featuredImage": "Featured image",
+	"resourceGrid.relatedResources": "Related resources",
+
+	"searchPage.pageTitle": "Search Tricentis",
+	"searchPage.searchButtonText": "Search",
+	"searchPage.searchPlaceholderText": "Search",
+	"searchPage.noSearchResultsText": "No results found",
+	"searchPage.clearSearchResults": "Clear search results",
+
+	"secondaryNav.mobileTitle": "Navigate",
+
+	"taxonomies.Regions": "Regions",
+	"taxonomies.Industries": "Industries",
+	"taxonomies.Products": "Products",
+	"taxonomies.Topics": "Topics",
+	"taxonomies.Partners": "Partners",
+	"taxonomies.PartnerCertification": "Partners Certificates",
+	"taxonomies.ResourceType": "Resource Type",
+	"taxonomies.Category": "Category",
+	"taxonomies.EventTypes": "Event Types",
+	"taxonomies.EventMonths": "Event Months",
+	"taxonomies.Learntype": "Topics",
+
+	"teamMember.team": "Tricentis team",
+
+	"mktoI18n.contactMeButton": "Contact me",
+	"mktoI18n.registerButton": "Register",
+	"mktoI18n.reasonForContacting": "Please select a reason for contacting",
+
+	"mktoI18n.qtestTrial.emailLabel": "Your email will be your user name",
+	"mktoI18n.qtestTrial.domainLabel": "Create your qTest Web Address",
+	"mktoI18n.qtestTrial.domainHelp": "Your qTest account will be available via this URL",
+	"mktoI18n.qtestTrial.passwordLabel": "Password",
+	"mktoI18n.qtestTrial.passwordHelp": "Password must be 8 to 16 characters, include at least one number and 1 letter.",
+	"mktoI18n.qtestTrial.noticeLabel": "Important Notice",
+	"mktoI18n.qtestTrial.noticeText": "By selecting your data center location, Tricentis will use reasonable efforts to store your test data within a physical jurisdiction that is acceptable under your country's laws. Please note that if you are location in a non-EU jurisdiction, your data will be stored in the United States. For more information, please review our %s",
+	"mktoI18n.qtestTrial.privacyPolicyUrl": "/privacy-policy/",
+	"mktoI18n.qtestTrial.privacyPolicyText": "Privacy Policy",
+	"mktoI18n.qtestTrial.provisioningMessage": "Please do NOT close this window until processing is completed. Otherwise you will not receive your email with your qTest account info. Thanks for your patience.",
+	"mktoI18n.qtestTrial.submitButtonLabel": "Start My Trial",
+	"mktoI18n.qtestTrial.emailExistsError": "User %s already exists.",
+
+	"mktoI18n.qtestTrial.domainValidation.noSubdomains": "No subdomains or .com, .net, etc.",
+	"mktoI18n.qtestTrial.domainValidation.maxLength": "Maximum length is %d characters",
+	"mktoI18n.qtestTrial.domainValidation.minLength": "Minimum length is %d characters",
+	"mktoI18n.qtestTrial.domainValidation.urlTaken": "That URL is already taken",
+	"mktoI18n.qtestTrial.domainValidation.urlInvalid": "That URL is invalid",
+	"mktoI18n.qtestTrial.domainValidation.success": "Good to go!",
+
+	"mktoI18n.toscaTrial.emailLabel": "Your email will be your user name",
+	"mktoI18n.toscaTrial.passwordLabel": "Password",
+	"mktoI18n.toscaTrial.passwordHelp": "Password must be at least 8 characters, include at least one number, one uppercase and one lowercase letter.",
+	"mktoI18n.toscaTrial.passwordConfirmLabel": "Confirm Password",
+	"mktoI18n.toscaTrial.loadingEmailCheck": "Checking email validity...",
+	"mktoI18n.toscaTrial.emailIneligibleError": "Sorry, this account currently or recently had a trial and is ineligible for another one at this time.",
+	"mktoI18n.toscaTrial.provisioningMessage": "Please do NOT close this window until processing is completed. Otherwise you will not receive your email with your Tosca trial info. Thanks for your patience.",
+	"mktoI18n.toscaTrial.errorStartingTrial": "An error occurred starting your trial. Please contact support.",
+	"mktoI18n.toscaTrial.verifyEmailRequired": "Verify email required, please check your email.",
+
+	"mktoI18n.validationErrors.wrongEmailFormat": "Not properly formatted.",
+	"mktoI18n.validationErrors.enterValidBusEmail": "Please enter a valid, business email address.",
+	"mktoI18n.validationErrors.validEmail": "Great! Your email is valid!",
+	"mktoI18n.validationErrors.unexpectedReload": "An unexpected error occurred. Please reload the page and try again.",
+	"mktoI18n.validationErrors.unexpected": "An unexpected error occurred.",
+	"mktoI18n.validationErrors.onlyAlphaNumeric": "Only letters and numbers are allowed",
+	"mktoI18n.validationErrors.minLength": "Please use at least %d characters",
+	"mktoI18n.validationErrors.maxLength": "Please use a maximum of %d characters",
+	"mktoI18n.validationErrors.includeAlphaNum": "Please include at least one number and one letter",
+	"mktoI18n.validationErrors.includeULAlphaNum": "Please include at least one uppercase and one lowercase letter and one number",
+	"mktoI18n.validationErrors.invalidChar": "Only letters, numbers, and the following special characters are allowed: %s",
+	"mktoI18n.validationErrors.excludeSpecialChar": "No special characters allowed",
+	"mktoI18n.validationErrors.greatPassRemember": "Great password — don't forget it!",
+	"mktoI18n.validationErrors.requiredField": "This field is required.",
+	"mktoI18n.validationErrors.passwordMismatch": "Passwords do not match"
+}

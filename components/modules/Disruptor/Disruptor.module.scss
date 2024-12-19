@@ -1,0 +1,48 @@
+@import '../../../styles/baseline/__styles';
+.disruptor-wrapper {
+	padding: 50px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	min-height: 166px;
+	@include respond-to($bp-md) {
+		padding: 50px 32px;
+	}
+	@include respond-above($bp-lg) {
+		padding: 50px 65px 50px 85px;
+	}
+	.disruptor-content {
+		max-width: 50%;
+		@include respond-to($bp-md) {
+			max-width: 100%;
+		}
+		@include respond-to($bp-sm) {
+			max-width: 630px;
+		}
+		.h5 {
+			margin-bottom: rem-calc(11);
+		}
+	}
+	.button-group {
+		> div {
+			padding: initial;
+		}
+
+		@include respond-to($bp-md) {
+			text-align: center;
+			width: 100%;
+			> div {
+				justify-content: center;
+				padding: 29px 0 0;
+				margin-bottom: 0;
+			}
+		}
+	}
+	.light {
+		color: $white-light;
+	}
+	.dark {
+		color: $dark-color;
+	}
+}

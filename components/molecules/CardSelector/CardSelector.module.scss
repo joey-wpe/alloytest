@@ -1,0 +1,44 @@
+@import '../../../styles/baseline/_styles';
+
+.grid-card {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	margin-bottom: 50px;
+	width: 100%;
+	padding: 0 20px;
+
+	@include respond-to($bp-md) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include respond-to($bp-sm) {
+		grid-template-columns: repeat(1, 1fr);
+		justify-items: center;
+	}
+}
+
+.card {
+	display: flex;
+	width: 100%;
+
+	&:hover {
+		z-index: 1;
+	}
+}
+
+.not-found {
+	&-lowercase{
+		text-transform: lowercase;
+	}
+
+	& a {
+		color: $color-primary;
+		font-weight: bold;
+		text-decoration: underline;
+
+		&:hover {
+            color: $color-secondary-light;
+        }
+	}
+}

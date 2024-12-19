@@ -1,0 +1,83 @@
+@import '../../../styles/baseline/_styles';
+@import '../../molecules/FlexibleModuleWrapper/FlexibleModuleWrapper.module.scss';
+
+.background {
+	min-height: 100px;
+}
+
+.padding-bottom-default {
+	padding-bottom: 20px;
+}
+
+// Pattern
+.cover {
+	background-position: center;
+	background-size: cover;
+}
+
+.contain {
+	background-position-x: 50%;
+	background-size: contain;
+}
+
+// Solid
+.blaze {
+	background-color: $blaze-color;
+}
+
+.blue {
+	background-color: $tricentis-color;
+}
+
+.warp {
+	background-color: $warp-color;
+}
+
+.white {
+	background-color: $white-color;
+}
+
+.rainbow {
+	background-color: $white-color;
+}
+
+.accelerate-gradient {
+	background: linear-gradient(263.52deg, #{$accelerate-light-gradiant} 28.58%, #{$accelerate-color} 88.39%);
+}
+
+.warp-gradient {
+	background: linear-gradient(90deg, #{$tricentis-light-color} 0%, #{$tricentis-dark-color} 100%);
+}
+
+.content-bg {
+	position: relative;
+}
+
+.image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+}
+
+// NextJS doesn't currently support swapping images based on screen size, and traditional checking of
+// a window size does not work in statically built pages. As such we have two Image components and control
+// their visibility with CSS
+// ref: https://github.com/vercel/next.js/discussions/19880
+
+// These classes are to show/hide the different background images based on screen size
+
+.image-bg-desktop {
+	display: none !important;
+}
+
+@include respond-above($bp-md) {
+	.image-bg-desktop {
+		display: block !important;
+	}
+	.image-bg-mobile {
+		display: none !important;
+	}
+}

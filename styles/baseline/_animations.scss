@@ -1,0 +1,84 @@
+//$duration-xxshort: 50ms; // not used yet
+//$duration-xshort: 100ms; // not used yet
+$duration-short: 200ms;
+$duration-medium: 300ms;
+$duration-long: 400ms;
+$duration-xlong: 500ms;
+// $duration-xxlong: 600ms; // not used yet
+
+$hover-duration: $duration-short;
+
+.hover-animation-basic {
+	transition: all $hover-duration ease-in;
+}
+
+// Anim Play
+.anim-play {
+	animation-play-state: running !important;
+}
+
+// Fade In Up
+@keyframes fade-in-up {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+.anim-fade-in-up {
+	animation-name: fade-in-up;
+	animation-duration: 0.7s;
+	animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+}
+
+// Fade In Left
+@keyframes fade-in-left {
+	from {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.anim-fade-in-left {
+	animation-name: fade-in-left;
+	animation-duration: 0.7s;
+	animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+}
+
+// Fade In Right
+@keyframes fade-in-right {
+	from {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+.anim-fade-in-right {
+	animation-name: fade-in-right;
+	animation-duration: 0.7s;
+	animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	animation-play-state: paused;
+}

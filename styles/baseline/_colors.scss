@@ -1,0 +1,98 @@
+/*************************************************/
+/*** colors with accessibillity alternatives   ***/
+/*** When adding colors to components          ***/
+/*** MAKE SURE TO include accessibility styles ***/
+/*************************************************/
+
+$blaze-color: #1b365d;
+$charcoal-color: #343941;
+$white-color: #ffffff;
+$white-light: #fbfbfb;
+$dark-color: #2b2b2b;
+
+// tricentis blue
+$tricentis-color: #004c97;
+$tricentis-dark: #7aa2d0;
+
+// truster color
+$truster-color: #d2d755;
+$truster-light: #777b01;
+
+// bolt color
+$bolt-color: #59c8e6;
+$bolt-light: #0980a0;
+
+// warp color
+$warp-color: #0087ae;
+$warp-light: #026985;
+$warp-dark: #3baccb;
+
+// swift color
+$swift-color: #5e93db;
+$swift-light: #3d77c7;
+$swift-dark: #72a0e1;
+
+// accelerate color
+$accelerate-color: #ff6c0e;
+$accelerate-light: #cb4f02;
+$accelerate-dark: #fd7826;
+
+// launch color
+$launch-color: #b52555;
+$launch-light: #b52555;
+$launch-dark: #fa769d;
+
+// velocity color
+$velocity-color: #406997;
+$velocity-light: #406997;
+$velocity-dark: #7aa2d0;
+
+//disabled color
+$disabled-brown-light: #f3e9e3;
+$disabled-brown-dark: #c19e87;
+$disabled-gray-light: #ababab;
+$disabled-gray-dark: #c19e87;
+
+/*****************************************/
+/*** color abstractions and references ***/
+/*****************************************/
+
+// color abstractions
+$color-primary: $warp-color;
+$color-primary-light: $warp-light;
+$color-primary-dark: $warp-dark;
+$color-secondary: $accelerate-color;
+$color-secondary-light: $accelerate-light;
+$color-secondary-dark: $accelerate-dark;
+$white-button-hover-color: #c6d7f1;
+$table-bg-color: #eff3f9;
+$table-item-color: #f2f4f7;
+
+// color references
+$heading-color: $blaze-color;
+$body-color: $charcoal-color;
+$preheader-color: $warp-color;
+$preheader-light: $warp-light;
+$preheader-dark: $warp-dark;
+
+// mist color
+$mist-color: #d7e2f0;
+
+// gradiant colors
+$accelerate-light-gradiant: #ffac2f;
+$tricentis-dark-color: #1b71ae;
+$tricentis-light-color: #00b6e6;
+
+// shadow colors
+$shadow-primary-dark: #00000033;
+$shadow-secondary-dark: #00000008;
+$shadow-tertiary-dark: #06273933;
+$shadow-light: #e5e5e5;
+$shadow-primary-light: #00000026;
+$shadow-dark: #00000040;
+
+//tricentis neutral
+$tricentis-neutral: #898d8d;
+
+// tricentis gradient color
+$gradient-dark: #0d1d34;

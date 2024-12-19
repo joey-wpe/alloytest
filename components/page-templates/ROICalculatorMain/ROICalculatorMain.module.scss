@@ -1,0 +1,438 @@
+@import '../../../styles/baseline/__styles';
+
+$inputShadow: 2px 2px 10px rgba(6, 39, 57, 0.12);
+$formShadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+$background-slide-hover-duration: $duration-xlong;
+$hover-duration: $duration-short;
+$warning-color: #b52555;
+
+.calculator-masthead {
+	padding-bottom: 228px !important;
+	grid-template-columns: 2fr 1fr;
+
+	@include respond-to($bp-lg) {
+		grid-template-columns: 1fr !important;
+	}
+
+	@include respond-to($bp-sm) {
+		padding-bottom: 57px !important;
+	}
+}
+
+.testimonial {
+	position: relative;
+	padding-top: 43px;
+	padding-bottom: 25px;
+	padding-left: 20px;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: -50px;
+		width: 1px;
+		height: 100%;
+		background-color: $mist-color;
+		opacity: 0.5;
+		z-index: 2;
+
+		@include respond-to($bp-lg) {
+			display: none;
+		}
+	}
+
+	&::after {
+		content: url('/icons/quote.svg');
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.description {
+		display: flex;
+		font-size: 13px;
+		line-height: 24px;
+		color: $mist-color;
+		gap: 15px;
+
+		p {
+			font-style: italic;
+		}
+	}
+
+	.testimony {
+		font-weight: $bold;
+		margin-bottom: 39px;
+
+		p {
+			span {
+				font-weight: $bold !important;
+			}
+		}
+	}
+
+	.author {
+		font-weight: $bold;
+		color: $mist-color;
+	}
+}
+
+.container {
+	position: relative;
+	z-index: 2;
+}
+
+.form-calculator {
+	margin-top: -138px;
+	margin-bottom: 90px;
+	background-color: $white-color;
+	box-shadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+	padding: 70px 100px 90px;
+
+	@include respond-to($bp-md) {
+		padding: 50px;
+	}
+
+	@include respond-to($bp-sm) {
+		padding: 82px initial initial initial;
+		margin-top: initial;
+		box-shadow: initial;
+	}
+}
+
+//General Styles
+.contentFlex {
+	display: flex;
+	flex-direction: column;
+
+	& > label,
+	legend {
+		font-size: rem-calc(18);
+		line-height: rem-calc(24);
+		font-weight: $bold;
+		margin-bottom: 24px;
+
+		@include respond-to($bp-sm) {
+			margin-bottom: 24px;
+		}
+	}
+
+	input[type='text'],
+	[type='number'],
+	select {
+		padding: 13px 16px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: $inputShadow;
+		appearance: none;
+		outline: none;
+		transition: all $hover-duration ease-in;
+
+		&.w-50 {
+			grid-column: span 1;
+
+			@include respond-to($bp-md) {
+				grid-column: span 2;
+			}
+		}
+
+		&::placeholder {
+			color: $charcoal-color;
+			font-size: rem-calc(14);
+			line-height: rem-calc(20);
+			letter-spacing: 0.2px;
+		}
+
+		&:focus {
+			border: 1px solid $warp-color;
+		}
+	}
+
+	select {
+		background-image: url('/icons/arrow-nav-default.png');
+		background-position: right 18px center;
+		color: $charcoal-color;
+	}
+}
+.inputErrors {
+	border: 2px solid $warning-color !important;
+}
+.hr {
+	margin-top: 48px;
+	margin-bottom: 48px;
+	color: $mist-color;
+	border: 1px solid $mist-color;
+}
+
+.asteriskskMark {
+	color: $warning-color;
+	margin: -6px 5px 0 2px;
+	font-size: 12px;
+	vertical-align: bottom;
+	position: absolute;
+	display: inline-block;
+	padding-bottom: 2px;
+	font-weight: $bold;
+}
+.errorMessage {
+	margin-top: 11px;
+	color: $warning-color;
+	font-weight: $regular;
+	font-size: rem-calc(12);
+	line-height: 20px;
+	font-style: italic;
+	letter-spacing: 0.2px;
+}
+//Content Test
+.content__test {
+	position: relative;
+
+	.content__test-other-information {
+		margin-top: 32px;
+		color: $charcoal-color;
+		font-weight: $regular;
+		font-size: 16px;
+		line-height: 26px;
+
+		strong {
+			font-weight: $bold;
+		}
+	}
+
+	input {
+		position: relative;
+		padding: 13px 36px !important;
+		background: $white-color url('/icons/icon-dollar.svg') no-repeat left 16px center;
+	}
+
+	div {
+		position: relative;
+		top: -33px;
+		text-align: end;
+		right: 12px;
+		height: 0px;
+		font-weight: $regular;
+		font-size: 12px;
+		color: #999ea7;
+	}
+
+	.input-disabled {
+		opacity: 0.5;
+	}
+}
+
+//Content Aplications
+.content__aplications {
+	.content-check {
+		display: grid;
+		grid-template-columns: calc(100% - 450px) calc(100% - 570px);
+		column-gap: 20px;
+
+		@include respond-to($bp-lg) {
+			grid-template-columns: calc(100% - 233px) calc(100% - 500px);
+		}
+
+		@include respond-to($bp-md) {
+			grid-template-columns: 100%;
+			column-gap: 0;
+		}
+
+		label {
+			color: $charcoal-color;
+			font-style: italic;
+			font-weight: $regular;
+			font-size: 14px;
+			line-height: 18px;
+			margin-bottom: 24px;
+			width: fit-content;
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+		}
+
+		input {
+			padding: initial;
+			appearance: none;
+			width: rem-calc(20);
+			height: rem-calc(20);
+			border: 2px solid $tricentis-color;
+			flex-grow: 2;
+			transition: all $hover-duration ease-in;
+			cursor: pointer;
+			position: relative;
+			margin-right: 10px;
+
+			&:checked {
+				background-color: $white-color;
+				border-color: $accelerate-color;
+
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: 100%;
+				height: 100%;
+				transform: translate(-50%, -50%);
+				background-color: $accelerate-color;
+				opacity: 0;
+				transition: inherit;
+				background-image: url(/icons/check-icon.svg);
+				background-position: center;
+			}
+			&:disabled {
+				border: 2px solid #898d8d;
+				cursor: no-drop;
+			}
+		}
+
+		.disabled-label {
+			opacity: 0.7;
+			cursor: no-drop;
+		}
+	}
+}
+
+//Content Hours
+.content__hours {
+	label {
+		display: inline;
+		align-items: center;
+		position: relative;
+
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	.hours-icon {
+		content: '';
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+		background-image: url('/icons/icon-information.png');
+
+		@include respond-to($bp-md) {
+			margin-top: 15px;
+		}
+
+		&:hover {
+			& ~ .hours-information {
+				opacity: 1;
+			}
+		}
+	}
+	.asteriskskMark {
+		position: initial;
+		margin-top: -11px;
+	}
+	.hours-information {
+		opacity: 0;
+		text-align: center;
+		padding: 11px 16px;
+		color: $white-color;
+		position: absolute;
+		top: -60px;
+		width: 100%;
+		right: calc(100% - 824px);
+		max-width: 358px;
+		background-color: $tricentis-color;
+		font-weight: $bold;
+		font-size: 9px;
+		line-height: 11px;
+		box-shadow: 1.51375px 5.29813px 15.1375px rgba(0, 56, 87, 0.3);
+		transition: all $hover-duration ease-in;
+
+		@include respond-to($bp-lg) {
+			top: -41px;
+			right: initial;
+			left: 0;
+		}
+
+		@include respond-to($bp-sm) {
+			top: 8px;
+		}
+
+		&::after {
+			content: '';
+			width: 18px;
+			height: 18px;
+			background-color: $tricentis-color;
+			display: block;
+			transform: rotate(45deg);
+			position: absolute;
+			bottom: -8px;
+			left: calc(100% - 54%);
+
+			@include respond-to($bp-lg) {
+				left: 14px;
+			}
+		}
+	}
+}
+
+//Button
+.submit {
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	max-width: max-content;
+	margin-top: rem-calc(33);
+	padding: 16px 18px;
+	appearance: none;
+	color: $white-color;
+	font-weight: $bold;
+	font-size: rem-calc(16);
+	line-height: rem-calc(12);
+	border: none;
+	position: relative;
+	z-index: 2;
+	cursor: pointer;
+
+	@include respond-to($bp-lg) {
+		width: 100%;
+		justify-content: center;
+		max-width: initial;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $accelerate-color;
+		z-index: -2;
+	}
+
+	&::after {
+		content: '';
+		width: 0;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: -30px;
+		background-color: $accelerate-light;
+		transition: all $background-slide-hover-duration;
+		transform: skewX(-45deg) translateX(-120%);
+		pointer-events: none;
+		z-index: -1;
+	}
+
+	&:hover {
+		&::after {
+			width: 140%;
+			transform: skewX(-45deg) translateX(0);
+		}
+	}
+}

@@ -1,0 +1,121 @@
+@import '../../../styles/baseline/_styles';
+
+.flag-cta {
+	position: relative;
+	width: max-content;
+	height: 97px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 60px;
+
+	&:before {
+		content: '';
+		background-color: $color-secondary;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transform: skew(-47deg);
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&:after {
+		content: '';
+		width: 100vw;
+		height: 100%;
+		z-index: -2;
+		position: absolute;
+		left: 55px;
+		top: 0;
+	}
+
+	// Flag Style
+	&.primary {
+		&:after {
+			background-color: #c25b0d;
+		}
+	}
+
+	&.secondary {
+		&:after {
+			background-color: #ff8e45;
+		}
+	}
+
+	&.tertiary {
+		.line {
+			display: none;
+		}
+
+		@include respond-to($bp-lg) {
+			.title-container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.title-container {
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	max-width: max-content;
+	position: relative;
+
+	&::after {
+		content: '';
+		height: 0.125rem;
+		width: 0;
+		display: block;
+		position: absolute;
+		bottom: rem-calc(-1);
+		left: 0;
+		transition: all $hover-duration;
+	}
+
+	&:hover {
+		.content-arrow {
+			transform: translateX(3px);
+		}
+
+		&::after {
+			width: 100%;
+			background-color: $white-color;
+		}
+	}
+}
+
+.content-arrow {
+	transition: all $hover-duration ease;
+	display: flex;
+}
+
+.title {
+	font-size: rem-calc(16);
+	line-height: rem-calc(24);
+	font-weight: $bold;
+	color: $white-color;
+}
+
+.text {
+	padding-top: 5px;
+	font-size: rem-calc(14);
+	line-height: rem-calc(24);
+	font-weight: $semibold;
+	color: $white-color;
+}
+
+.line {
+	width: 103px;
+	height: 3px;
+	background-color: $truster-color;
+	position: absolute;
+	left: -41px;
+	top: 22px;
+	transform: rotate(-43deg);
+}

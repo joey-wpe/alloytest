@@ -1,0 +1,17 @@
+@import '../../../styles/baseline/_styles';
+
+.text-link {
+	font-size: rem-calc(14);
+	line-height: rem-calc(16);
+	font-weight: $semibold;
+	color: $tricentis-color;
+	padding-bottom: 2px;
+	border-bottom: 2px solid;
+	border-color: transparent;
+	max-width: max-content;
+
+	&:hover {
+		color: $color-secondary;
+		border-color: $color-secondary;
+	}
+}

@@ -1,0 +1,184 @@
+{
+	"generic.readMore": "균형있는",
+	"generic.showMore": "국가는",
+	"generic.loadMore": "국민경제의",
+	"generic.learnMore": "안정과",
+	"generic.Submit": "적정한",
+	"generic.view": "소득의",
+	"generic.email": "분배를",
+	"generic.tel": "공무원은",
+	"generic.download": "유지하고",
+	"generic.tricentis": "Tricentis",
+	"generic.explore": "봉사자이며",
+	"generic.thankYou": "공무원",
+	"generic.thankYouMessage": "종교와 정치는 분리된다.",
+	"generic.noResultsFound": "선거인명부의",
+
+	"accessibilityToggle.turnContrastOn": "고대비 모드 사용하기",
+	"accessibilityToggle.turnContrastOff": "고대비 모드 해제하기",
+
+	"breadcrumb.home": "홈",
+	"breadcrumb.caseStudies": "사례 연구",
+	"breadcrumb.team": "팀",
+
+	"blogSection.inThisArticle": "이 문서에서",
+	"blogSection.authorTitle": "작성자",
+	"blogSection.date": "날짜",
+	"blogSection.getDemo": "Get a demo",
+
+	"calculatorResult.prehead": "Tricentis",
+	"calculatorResult.title": "예상 결과",
+	"calculatorResult.description": "업계 지표와 유사한 조직을 대상으로 한 Tricentis 결과에 따르면, 트리센티스로 테스트를 자동화하면 다음과 같은 이점을 얻을 수 있습니다.",
+	"calculatorResult.btnTitle": "결과 공유",
+
+	"card.logoImageAlt": "로고 이미지",
+
+	"cardSelector.cardCTA": "세부 정보 보기",
+	"cardSelector.featuredImageAlt": "추천 이미지",
+
+	"caseStudiesMain.title": "Tricentis가 고객사의 성공을 지원하는 방법",
+
+	"caseStudy.companyOverview": "회사 개요",
+	"caseStudy.companyIndustryString": "산업분야: ",
+	"caseStudy.companyLocationString": "회사 규모: ",
+	"caseStudy.companySizeString": "위치: ",
+	"caseStudy.companyProductString": "제품: ",
+	"caseStudy.companyUseCaseString": "활용 사례: ",
+	"caseStudy.preHead": "성공 사례",
+
+	"caseStudySlider.altTextFallback": "고객사례 연구 주요 이미지",
+	"caseStudySlider.viewMore": "성공사례 더 보기",
+	"caseStudySlider.keyOutcomes": "주요 결과",
+	"caseStudySlider.postPreHead": "고객사례 연구",
+
+	"eventDetail.sideRailTitle": "이벤트 세부 정보",
+	"eventDetail.sideRailWhen": "시간",
+	"eventDetail.sideRailWhere": "장소",
+
+	"filterBar.textInputSearch": "검색",
+	"filterBar.titleFilter": "필터링 기준:",
+	"filterBar.selectText": "전체",
+	"filterBar.searchIconAlt": "검색 아이콘",
+
+	"filterSearch.noResults" : "{{postTypeLabel}} 를 찾을 수 없습니다. <searchLink>전체 사이트</searchLink> 를 검색해 보세요.",
+
+	"flagCTA.trialsDemo": "평가판 및 데모",
+
+	"footer.tricentisLogo": "Tricentis 로고",
+	"footer.footerCtaText": "테스트를 오버드라이브로 전송하세요",
+	"footer.footerCtaTitle": "데모 또는 평가판 받기",
+
+	"nav.arrowDown": "아래쪽 화살표",
+
+	"newsDetail.prehead": "뉴스",
+
+	"newsRoomMain.btnTextPressSetting": "보도자료 전체 보기",
+	"newsRoomMain.btnTextNewsSetting": "모든 뉴스 보기",
+	"newsRoomMain.prehead": "Tricentis",
+	"newsRoomMain.mainTitle": "뉴스룸",
+	"newsRoomMain.awards": "수상 및 공로 ",
+	"newsRoomMain.news": "뉴스에서",
+	"newsRoomMain.featured": "추천",
+	"newsRoomMain.release": "보도 자료",
+	"newsRoomMain.mediaKit": "미디어 키트",
+	"newsRoomMain.release_anchor": "press-releases",
+	"newsRoomMain.news_anchor": "in-the-news",
+	"newsRoomMain.awards_anchor": "awards-and-recognition",
+	"newsRoomMain.mediaKit_anchor": "media-kit",
+
+	"partner.copyTitle": "파트너 찾기",
+
+	"postType.resources": "리소스",
+	"postType.caseStudies": "성공 사례",
+	"postType.events": "이벤트",
+	"postType.partners": "파트너",
+	"postType.posts": "블로그",
+
+	"pressReleases.dateArchiveTitle": "보관 날짜",
+
+	"pricingMain.prehead": "Tricentis 요금",
+	"pricingMain.mainTitle": "간단하고 투명하고 유연하며 예측 가능한 요금제",
+
+	"productDemo.title": "더 강력한 인사이트, 더 우수한 테스트",
+	"productDemo.description": "속도가 중요하기 때문에 Tricentis는 속도를 우선시합니다. AI 기반의  코딩이 필요 없고 완전히 자동화된 지속적인 테스트 플랫폼은 소프트웨어 배포를 가속화하고 그 과정에서 비용을 절감할 수 있도록 도와줍니다.",
+	"productDemo.content": "아래 양식을 작성하여 데모를 예약하세요. qTest가 소프트웨어 테스트 속도, 효율성 및 협업을 향상하는 데 어떻게 도움이 되는지 알아보세요.",
+
+	"productDetail.demoVideo": "데모 비디오",
+
+	"resourceDetail.thankYouMessage": "아래에서 리소스를 사용할 수 있습니다.",
+
+	"resourceGrid.featuredImage": "추천 이미지",
+	"resourceGrid.relatedResources": "관련 리소스",
+
+	"searchPage.pageTitle": "Tricentis 검색하기",
+	"searchPage.searchButtonText": "검색",
+	"searchPage.searchPlaceholderText": "검색",
+	"searchPage.noSearchResultsText": "결과를 찾을 수 없습니다",
+	"searchPage.clearSearchResults": "검색 결과 지우기",
+
+	"secondaryNav.mobileTitle": "탐색",
+
+	"taxonomies.Regions": "지역",
+	"taxonomies.Industries": "산업 분야",
+	"taxonomies.Products": "제품",
+	"taxonomies.Topics": "주제",
+	"taxonomies.Partners": "파트너",
+	"taxonomies.PartnerCertification": "Partners Certificates",
+	"taxonomies.ResourceType": "A리소스 유형",
+	"taxonomies.Category": "카테고리",
+	"taxonomies.EventTypes": "이벤트 유형",
+	"taxonomies.EventMonths": "이벤트 월",
+	"taxonomies.Learntype": "Topics",
+
+	"teamMember.team": "Tricentis 팀",
+
+	"mktoI18n.contactMeButton": "문의하기",
+	"mktoI18n.registerButton": "등록",
+	"mktoI18n.reasonForContacting": "문의 이유를 선택해 주세요.",
+
+	"mktoI18n.qtestTrial.emailLabel": "이메일이 사용자 이름이 됩니다",
+	"mktoI18n.qtestTrial.domainLabel": "qTest 웹 주소 생성",
+	"mktoI18n.qtestTrial.domainHelp": "다음 URL을 통해 qTest 계정을 사용할 수 있습니다",
+	"mktoI18n.qtestTrial.passwordLabel": "비밀번호",
+	"mktoI18n.qtestTrial.passwordHelp": "비밀번호는 8~12자로, 숫자 1개와 문자 1개를 포함해야 합니다. 특수 문자는 사용할 수 없습니다.",
+	"mktoI18n.qtestTrial.noticeLabel": "중요 공지",
+	"mktoI18n.qtestTrial.noticeText": "귀하의 데이터 센터 위치를 선택함으로써, 트리센티스는 귀하의 국가 법률에 따라 허용되는 실질적인 관할권 내에 귀하의 테스트 데이터를 저장하기 위해 가능한 한 합리적인 노력을 다할 것입니다. 귀하가 비유럽연합 관할권에 있는 경우, 귀하의 데이터는 미국에 저장된다는 점에 유의하시기 바랍니다. 자세한 내용은 당사의 %s을 참고하세요",
+	"mktoI18n.qtestTrial.privacyPolicyUrl": "/privacy-policy/",
+	"mktoI18n.qtestTrial.privacyPolicyText": "개인정보 보호방침",
+	"mktoI18n.qtestTrial.provisioningMessage": "처리가 완료될 때까지 이 창을 닫지 마세요. 그렇지 않으면 qTest 계정 정보가 포함된 이메일을 받으실 수 없습니다. 기다려 주셔서 감사합니다.",
+	"mktoI18n.qtestTrial.submitButtonLabel": "평가판 시작",
+	"mktoI18n.qtestTrial.emailExistsError": "사용자 %s가 이미 존재합니다.",
+
+	"mktoI18n.qtestTrial.domainValidation.noSubdomains": "하위 도메인 또는 .com, .net 등이 없습니다.",
+	"mktoI18n.qtestTrial.domainValidation.maxLength": "최대 길이는 %d자입니다",
+	"mktoI18n.qtestTrial.domainValidation.minLength": "최소 길이는 %d자입니다",
+	"mktoI18n.qtestTrial.domainValidation.urlTaken": "Diese URL ist bereits vergeben",
+	"mktoI18n.qtestTrial.domainValidation.urlInvalid": "해당 URL은 이미 사용되었습니다",
+	"mktoI18n.qtestTrial.domainValidation.success": "이제 시작하세요!",
+
+	"mktoI18n.toscaTrial.emailLabel": "이메일이 사용자 이름이 됩니다",
+	"mktoI18n.toscaTrial.passwordLabel": "비밀번호",
+	"mktoI18n.toscaTrial.passwordHelp": "비밀번호는 숫자 1개, 대문자 1개, 소문자 1개 이상을 포함하여 8자 이상이어야 합니다.",
+	"mktoI18n.toscaTrial.passwordConfirmLabel": "비밀번호 확인",
+	"mktoI18n.toscaTrial.loadingEmailCheck": "이메일 유효성 확인 중...",
+	"mktoI18n.toscaTrial.emailIneligibleError": "죄송합니다. 이 계정은 현재 또는 최근에 평가판을 사용했으므로 현재로서는 다른 평가판을 사용할 수 없습니다.",
+	"mktoI18n.toscaTrial.provisioningMessage": "처리가 완료될 때까지 이 창을 닫지 마세요. 그렇지 않으면 Tosca 평가판 정보가 포함된 이메일을 받으실 수 없습니다. 기다려 주셔서 감사합니다.",
+	"mktoI18n.toscaTrial.errorStartingTrial": "평가판을 시작하는 동안 오류가 발생했습니다. 지원팀에 문의하세요.",
+	"mktoI18n.toscaTrial.verifyEmailRequired": "Verify email required, please check your email.",
+
+	"mktoI18n.validationErrors.wrongEmailFormat": "Not properly formatted.",
+	"mktoI18n.validationErrors.enterValidBusEmail": "유효한 비즈니스 이메일 주소를 입력하세요.",
+	"mktoI18n.validationErrors.validEmail": "유효한 이메일입니다!",
+	"mktoI18n.validationErrors.unexpectedReload": "예기치 않은 오류가 발생했습니다. 페이지를 새로고침 하세요.",
+	"mktoI18n.validationErrors.unexpected": "예기치 않은 오류가 발생했습니다.",
+	"mktoI18n.validationErrors.onlyAlphaNumeric": "문자와 숫자만 허용됩니다.",
+	"mktoI18n.validationErrors.minLength": "최소 %d 자를 사용하세요.",
+	"mktoI18n.validationErrors.maxLength": "최대 %d 자를 사용하세요.",
+	"mktoI18n.validationErrors.includeAlphaNum": "숫자 1개, 문자 1개 이상 포함해 주세요.",
+	"mktoI18n.validationErrors.includeULAlphaNum": "대문자 1개, 소문자 1개, 숫자 1개 이상 포함하세요.",
+	"mktoI18n.validationErrors.invalidChar": "문자, 숫자 및 다음 특수 문자만 허용됩니다: %s.",
+	"mktoI18n.validationErrors.excludeSpecialChar": "특수 문자는 허용되지 않습니다",
+	"mktoI18n.validationErrors.greatPassRemember": "좋은 암호입니다. 기억해 두세요!",
+	"mktoI18n.validationErrors.requiredField": "이 필드는 필수 입력 사항입니다.",
+	"mktoI18n.validationErrors.passwordMismatch": "비밀번호가 일치하지 않습니다"
+}

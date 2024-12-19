@@ -1,0 +1,47 @@
+@import '../../../styles/baseline/_styles';
+
+.footer-action-bar {
+	background-color: $blaze-color;
+	position: relative;
+
+	@include respond-to($bp-sm) {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: relative;
+	display: flex;
+	align-content: center;
+
+	@include respond-to($bp-md) {
+		padding-top: 48px;
+		padding-bottom: initial;
+		display: initial;
+	}
+}
+
+.logo {
+	display: flex;
+
+	@include respond-to($bp-md) {
+		justify-content: center;
+		margin-bottom: 55px;
+		text-align: center;
+	}
+}
+
+.flag {
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	position: absolute;
+
+	@include respond-to($bp-md) {
+		position: relative;
+		margin-left: auto;
+	}
+}

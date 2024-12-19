@@ -1,0 +1,25 @@
+@import '../../../styles/baseline/_styles';
+
+.card {
+	max-width: 397px;
+	width: 100%;
+	background: $white-color;
+	padding: 50px 33px 27px;
+	box-shadow: 2px 5px 20px $shadow-primary-light;
+	&:hover {
+		box-shadow: 2px 5px 20px $shadow-dark;
+		transition: all $hover-duration ease-in;
+	}
+	.subhead {
+		margin: 38px 0 12px;
+	}
+
+	.description {
+		font-size: rem-calc(18);
+		line-height: rem-calc(24);
+		font-weight: $bold;
+		letter-spacing: 0;
+		color: $blaze-color;
+		margin-bottom: 21px;
+	}
+}

@@ -1,0 +1,34 @@
+@import '../../../styles/baseline/__styles';
+
+.m-avatar {
+	padding-top: 90px;
+	padding-bottom: 72px;
+
+	@include respond-to($bp-sm) {
+		padding-top: 48px;
+	}
+}
+
+.content-text {
+	margin: 0 auto 100px;
+	max-width: 812px;
+	text-align: center;
+
+	p {
+		color: $blaze-color;
+	}
+}
+
+.grid-avatar-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 60px;
+	column-gap: 10px;
+
+	.card {
+		@include respond-to($bp-md) {
+			max-width: 220px;
+		}
+	}
+}

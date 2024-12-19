@@ -1,0 +1,141 @@
+@import '../../../styles/baseline/__styles';
+
+.table-compare-desktop {
+	@include respond-to($bp-lg) {
+		margin-top: 175px;
+	}
+
+	@media (max-width: 880px) {
+		padding-top: 40px;
+	}
+
+	@media (max-width: 809px) {
+		padding-top: 90px;
+	}
+
+	@include respond-to($bp-md) {
+		padding-top: initial;
+		margin-top: initial;
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.bar-price-top {
+	position: sticky;
+	top: 72px;
+	z-index: 20;
+	opacity: 0;
+	transition: all $duration-medium;
+	height: 0;
+
+	@include respond-to($bp-md) {
+		display: none;
+	}
+}
+
+.active-bar {
+	opacity: 1;
+	height: 100%;
+
+	@include respond-to($bp-md) {
+		display: none;
+	}
+}
+
+
+.price-nav {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	align-items: center;
+	background-color: $tricentis-color;
+	box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.15);
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	.logo-container {
+		position: relative;
+		display: flex;
+		align-items: center;
+		height: fit-content;
+		max-width: 310px;
+		width: 100%;
+
+		@include respond-to($bp-xl) {
+			max-width: 215px;
+		}
+
+		@include respond-to($bp-lg) {
+			display: none;
+		}
+
+		span {
+			position: relative !important;
+		}
+
+		.logo-container__logo {
+			position: relative !important;
+			object-position: left;
+			height: initial !important;
+			width: 100% !important;
+			max-height: 32px !important;
+		}
+	}
+
+	.content-title-nav {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 24px;
+		justify-content: center;
+		width: 100%;
+
+		@include respond-to($bp-md) {
+			justify-content: space-between;
+		}
+	}
+
+	.title-nav {
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 30px;
+		display: flex;
+		justify-content: center;
+
+		span {
+			display: flex;
+		}
+
+		.dividing-line {
+			font-weight: $regular;
+			padding: 0 14px;
+			opacity: 50%;
+		}
+
+		.amount-detail {
+			font-size: 14px;
+			font-weight: $regular;
+		}
+	}
+
+	.title-nav:nth-child(1) {
+		color: $mist-color;
+	}
+
+	.title-nav:nth-child(2) {
+		color: $truster-color;
+	}
+
+	.title-nav:nth-child(3) {
+		color: $bolt-color;
+	}
+
+	span {
+		color: $mist-color;
+	}
+}

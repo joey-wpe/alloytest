@@ -1,0 +1,88 @@
+@import '../../../styles/baseline/__styles';
+
+.container {
+	@include respond-to($bp-md) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.content-information {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+
+	@include respond-to($bp-md) {
+		padding-left: rem-calc(16);
+		padding-right: rem-calc(16);
+	}
+}
+
+.header-copy {
+	max-width: 812px;
+	text-align: center;
+
+	@include respond-to($bp-sm) {
+		padding: 0 1rem;
+	}
+
+	&__no-basic {
+		padding-bottom: 60px;
+	}
+
+	+ .content-items-copy {
+		margin-top: 48px;
+		padding-bottom: 60px;
+	}
+}
+
+.basic-copy {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	text-align: center;
+
+	@include respond-to($bp-md) {
+		flex-direction: column;
+		padding-bottom: 50px;
+
+		.items-copy {
+			max-width: initial;
+		}
+	}
+
+	.items-copy {
+		max-width: 600px;
+		width: 100%;
+	}
+
+	&__none {
+		display: none !important;
+	}
+}
+
+.content-items-copy {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 25px;
+	text-align: center;
+
+	@include respond-to($bp-md) {
+		grid-template-columns: 100%;
+	}
+
+	.items-copy {
+		.h6 {
+			margin-bottom: 12px;
+		}
+	}
+}
+
+.product-tabber-tab {
+	h6 {
+		&::after {
+			top: 0 !important;
+		}
+	}
+}

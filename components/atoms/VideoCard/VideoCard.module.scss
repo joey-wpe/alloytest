@@ -1,0 +1,41 @@
+@import '../../../styles/baseline/_styles';
+
+.video-card {
+	-webkit-box-shadow: 2px 5px 20px 0px rgba(6, 39, 57, 0.2);
+	box-shadow: 2px 5px 20px 0px rgba(6, 39, 57, 0.2);
+	&:hover {
+		-webkit-box-shadow: 2px 5px 20px 0px rgba(6, 39, 57, 0.3);
+		box-shadow: 2px 5px 20px 0px rgba(6, 39, 57, 0.3);
+	}
+	iframe {
+		height: 100%;
+	}
+	.card-body {
+		padding: 32px 33px 18px;
+		text-align: left;
+		background-color: $white-color;
+		.video-body-button {
+			padding-top: 24px;
+		}
+	}
+	h6 {
+		color: $blaze-color;
+		margin-bottom: 16px;
+		line-height: 24px;
+		font-weight: $bold;
+		text-transform: none;
+	}
+	span.sub-p {
+		margin-bottom: 13px;
+		display: block;
+	}
+	b.sub-p {
+		font-weight: $bold;
+	}
+	.video {
+		max-width: 100%;
+		width: 100% !important;
+		height: 206px !important;
+		background-color: $white-color;
+	}
+}

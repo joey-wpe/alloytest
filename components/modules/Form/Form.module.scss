@@ -1,0 +1,308 @@
+@import '../../../styles/baseline/_styles';
+
+.form-module {
+	max-width: 606px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+
+	@include respond-to($bp-md) {
+		padding: 0 16px;
+	}
+
+	.text-wrapper {
+		margin-bottom: 30px;
+
+		@include respond-above($bp-md) {
+			margin-bottom: 49px;
+		}
+	}
+}
+
+.form-module-preference-center {
+	max-width: 900px;
+
+	.form-content {
+		max-width: 800px !important;
+	}
+
+	@include respond-to($bp-lg) {
+		max-width: 606px;
+
+		.form-content {
+			max-width: 606px !important;
+		}
+	}
+
+	:global .mktoFieldWrap {
+		label {
+			font-style: normal !important;
+		}
+	}
+
+	:global .mktoFieldWrap {
+		&.mktoPreference {
+			label {
+				font-style: italic !important;
+			}
+		}
+	}
+}
+
+.form-wrapper {
+	background-color: $white-color;
+	padding: 48px 20px;
+	box-shadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+
+	.form-content {
+		max-width: 490px;
+		width: 100%;
+		margin: 0 auto;
+
+		.form-contact {
+			:global .mktoFormRow:nth-child(3),
+			:global .mktoFormRow:nth-child(4),
+			:global .mktoFormRow:nth-child(5) {
+				display: grid;
+				column-gap: 25px;
+				grid-template-columns: repeat(2, 1fr);
+
+				@include respond-to($bp-md) {
+					grid-template-columns: 100%;
+					gap: 10px;
+				}
+			}
+		}
+
+		.form-preference {
+			:global .mktoFormRow:nth-child(2),
+			:global .mktoFormRow:nth-child(3),
+			:global .mktoFormRow:nth-child(4),
+			:global .mktoFormRow:nth-child(5) {
+				margin: initial;
+
+				.mktoFieldDescriptor {
+					label {
+						margin-left: 0 !important;
+					}
+				}
+			}
+
+			:global .mktoFormRow:nth-child(4) {
+				.mktoError {
+					position: absolute;
+					left: 0;
+					bottom: -7px !important;
+				}
+			}
+
+			:global .mktoFormRow:nth-child(6),
+			:global .mktoFormRow:nth-child(7),
+			:global .mktoFormRow:nth-child(8),
+			:global .mktoFormRow:nth-child(12) {
+				display: grid;
+				column-gap: 25px;
+				grid-template-columns: repeat(2, 1fr);
+
+				//labels
+				:global .mktoFieldDescriptor {
+					label {
+						margin-top: -3px;
+						margin-bottom: 0 !important;
+					}
+					.mktoAsterix {
+						position: relative;
+						top: -2px;
+					}
+				}
+
+				@include respond-to($bp-sm) {
+					grid-template-columns: 100%;
+					margin: 0 0 10px;
+					gap: 10px;
+				}
+
+				.mktoFieldDescriptor {
+					margin: 10px 0 54px;
+
+					@include respond-to($bp-sm) {
+						margin: -10px 0 43px;
+					}
+				}
+			}
+
+			:global .mktoFormRow:nth-child(7) {
+				.mktoFieldDescriptor {
+					@include respond-to($bp-lg) {
+						margin: 10px 0 76px;
+					}
+
+					@include respond-to($bp-sm) {
+						margin: 10px 0 43px;
+					}
+				}
+			}
+			:global .mktoFormRow:nth-child(9) {
+				margin: 0px 0 50px;
+				display: block;
+				width: 100%;
+
+				@include respond-to($bp-lg) {
+					margin: 0 0 76px;
+				}
+
+				//labels
+				:global .mktoFieldDescriptor {
+					label {
+						margin-top: -3px;
+					}
+					.mktoAsterix {
+						position: relative;
+						top: -2px;
+					}
+				}
+			}
+
+			//Titles
+			:global .mktoFormRow:nth-child(5) {
+				margin-top: 20px;
+			}
+			:global .mktoFormRow:nth-child(5),
+			:global .mktoFormRow:nth-child(11) {
+				.mktoHtmlText {
+					color: $blaze-color;
+					margin-left: 0;
+					margin-bottom: 24px;
+					font-style: normal;
+					font-weight: $bold;
+					font-size: rem-calc(18);
+					line-height: rem-calc(24);
+				}
+			}
+			:global .mktoFormRow:nth-child(12) {
+				.mktoFieldDescriptor {
+					margin: 0 0 15px;
+				}
+
+				@include respond-to($bp-sm) {
+					grid-template-columns: repeat(2, 1fr);
+
+					@media (max-width: 388px) {
+						grid-template-columns: 100%;
+					}
+				}
+			}
+		}
+		.form-de-preference {
+			:global .mktoFormRow:nth-child(5) {
+				margin-top: initial;
+			}
+			:global .mktoFormRow:nth-child(7) {
+				.mktoFieldDescriptor:last-child {
+					margin: 10px 0 60px;
+				}
+			}
+			:global .mktoFormRow:nth-child(8) {
+				.mktoFieldDescriptor:last-child {
+					margin: 10px 0 25px;
+				}
+			}
+			:global .mktoFormRow:nth-child(7),
+			:global .mktoFormRow:nth-child(8),
+			:global .mktoFormRow:nth-child(9),
+			:global .mktoFormRow:nth-child(10),
+			:global .mktoFormRow:nth-child(12),
+			:global .mktoFormRow:nth-child(13) {
+				.mktoFieldDescriptor {
+					label {
+						display: flex;
+						flex-direction: column;
+						text-align: left;
+						margin-left: 25px;
+
+						.mktoAsterix {
+							display: none;
+						}
+
+						br {
+							display: none;
+						}
+					}
+
+					.mktoLogicalField {
+						input {
+							&::before {
+								right: -20px;
+							}
+						}
+					}
+				}
+			}
+			:global .mktoFormRow:nth-child(9) {
+				row-gap: 25px;
+				@include respond-to($bp-lg) {
+					margin: 25px 0 40px;
+				}
+				@include respond-to($bp-sm) {
+					margin: 0 0 25px;
+					grid-template-columns: 100% !important;
+				}
+				.mktoFieldDescriptor:last-child {
+					margin: 10px 0 35px;
+				}
+			}
+			:global .mktoFormRow:nth-child(10) {
+				.mktoFieldDescriptor:last-child {
+					margin: 10px 0 65px;
+				}
+			}
+			:global .mktoFormRow:nth-child(9),
+			:global .mktoFormRow:nth-child(13) {
+				display: grid;
+				column-gap: 25px;
+				grid-template-columns: repeat(2, 1fr);
+
+				//labels
+				:global .mktoFieldDescriptor {
+					margin-top: 10px;
+					label {
+						margin-top: -3px;
+						margin-bottom: 0 !important;
+					}
+					.mktoAsterix {
+						position: relative;
+						top: -2px;
+					}
+				}
+			}
+
+			//Titles
+			:global .mktoFormRow:nth-child(6) {
+				margin: 10px 0;
+			}
+
+			:global .mktoFormRow:nth-child(12) {
+				margin: 40px 0 20px;
+			}
+			:global .mktoFormRow:nth-child(6) {
+				display: flex;
+				.mktoHtmlText {
+					color: $blaze-color;
+					margin-left: 0;
+					font-style: normal;
+					font-weight: $bold;
+					font-size: rem-calc(18);
+					line-height: rem-calc(24);
+				}
+			}
+
+			:global .mktoFormRow:nth-child(12),
+			:global .mktoFormRow:nth-child(13) {
+				@media (max-width: 388px) {
+					grid-template-columns: 100%;
+				}
+			}
+		}
+	}
+}

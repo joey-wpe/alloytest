@@ -1,0 +1,466 @@
+@import '../../../styles/baseline/__styles';
+
+$inputShadow: 2px 2px 10px rgba(6, 39, 57, 0.12);
+$formShadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+$background-slide-hover-duration: $duration-xlong;
+$hover-duration: $duration-short;
+
+.marketo-toggle {
+	width: 70%;
+	margin-bottom: 15px;
+
+	@include respond-to($bp-md) {
+		width: 100%;
+	}
+}
+
+.form-header-wrapper {
+	padding-bottom: 1rem;
+}
+
+.form-heading {
+	text-align: left !important;
+	color: $blaze-color !important;
+	line-height: 1.4;
+}
+
+.form-subheading {
+	text-align: left;
+	color: $charcoal-color;
+}
+
+.marketo_411,
+.marketo_1794 {
+	:global .mktoFormRow:nth-child(3),
+	:global .mktoFormRow:nth-child(4),
+	:global .mktoFormRow:nth-child(5) {
+		display: grid;
+		column-gap: 25px;
+		grid-template-columns: repeat(2, 1fr);
+
+		@include respond-to($bp-md) {
+			grid-template-columns: 100%;
+			gap: 10px;
+		}
+	}
+}
+:local .marketo-form {
+	//Errors Msg
+	:global .mktoErrorArrowWrap {
+		display: none;
+	}
+
+	:global .mktoErrorMsg {
+		font-style: italic;
+		font-size: 10px;
+		color: $launch-light;
+		margin-top: -7px;
+		margin-bottom: 5px;
+		text-align: start;
+	}
+
+	:global textarea + .mktoError {
+		.mktoErrorMsg {
+			margin-top: 7px !important;
+		}
+	}
+	:global .mktoError {
+		#ValidMsgemailOptin {
+			position: absolute;
+			min-width: 150px;
+			width: 200px;
+			bottom: calc(100% - 0px);
+		}
+
+		#ValidMsgFree_Trial_Opt_In__c {
+			position: absolute;
+			min-width: 150px;
+			width: 200px;
+			bottom: calc(100% - 0px);
+		}
+	}
+	:global .mktoInvalid {
+		border: 1px solid $launch-color;
+		input[type='checkbox'] {
+			border: 2px solid $launch-color;
+		}
+	}
+
+	//Input
+	:global input {
+		padding: 18px 16px 8px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: $inputShadow;
+		appearance: none;
+		outline: none;
+		transition: all $hover-duration ease-in;
+
+		&.w-50 {
+			grid-column: span 1;
+
+			@include respond-to($bp-md) {
+				grid-column: span 2;
+			}
+		}
+
+		&::placeholder {
+			color: $blaze-color;
+			font-size: rem-calc(14);
+			line-height: rem-calc(20);
+			letter-spacing: 0.2px;
+		}
+
+		&:focus {
+			border: 1px solid $warp-color;
+		}
+	}
+
+	//Select
+	:global select {
+		padding: 18px 31px 8px 16px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: $inputShadow;
+		appearance: none;
+		outline: none;
+		transition: all $hover-duration ease-in;
+		background-image: url('/icons/arrow-down-blue-small.png');
+		background-position: right 18px center;
+
+		&::placeholder {
+			color: $blaze-color;
+			font-size: rem-calc(14);
+			line-height: rem-calc(20);
+			letter-spacing: 0.2px;
+		}
+
+		&:focus {
+			border: 1px solid $warp-color;
+		}
+	}
+
+	//TextArea
+	:global textarea {
+		padding: 18px 16px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: $inputShadow;
+		appearance: none;
+		outline: none;
+		transition: all $hover-duration ease-in;
+
+		&:focus {
+			border: 1px solid $warp-color;
+		}
+	}
+
+	//Laberl
+	:global .mktoFieldWrap {
+		position: relative;
+
+		.label-down {
+			color: $charcoal-color;
+			position: absolute;
+			top: 16px;
+			left: 15px;
+			font-weight: $regular;
+			font-size: rem-calc(12);
+			transition: 0.25s all ease;
+			display: flex;
+		}
+
+		.label-up {
+			font-size: rem-calc(10);
+			position: absolute;
+			top: 4px;
+			left: 15px;
+			font-weight: 400;
+			transition: 0.25s all ease;
+			display: flex;
+		}
+		:global .mktoAsterix {
+			margin-right: 5px;
+		}
+		input,
+		select {
+			margin-bottom: 15px;
+		}
+
+		textarea {
+			&:focus {
+				label {
+					display: none;
+				}
+			}
+		}
+	}
+
+	//Check Box
+	:global input[type='checkbox'] {
+		padding: initial;
+		appearance: none;
+		width: rem-calc(20);
+		height: rem-calc(20);
+		border: 2px solid $tricentis-color;
+		flex-grow: 2;
+		transition: all $hover-duration ease-in;
+		cursor: pointer;
+		position: relative;
+
+		&:hover {
+			border-color: $accelerate-color;
+		}
+
+		&:checked {
+			background-color: $white-color;
+			border-color: $accelerate-color;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			height: 100%;
+			transform: translate(-50%, -50%);
+			background-color: $accelerate-color;
+			opacity: 0;
+			transition: inherit;
+			background-image: url(/icons/check-icon.svg);
+			background-position: center;
+		}
+
+		&::before {
+			position: absolute;
+			right: -24px;
+			top: -2px;
+			content: '*';
+			display: block;
+			margin: 0 5px;
+		}
+	}
+
+	:global .mktoCheckboxList {
+		max-width: 20px;
+		&.mktoInvalid {
+			border: none;
+		}
+	}
+
+	:global .mktoFormCol {
+		.mktoHtmlText {
+			font-style: italic;
+			font-weight: 400;
+			font-size: 13px;
+			line-height: 18px;
+			width: fit-content;
+			margin-left: 17px;
+			text-align: start;
+
+			a {
+				color: $tricentis-color;
+				text-decoration: underline;
+				transition: all $background-slide-hover-duration;
+
+				&:hover {
+					color: $accelerate-color;
+				}
+			}
+			&--nospace {
+				margin-left: 0;
+			}
+			.terms-button-text {
+				font-weight: bold;
+			}
+		}
+	}
+
+	:global .mktoFieldDescriptor {
+		.mktoFieldWrap {
+			position: relative;
+
+			&.hidden {
+				display: none;
+			}
+			& > #LbldefaultAgreeFree {
+				font-style: italic;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 18px;
+				text-align: start;
+				position: absolute;
+				left: 7.5%;
+
+				.mktoAsterix {
+					display: none;
+				}
+			}
+
+			& > #LblpartnerOptin {
+				font-style: italic;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 18px;
+				text-align: start;
+				position: relative;
+				top: 0;
+
+				.mktoAsterix {
+					display: none;
+				}
+			}
+
+			& > #LbldrfaultAgreeTrial {
+				font-style: italic;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 18px;
+				text-align: start;
+				position: absolute;
+				left: 7.5%;
+
+				.mktoAsterix {
+					display: none;
+				}
+			}
+		}
+	}
+
+	:global .mktoFormRow--optin {
+		margin: 15px 10px 0 0;
+		display: flex;
+		align-items: flex-start;
+
+		.mktoAsterix {
+			display: none;
+		}
+
+		&--hide {
+			display: none;
+		}
+	}
+
+	:global .mktoFormRow--checkboxes_group {
+		.mktoFieldWrap {
+			.mktoLabel {
+				position: unset;
+				margin-bottom: 1em;
+			}
+		}
+		.mktoCheckboxList {
+			display: grid;
+			grid-template-columns: 30px 1fr;
+			margin-left: 1em;
+			width: 100%;
+			max-width: 100%;
+
+			&.mktoInvalid {
+				border: none;
+			}
+			input::before {
+				display: none;
+			}
+			label {
+				position: unset;
+			}
+		}
+	}
+
+	:global .mktoFormRow--secOptin {
+		.mktoFieldWrap {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		#LblpartnerOptin {
+			margin: 0;
+		}
+
+		//Validation message fix style conflict
+		&:has(#ValidMsgpartnerOptin) {
+			margin-bottom: 30px;
+			& #ValidMsgpartnerOptin {
+				bottom: -20px;
+			}
+		}
+		// * margin for label
+		input[type='checkbox']::before {
+			margin: 0 3px;
+		}
+	}
+
+	//Button
+	:global button[type='submit'] {
+		display: flex;
+		position: relative;
+		overflow: hidden;
+		max-width: max-content;
+		margin-top: rem-calc(33);
+		padding: 16px 45px;
+		appearance: none;
+		color: $white-color;
+		font-weight: $bold;
+		font-size: rem-calc(16);
+		line-height: rem-calc(12);
+		border: none;
+		z-index: 2;
+		cursor: pointer;
+
+		&:disabled {
+			opacity: 0.7;
+		}
+
+		@include respond-to($bp-md) {
+			width: 100%;
+			justify-content: center;
+			max-width: initial;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: $accelerate-color;
+			z-index: -2;
+		}
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -30px;
+			background-color: $accelerate-light;
+			transition: all $background-slide-hover-duration;
+			transform: skewX(-45deg) translateX(-120%);
+			pointer-events: none;
+			z-index: -1;
+		}
+
+		&:hover:not(:disabled) {
+			&::after {
+				width: 140%;
+				transform: skewX(-45deg) translateX(0);
+			}
+		}
+	}
+}

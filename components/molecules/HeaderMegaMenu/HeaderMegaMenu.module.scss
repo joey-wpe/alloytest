@@ -1,0 +1,305 @@
+@import '../../../styles/baseline/_styles';
+
+.primary-item {
+	flex-direction: column;
+	align-items: center;
+	display: inline-flex;
+
+	.title {
+		cursor: pointer;
+		position: relative;
+
+		> a,
+		p {
+			font-size: rem-calc(16);
+			line-height: rem-calc(24);
+			font-weight: $semibold;
+			@extend .hover-animation-basic;
+		}
+
+		svg {
+			opacity: 0;
+			position: absolute;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 110%;
+		}
+
+		@include respond-to($bp-lg) {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+
+			svg {
+				opacity: 1;
+				position: static;
+				transform: translateX(0) rotate(-90deg);
+
+				path {
+					fill: $tricentis-color;
+				}
+			}
+		}
+	}
+
+	&:hover {
+		.title {
+			> a,
+			p {
+				color: $accelerate-color;
+			}
+
+			svg {
+				position: absolute;
+				opacity: 1;
+			}
+
+			@include respond-to($bp-lg) {
+				svg {
+					position: static;
+
+					path {
+						fill: $accelerate-color;
+					}
+				}
+			}
+		}
+
+		.mega-menu {
+			@include respond-above($bp-lg) {
+				opacity: 1 !important;
+				pointer-events: initial;
+			}
+		}
+
+		.mega-menu-show {
+			@include respond-to($bp-lg) {
+				opacity: 1;
+				pointer-events: initial;
+				transform: translateX(0%);
+				overflow-y: scroll;
+				height: auto;
+				position: fixed;
+				bottom: 0;
+			}
+		}
+	}
+
+	.mega-menu {
+		@include respond-to($bp-lg) {
+			opacity: 1 !important;
+			pointer-events: initial;
+		}
+	}
+
+	&--static {
+		.mega-menu {
+			display: none;
+		}
+
+		svg {
+			display: none;
+		}
+	}
+}
+
+.mega-menu {
+	width: calc(100vw - 15px);
+	box-shadow: 0px 8px 24px -16px $shadow-primary-dark, 0px 1px 2px 0px $shadow-secondary-dark;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: 1440px;
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.2s;
+	background-color: $white-color;
+
+	@include respond-to($bp-xl) {
+		width: 100%;
+	}
+
+	@include respond-to($bp-lg) {
+		width: 100vw;
+		height: 100%;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 3;
+		background-color: $white-color;
+		padding: 0 25px 60px;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		transform: translateX(100%);
+	}
+
+	&__title {
+		display: none;
+		font-size: rem-calc(16);
+		line-height: rem-calc(21);
+		font-weight: $bold;
+		color: $warp-color;
+		margin-bottom: rem-calc(32);
+
+		@include respond-to($bp-lg) {
+			display: block;
+		}
+	}
+}
+
+.back-button {
+	border: none;
+	padding: none;
+	align-items: center;
+	font-size: rem-calc(14);
+	line-height: rem-calc(21);
+	font-weight: $bold;
+	color: #8596aa;
+	display: none;
+	margin-bottom: rem-calc(38);
+	margin-top: rem-calc(32);
+	cursor: pointer;
+
+	svg {
+		margin-right: rem-calc(16);
+	}
+
+	@include respond-to($bp-lg) {
+		display: flex;
+	}
+}
+
+.header-menu-column {
+	display: flex;
+	position: relative;
+	background-color: $white-color;
+	min-height: rem-calc(425);
+
+	@include respond-to($bp-lg) {
+		padding-bottom: rem-calc(60);
+	}
+
+	.columns {
+		flex-grow: 1;
+		padding: 64px 83px 116px 67px;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		gap: 30px 20px;
+		position: relative;
+
+		@include respond-to($bp-xl) {
+			padding: 44px 50px;
+		}
+
+		@include respond-to($bp-lg) {
+			display: block;
+			flex-direction: column;
+			justify-content: flex-start;
+			padding: initial;
+			grid-template-columns: 1fr;
+			gap: initial;
+		}
+
+		&--with-global {
+			@include respond-to($bp-xl) {
+				padding: 44px 50px 116px;
+			}
+		}
+
+		&--secondary {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: auto;
+			gap: 0px 20px;
+
+			@include respond-to($bp-xl) {
+				grid-template-columns: repeat(2, 1fr);
+				padding: 44px 67px 116px;
+				gap: 28px 20px;
+			}
+
+			@include respond-to($bp-lg) {
+				grid-template-columns: 1fr;
+				gap: 16px 0;
+				padding: 0;
+			}
+
+			.button {
+				margin-top: rem-calc(48);
+			}
+
+			.column {
+				max-width: initial;
+
+				&:first-child {
+					grid-row: span 2;
+
+					@include respond-to($bp-xl) {
+						grid-row: span 3;
+					}
+
+					@include respond-to($bp-lg) {
+						grid-row: span 1;
+					}
+				}
+			}
+		}
+	}
+
+	.column {
+		max-width: 277px;
+
+		@include respond-to($bp-lg) {
+			max-width: initial;
+			margin-bottom: rem-calc(48);
+
+			&:last-child {
+				margin-bottom: initial;
+			}
+		}
+	}
+
+	.button {
+		position: absolute;
+		right: 78px;
+		bottom: 44px;
+
+		@include respond-to($bp-lg) {
+			position: static;
+			grid-column: span 1;
+		}
+	}
+
+	&::after {
+		content: '';
+		width: 381px;
+		display: inline-block;
+
+		@include respond-to(1336px) {
+			display: none;
+		}
+	}
+
+	.featured {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 381px;
+		height: 100%;
+		z-index: 2;
+
+		@include respond-to(1336px) {
+			display: none;
+		}
+	}
+}

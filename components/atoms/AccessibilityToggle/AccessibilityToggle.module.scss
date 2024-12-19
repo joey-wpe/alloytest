@@ -1,0 +1,58 @@
+@import '../../../styles/baseline/_styles';
+
+.accessibility-btn {
+	z-index: 100;
+	position: fixed;
+	margin: auto;
+	background-color: $white-color;
+	transform: rotate(0deg);
+	cursor: pointer;
+	width: 100%;
+	bottom: 0px;
+	transition: all $hover-duration ease;
+	border: 0;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+	@include respond-above($bp-md) {
+		// float: left;
+		top: 50vh;
+		transform: rotate(-90deg) translateX(-50%);
+		transform-origin: top left;
+		bottom: initial;
+		width: initial;
+	}
+
+	&__inner {
+		padding: 14px 24px;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		@include respond-between(768px, 1071px) {
+			padding: 4px 18px 4px;
+		}
+
+		&__text {
+			font-size: rem-calc(13);
+			color: $blaze-color;
+			line-height: 26px;
+			font-weight: 400;
+			transition: all $hover-duration ease;
+			padding-right: 16px;
+		}
+	}
+	svg {
+		margin-bottom: -2px;
+		fill: $blaze-color;
+		transition: all $hover-duration ease;
+	}
+
+	&:hover,
+	&:focus {
+		background-color: #f1f1f1;
+		.accessibility-btn__inner__text {
+			color: $warp-color;
+		}
+		svg {
+			fill: $warp-color;
+		}
+	}
+}

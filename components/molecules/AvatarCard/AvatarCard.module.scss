@@ -1,0 +1,30 @@
+@import '../../../styles/baseline/_styles';
+
+.avatar-card {
+	max-width: 293px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.content-image {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		box-shadow: 0.921273px 2.30318px 9.21273px rgba(6, 39, 57, 0.2);
+		border-radius: 50%;
+
+		img {
+			border-radius: 50%;
+		}
+	}
+
+	.h5 {
+		margin: 12px 0 0;
+	}
+
+	.sub-p {
+		font-style: italic;
+		color: $tricentis-neutral;
+	}
+}

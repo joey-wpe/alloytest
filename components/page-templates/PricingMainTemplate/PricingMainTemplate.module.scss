@@ -1,0 +1,29 @@
+@import '../../../styles/baseline/_styles';
+
+.pricing-main {
+	&__cards {
+		padding: 90px 0;
+	}
+
+	.wysiwyg {
+		color: $charcoal-color;
+
+		ul {
+			padding-left: 35px;
+			margin-bottom: rem-calc(37);
+
+			li {
+				margin-bottom: rem-calc(15);
+
+				&:last-child {
+					margin-bottom: initial;
+				}
+			}
+		}
+
+		h3,
+		h5 {
+			margin-bottom: rem-calc(25);
+		}
+	}
+}

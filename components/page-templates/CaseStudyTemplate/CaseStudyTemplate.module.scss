@@ -1,0 +1,256 @@
+@import '../../../styles/baseline/_styles';
+
+.keyOutcomeSection {
+	.content-information {
+		display: flex;
+		margin-bottom: 50px;
+
+		@include respond-to($bp-sm) {
+			flex-direction: column;
+			margin-bottom: 45px;
+		}
+
+		&:last-child {
+			margin-bottom: initial;
+		}
+	}
+
+	.content-copy {
+		max-width: 395px;
+		width: 100%;
+	}
+
+	.stat {
+		color: $bolt-color;
+		font-weight: $bold;
+		font-size: 56px;
+		line-height: 50px;
+		margin-right: 22px;
+		min-width: 30%;
+		@include respond-to($bp-md) {
+			font-size: 46px;
+		}
+		@include respond-to($bp-lg) {
+			min-width: auto;
+		}
+	}
+
+	.text {
+		color: $white-color;
+		font-weight: $bold;
+		font-size: 21px;
+		line-height: 33px;
+	}
+
+	.description {
+		color: $white-color;
+	}
+
+	.seo {
+		display: none;
+	}
+}
+.p {
+	p {
+		margin-bottom: 24px;
+		&:last-child {
+			margin-bottom: initial;
+		}
+	}
+}
+//overviewSection
+.content-overviewSection {
+	padding-top: 94px;
+	padding-bottom: 210px;
+	display: grid;
+	grid-template-columns: calc(100% - 387px) 337px;
+	gap: 50px;
+	align-items: flex-start;
+
+	@include respond-to($bp-lg) {
+		padding-bottom: 170px;
+	}
+	@include respond-to($bp-md) {
+		grid-template-columns: 100%;
+		gap: 30px;
+		padding-bottom: 92px;
+	}
+}
+
+.overviewSection {
+	position: relative;
+	height: 100%;
+	margin-bottom: 22px;
+
+	span {
+		position: relative !important;
+	}
+
+	.logo {
+		max-height: 70px !important;
+		position: relative !important;
+		object-fit: scale-down;
+		object-position: left;
+		height: initial !important;
+		width: 100% !important;
+	}
+
+	.h3 {
+		margin-top: 18px;
+		margin-bottom: 18px;
+	}
+}
+
+.railSection {
+	ul {
+		list-style: none;
+	}
+
+	.list {
+		padding: 50px 0 50px 90px;
+		border-left: 1px solid $mist-color;
+		height: 100%;
+
+		@include respond-to($bp-md) {
+			border-left: none;
+			border-top: 1px solid $mist-color;
+			padding: 30px 0 0;
+		}
+		&-text {
+			color: $charcoal-color;
+		}
+
+		li {
+			margin-bottom: 32px;
+			display: flex;
+
+			span {
+				margin-right: 11px;
+				max-width: 10px;
+				width: 100%;
+			}
+
+			&:last-child {
+				margin-bottom: initial;
+			}
+		}
+		ul {
+			padding-left: 20px;
+		}
+	}
+
+	.content-sub-lis {
+		flex-direction: column;
+
+		.title-sub-list {
+			margin-bottom: 10px;
+		}
+
+		.sub-list {
+			li {
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.content-wrapper {
+	padding: 0 0 86px;
+	position: relative;
+	top: -138px;
+	@include respond-to($bp-lg) {
+		padding: 0 0 65px;
+		top: -100px;
+		@include respond-to($bp-md) {
+			top: -40px;
+		}
+	}
+	&.next-section-without-image {
+		display: block;
+		padding-bottom: 0;
+		@include respond-to($bp-md) {
+			padding-bottom: 65px;
+		}
+	}
+	&.next-section-with-image {
+		display: block;
+	}
+	&.no-image {
+		padding-top: 86px;
+		top: 0;
+		padding-bottom: 220px;
+		@include respond-to($bp-lg) {
+			padding-bottom: 150px;
+		}
+		@include respond-to($bp-md) {
+			padding-bottom: 100px;
+		}
+		&.next-section-without-image {
+			padding-bottom: 86px;
+		}
+	}
+	.content-image {
+		padding-bottom: 86px;
+		@include respond-to($bp-lg) {
+			padding-bottom: 44px;
+		}
+	}
+}
+//repeaterSections
+
+.repeaterSection {
+	position: relative;
+	display: grid;
+	grid-template-columns: calc(100% - 387px) 337px;
+	gap: 50px;
+
+	@include respond-to($bp-md) {
+		grid-template-columns: 100%;
+		gap: 30px;
+	}
+}
+
+.repeater-image {
+	position: relative;
+	max-width: 100%;
+	// top: -50px;
+	@include respond-to($bp-xl) {
+		margin-top: initial;
+	}
+}
+
+.contetnt-only-description {
+	position: relative;
+}
+
+.repeaterSectionRight {
+	ul {
+		list-style: none;
+	}
+
+	.list {
+		padding: 0px 0 50px 90px;
+		border-left: 1px solid rgba(215, 226, 240, 0.5);
+
+		@include respond-to($bp-md) {
+			border-left: none;
+			border-top: 1px solid rgba(215, 226, 240, 0.5);
+			padding: 30px 0 0;
+		}
+
+		li {
+			display: flex;
+			margin-bottom: 30px;
+
+			span {
+				margin-right: 11px;
+				max-width: 10px;
+				width: 100%;
+			}
+
+			&:last-child {
+				margin-bottom: initial;
+			}
+		}
+	}
+}

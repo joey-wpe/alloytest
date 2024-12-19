@@ -1,0 +1,98 @@
+@import '../../../styles/baseline/_styles';
+
+$heading-gradient: linear-gradient(263.68deg, #4486e1 28.65%, $tricentis-color 79.35%);
+$shadow: 2px 7px 20px rgba(0, 0, 0, 0.15);
+
+.pricing-card {
+	max-width: rem-calc(375);
+	box-shadow: $shadow;
+	background-color: $white-color;
+	display: flex;
+	flex-direction: column;
+	transition: all $hover-duration ease-in;
+
+	&:hover {
+		filter: drop-shadow(0px 14px 35px rgba(0, 0, 0, 0.13));
+	}
+
+	&__heading {
+		box-shadow: $shadow;
+		background: $heading-gradient;
+		padding: 24px 28px 24px 32px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		flex-grow: 1;
+	}
+
+	&__title,
+	&__subhead {
+		color: $white-color;
+	}
+
+	&__title {
+		line-height: rem-calc(36);
+	}
+
+	&__body {
+		padding: 34px 28px 37px 32px;
+		min-height: rem-calc(499);
+
+		@include respond-to($bp-md) {
+			min-height: initial;
+		}
+	}
+
+	&__pricing {
+		display: flex;
+		flex-wrap: wrap;
+		padding-bottom: rem-calc(32);
+		border-bottom: 1px solid $mist-color;
+	}
+
+	&__pricing-head {
+		display: flex;
+		gap: 6px;
+		margin-bottom: rem-calc(24);
+		flex-direction: column;
+	}
+
+	&__pricing-price {
+		flex-grow: 1;
+		font-size: rem-calc(52);
+		line-height: rem-calc(47);
+		letter-spacing: -0.25px;
+		font-weight: $bold;
+		max-width: 220px;
+	}
+
+	&__pricing-package {
+		font-size: rem-calc(12);
+		line-height: rem-calc(21);
+		color: $tricentis-color;
+		font-weight: $bold;
+	}
+
+	&__pricing-description {
+		color: $charcoal-color;
+		width: 100%;
+	}
+
+	&__pricing + .pricing-card__highlights {
+		padding-top: rem-calc(32);
+	}
+
+	&__highlights {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__highlights-title {
+		margin-bottom: rem-calc(12);
+	}
+
+	&__highlights-description {
+		margin-bottom: rem-calc(21);
+		color: $charcoal-color;
+	}
+}

@@ -1,0 +1,172 @@
+@import '../../../styles/baseline/__styles';
+
+.wrap-animation {
+	&:nth-child(odd) {
+		margin-left: auto;
+	}
+
+	&:nth-child(even) {
+		margin-right: auto;
+	}
+
+	@include respond-to($bp-lg) {
+		max-width: 85%;
+		width: 100%;
+	}
+}
+
+.count-box {
+	background-color: $blaze-color;
+	padding: 37px 34px;
+
+	@include respond-to($bp-lg) {
+		width: 100%;
+	}
+
+	.button--center {
+		margin: 0 auto;
+	}
+}
+
+.number {
+	color: $truster-color;
+	font-weight: $bold;
+	margin-bottom: 8px;
+}
+
+.description {
+	font-size: rem-calc(18);
+	line-height: rem-calc(24);
+	font-weight: $bold;
+	color: $charcoal-color;
+}
+
+.title {
+	margin-top: 15px;
+	margin-bottom: 24px;
+	color: $tricentis-color;
+	font-size: rem-calc(30);
+	line-height: rem-calc(40);
+	letter-spacing: -0.195349px;
+	font-weight: $bold;
+}
+
+.subhead {
+	margin-bottom: 8px;
+	text-transform: initial;
+	font-size: rem-calc(20);
+	line-height: rem-calc(30);
+}
+
+// Sizes
+.large {
+	.count-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&--left {
+			align-items: flex-start;
+
+			.title {
+				margin-left: 8px;
+			}
+		}
+
+		.content-number {
+			display: flex;
+			align-items: baseline;
+			margin-bottom: 8px;
+
+			.span-symbol {
+				font-size: rem-calc(40);
+				font-weight: $bold;
+				letter-spacing: -0.195349px;
+				color: $tricentis-color;
+			}
+		}
+
+		.title {
+			line-height: 32px;
+			margin-top: 5px;
+		}
+	}
+
+	.number {
+		font-size: rem-calc(120);
+		line-height: rem-calc(95);
+		color: $tricentis-color;
+	}
+
+	.description {
+		font-weight: $regular;
+		font-size: rem-calc(16);
+		line-height: rem-calc(26);
+	}
+
+	&.wrap-animation {
+		margin: initial;
+		max-width: initial;
+	}
+
+	.count-box {
+		padding: 30px 0;
+		background-color: initial;
+	}
+}
+
+.small {
+	.description {
+		color: $white-color;
+	}
+}
+
+// Alignments
+.center {
+	.count-box {
+		text-align: center;
+	}
+}
+
+// Dark Mode
+:global(.midtone-theme),
+:global(.dark-theme) {
+	.wrap-animation {
+		.description {
+			color: $white-color;
+		}
+
+		&.small {
+			.count-box {
+				background-color: $white-color;
+			}
+
+			.description {
+				color: $blaze-color;
+			}
+
+			.number {
+				color: $truster-color !important;
+			}
+		}
+
+		&.large {
+
+			.span-symbol,
+			.title,
+			.span,
+			.number {
+				color: $bolt-color !important;
+			}
+
+			.subhead {
+				color: $white-color;
+			}
+		}
+	}
+}
+
+//Fraction Number
+.fraction-number {
+	display: flex;
+}

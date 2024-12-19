@@ -1,0 +1,46 @@
+@import '../../../styles/baseline/_styles';
+
+.location-card {
+	&__country {
+		line-height: rem-calc(36);
+	}
+
+	&__address {
+		margin-bottom: rem-calc(20);
+	}
+
+	&__email,
+	&__phone {
+		display: inline-block;
+		color: $tricentis-color;
+		text-decoration: underline;
+		@extend .hover-animation-basic;
+
+		&:hover {
+			color: $accelerate-color;
+			text-decoration-color: $accelerate-color;
+		}
+	}
+
+	&__city {
+		margin-top: rem-calc(24);
+		text-transform: uppercase;
+		font-size: rem-calc(12);
+		line-height: rem-calc(18);
+	}
+
+	&__location-name {
+		margin-top: rem-calc(6);
+		font-size: rem-calc(14);
+		line-height: rem-calc(24);
+		font-weight: $bold;
+		color: $blaze-color;
+	}
+
+	&__contact {
+		font-size: rem-calc(14);
+		line-height: rem-calc(24);
+		color: $dark-color;
+		margin-top: rem-calc(16);
+	}
+}

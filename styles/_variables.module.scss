@@ -1,0 +1,14 @@
+@import 'baseline/__styles';
+
+// Any colors defined here can also be refrenced from javascript while still
+// being defined in the same globals.scss that drives .scss files throughout the project
+:export {
+	PrimaryColor: $color-primary;
+	SecondaryColor: $color-secondary;
+	LightBlueColor: $bolt-color;
+	TricentisColor: $tricentis-color;
+	AccelerateColor: $accelerate-color;
+	BlazeColor: $blaze-color;
+	CharcoalColor: $charcoal-color;
+	WhiteColor: $white-color;
+}

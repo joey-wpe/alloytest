@@ -1,0 +1,34 @@
+@import '../../../styles/baseline/__styles';
+
+.component-media {
+	padding-top: 90px;
+	padding-bottom: 60px;
+}
+
+.c-media {
+	.media-title-content {
+		margin-bottom: 60px;
+	}
+
+	.media-kit-content {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		justify-items: center;
+		gap: 20px;
+		justify-content: space-between;
+
+		@include respond-to($bp-lg) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			justify-items: center;
+
+			.card {
+				max-width: initial;
+			}
+		}
+
+		@include respond-to($bp-sm) {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+}

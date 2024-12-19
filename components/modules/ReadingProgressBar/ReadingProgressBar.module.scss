@@ -1,0 +1,17 @@
+@import '../../../styles/baseline/_styles';
+
+.reading-progress-bar {
+	position: sticky;
+	z-index: 90;
+	top: 72px;
+	border-radius: 0px 2px 0px 0px;
+	width: 0;
+
+	&:after {
+		content: '';
+		position: absolute;
+		height: 6px;
+		width: 100%;
+		background-color: $bolt-color;
+	}
+}

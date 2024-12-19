@@ -1,0 +1,70 @@
+@import '../../../styles/baseline/_styles';
+
+.loader-wrapper {
+	position: absolute;
+	top: 0;
+	right: 15px;
+	width: 44px;
+	height: 100%;
+	z-index: 10;
+	overflow: hidden;
+}
+
+.loader {
+	display: block;
+	position: relative;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: $tricentis-color;
+	animation: spin 1.7s linear infinite;
+	z-index: 11;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: $accelerate-color;
+		animation: spin-reverse 0.6s linear infinite;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		right: 15px;
+		bottom: 15px;
+		border-radius: 50%;
+		border: 3px solid transparent;
+		border-top-color: $truster-color;
+		animation: spin 1s linear infinite;
+	}
+}
+
+// Bourbon mixins
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes spin-reverse {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(-360deg);
+	}
+}

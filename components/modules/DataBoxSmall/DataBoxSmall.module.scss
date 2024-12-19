@@ -1,0 +1,125 @@
+@import '../../../styles/baseline/__styles';
+
+.content {
+	display: grid;
+	grid-template-columns: 41% 53.5%;
+	justify-content: space-between;
+
+	@include respond-to($bp-xl) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.text-container {
+	@include respond-to($bp-xl) {
+		margin-bottom: 24px;
+		max-width: 718px;
+		margin-right: auto;
+	}
+}
+
+.title {
+	margin-bottom: 18px;
+}
+
+.description {
+	font-family: $font-family-headings;
+}
+
+.content-btn {
+	margin-top: 21px;
+
+	@include respond-to($bp-sm) {
+		margin-top: 3px;
+	}
+}
+
+.box-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 22px 26px;
+	padding-top: 95px;
+
+	@include respond-to($bp-xl) {
+		max-width: 667px;
+		width: 100%;
+		margin-left: auto;
+		padding-top: initial;
+	}
+
+	@include respond-to($bp-lg) {
+		grid-template-columns: 1fr;
+		max-width: initial;
+		width: 100%;
+	}
+}
+
+// Class that modify the grid
+.box-grid-1,
+.box-grid-2 {
+	padding-top: 35px;
+	grid-template-columns: 1fr;
+}
+
+.count-box-1,
+.count-box-2 {
+	@include respond-above($bp-lg) {
+		max-width: 392px;
+	}
+}
+
+// Class that modify <CountBox> position
+.count-box-3 {
+	display: flex;
+
+	&:nth-child(3) {
+		& > div {
+			@include respond-above($bp-lg) {
+				transform: translateX(calc(50% + 13px)) !important;
+			}
+		}
+	}
+}
+
+.count-box-1,
+.count-box-2 {
+	@include respond-above($bp-lg) {
+		max-width: 392px;
+	}
+}
+
+.count-box-4 {
+	display: flex;
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		& > div {
+			transform: translateX(-170px);
+
+			@include respond-to($bp-lg) {
+				transform: initial;
+			}
+		}
+	}
+}
+
+.subhead {
+	margin-bottom: 3px;
+	display: block;
+}
+
+//Dark Background
+.subhead-light {
+	color: $bolt-color;
+	font-size: 14px;
+	font-weight: $bold;
+}
+
+// Background Rainbow
+.rainbow {
+	@include respond-above($bp-xl) {
+		background-position-x: 92%;
+		background-position-y: -108px;
+		background-size: 57%;
+	}
+}

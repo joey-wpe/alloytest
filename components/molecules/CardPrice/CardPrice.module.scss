@@ -1,0 +1,98 @@
+@import '../../../styles/baseline/_styles';
+
+.component-card-price{
+	max-width: 292px;
+	display: flex;
+	flex-direction: column;
+	
+	.mist{
+		color: $mist-color;
+	}
+	.thruster{color: $truster-color;}
+	.bolt{
+		color: $bolt-color;
+	}
+	.h4{
+		line-height: 24px;
+		padding-top: 29px;
+	}
+	.span-subhead{
+		font-weight: $regular;
+		font-size: 14px;
+		line-height: 24px;
+		color: $white-color;
+	}
+	.h4, .span-subhead{
+		padding-left: 32px;
+		@include respond-to($bp-md) {
+			padding: initial;
+		}
+		
+	}
+	.title-content{
+		margin-bottom: 16px;
+		@include respond-to($bp-md){
+			background-color: $tricentis-color;
+			margin-bottom: initial;
+			padding: 32px;
+		}
+	}
+	.card-content{
+		box-shadow: 2px 7px 20px rgba(0, 0, 0, 0.15);
+		background-color: $white-color;
+		padding: 42px 30px;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		&__information{
+		.sub-p{
+			&::after{
+				content: "";
+				width: 100%;
+				height: 1px;
+				background-color: #F1F1F1;
+				display: block;
+				margin: 32px 0;
+			}
+		}
+		}
+		&__information-price{
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 24px;
+		}
+		&__information-number{
+			font-weight: $bold;
+			font-size: rem-calc(52);
+			line-height: rem-calc(47);
+			margin-right: 7px;
+		}
+		.h6{
+			line-height: 20px;
+			font-weight: $bold;
+			color: $tricentis-color;
+		}
+
+		&__items{
+			.h6{
+				color: $blaze-color;
+				margin-bottom: 12px;
+			}
+			ul{
+				margin-bottom: 32px;
+				padding-left: 20px;
+				
+				li{
+					font-size: 8px;
+					color: $charcoal-color;
+				}
+				.p{
+					color: $charcoal-color;
+				}
+			}
+		}
+		&__button{
+			margin-top: auto;
+		}
+	}
+}

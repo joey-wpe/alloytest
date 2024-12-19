@@ -1,0 +1,75 @@
+@import '../../../styles/baseline/_styles';
+
+.module-wrapper {
+	// NOTE: uncomment to see space used
+	// background-color: transparentize($color: #00ff00, $amount: 0.8);
+
+	padding-top: $mod-sp-none;
+	padding-bottom: $mod-sp-none;
+}
+
+// mobile paddings
+.padding-top-none {
+	padding-top: $mod-sp-none;
+}
+.padding-top-xsmall {
+	padding-top: $mod-sp-xsmall-mobile;
+}
+.padding-top-small {
+	padding-top: $mod-sp-small-mobile;
+}
+.padding-top-medium {
+	padding-top: $mod-sp-medium-mobile;
+}
+.padding-top-large {
+	padding-top: $mod-sp-large-mobile;
+}
+.padding-bottom-none {
+	padding-bottom: $mod-sp-none;
+}
+.padding-bottom-xsmall {
+	padding-bottom: $mod-sp-xsmall-mobile;
+}
+.padding-bottom-small {
+	padding-bottom: $mod-sp-small-mobile;
+}
+.padding-bottom-medium {
+	padding-bottom: $mod-sp-medium-mobile;
+}
+.padding-bottom-large {
+	padding-bottom: $mod-sp-large-mobile;
+}
+
+// desktop paddings
+@include respond-above($bp-md) {
+	.padding-top-none {
+		padding-top: $mod-sp-none;
+	}
+	.padding-top-xsmall {
+		padding-top: $mod-sp-xsmall-desktop;
+	}
+	.padding-top-small {
+		padding-top: $mod-sp-small-desktop;
+	}
+	.padding-top-medium {
+		padding-top: $mod-sp-medium-desktop;
+	}
+	.padding-top-large {
+		padding-top: $mod-sp-large-desktop;
+	}
+	.padding-bottom-none {
+		padding-bottom: $mod-sp-none;
+	}
+	.padding-bottom-xsmall {
+		padding-bottom: $mod-sp-xsmall-desktop;
+	}
+	.padding-bottom-small {
+		padding-bottom: $mod-sp-small-desktop;
+	}
+	.padding-bottom-medium {
+		padding-bottom: $mod-sp-medium-desktop;
+	}
+	.padding-bottom-large {
+		padding-bottom: $mod-sp-large-desktop;
+	}
+}

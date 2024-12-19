@@ -1,0 +1,37 @@
+@import '../../../styles/baseline/__styles';
+
+.content-awards {
+	padding-top: 90px;
+	padding-bottom: 139px;
+
+	.awards-title-content {
+		margin-bottom: 60px;
+	}
+
+	.content-cards-award {
+		display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			justify-items: center;
+		gap: 20px;
+		justify-content: space-between;
+
+		@include respond-to($bp-xl){
+			grid-template-columns: repeat(5, 1fr);
+		}
+
+
+		@include respond-to($bp-lg){
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-items: center;
+
+			.card{
+				max-width: initial;
+			}
+		}
+
+		@include respond-to($bp-sm){
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}

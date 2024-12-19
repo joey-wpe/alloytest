@@ -1,0 +1,39 @@
+@import '../../../styles/baseline/_styles';
+
+.share-buttons {
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		display: inline-flex;
+		margin-right: rem-calc(27);
+		border: none;
+		padding: 0;
+		cursor: pointer;
+		&:hover{
+			a{
+	
+			svg {
+					path {
+						transition: all 200ms;
+						fill: mix(black, $accelerate-color, 20%);
+					}
+				}
+			}
+		}
+
+		a {
+			display: inline-flex;
+		}
+
+		svg {
+			path {
+				fill: $accelerate-color;
+			}
+		}
+
+		&:last-child {
+			margin-right: initial;
+		}
+	}
+}

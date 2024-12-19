@@ -1,0 +1,49 @@
+@import './mixins';
+
+// Widths & Breakpoints
+$bp-xs: 320px;
+$bp-sm: 576px;
+$bp-md: 767px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+
+// Module Spacings
+$mod-sp-none: 0;
+$mod-sp-xsmall-desktop: rem-calc(48);
+$mod-sp-xsmall-mobile: rem-calc(32);
+$mod-sp-small-desktop: rem-calc(60);
+$mod-sp-small-mobile: rem-calc(48);
+$mod-sp-medium-desktop: rem-calc(90); // default
+$mod-sp-medium-mobile: rem-calc(60); // default
+$mod-sp-large-desktop: rem-calc(110);
+$mod-sp-large-mobile: rem-calc(90);
+
+// Generic Spacings
+$sp-xsmall: rem-calc(16);
+$sp-small: rem-calc(24);
+$sp-medium: rem-calc(32);
+
+// Display Constants
+$border-radius-small: 0.2em;
+
+// divider style
+.hr {
+	color: black;
+	width: 100%;
+}
+
+.container {
+	max-width: 1262px;
+	width: 100%;
+	padding-right: $sp-xsmall;
+	padding-left: $sp-xsmall;
+	margin: 0 auto;
+
+	@include respond-to($bp-xl) {
+		max-width: 999px;
+	}
+
+	@include respond-to($bp-md) {
+		overflow-x: hidden;
+	}
+}

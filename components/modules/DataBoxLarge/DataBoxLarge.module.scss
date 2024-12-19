@@ -1,0 +1,50 @@
+@import '../../../styles/baseline/__styles';
+
+.center {
+	text-align: center;
+}
+
+.box-container {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-around;
+	gap: 52px;
+
+	@include respond-to($bp-lg) {
+		flex-direction: column;
+		max-width: 500px;
+		margin: 50px auto 0;
+		gap: initial;
+	}
+
+	.content-data-num {
+		max-width: 344px;
+		width: 100%;
+
+		@include respond-to($bp-lg) {
+			max-width: initial;
+		}
+	}
+}
+
+.title {
+	margin-bottom: 17px;
+}
+
+.text-container {
+	max-width: 822px;
+	margin: 0 auto;
+}
+
+// Alignments
+.left {
+	.text-container {
+		margin-left: initial;
+	}
+
+	.box-container {
+		p {
+			margin-left: initial;
+		}
+	}
+}

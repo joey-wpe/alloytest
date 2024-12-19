@@ -1,0 +1,38 @@
+@import '../../../styles/baseline/_styles';
+
+.card-icon-content {
+	display: flex;
+	flex-direction: column;
+	max-width: 606px;
+
+	@include respond-to($bp-sm) {
+		align-items: flex-start;
+	}
+
+	.content-information {
+		margin: 28px 0 0;
+
+		@include respond-to($bp-sm) {
+			text-align: start;
+
+			.p {
+				font-size: rem-calc(14);
+			}
+		}
+
+		.p {
+			p {
+				padding: initial;
+			}
+		}
+
+		.h4 {
+			line-height: 36px;
+			margin-bottom: 16px;
+		}
+	}
+
+	.button-content {
+		margin-top: 18px;
+	}
+}

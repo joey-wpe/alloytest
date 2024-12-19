@@ -1,0 +1,75 @@
+@import '../../../styles/baseline/_styles';
+
+$footer-shadow: 0px 0px 15px #01002712;
+
+.footer {
+	overflow: hidden;
+	box-shadow: $footer-shadow;
+}
+
+.content {
+	margin-top: 60px;
+	margin-bottom: 70px;
+	display: flex;
+	justify-content: space-between;
+
+	@include respond-to($bp-md) {
+		margin: 45px 0;
+	}
+}
+
+.hide-container {
+	display: none;
+}
+
+.columns {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	width: 100%;
+	gap: 15px;
+
+	@include respond-to($bp-md) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.social-media-title {
+	font-size: rem-calc(14);
+	line-height: rem-calc(21);
+	margin-bottom: 22px;
+	font-weight: $bold;
+	color: $blaze-color;
+
+	@include respond-to($bp-md) {
+		display: none;
+	}
+}
+
+.social-media-list {
+	display: flex;
+	gap: 16px;
+	padding: initial;
+	margin: initial;
+
+	@include respond-to($bp-md) {
+		justify-content: center;
+		margin-top: 20px;
+		gap: 40px;
+	}
+}
+
+.icon-social {
+	svg {
+		path {
+			transition: all $hover-duration ease-in;
+		}
+	}
+
+	&:hover {
+		svg {
+			path {
+				fill: $accelerate-color;
+			}
+		}
+	}
+}

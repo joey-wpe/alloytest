@@ -1,0 +1,527 @@
+// NOTE:: CSS Modules do not allow you to style HTML tags directly - you have to modify classes only to be 'pure'
+// as such, this is the only file for modifying root tags. ref: https://stackoverflow.com/a/63142141/18005
+@import './baseline/__styles';
+
+// import global stylesheets to prevent multiple copies in bundle
+@import './global/_animations-global';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 400;
+	font-family: 'Open Sans', Calibri, Tahoma, Sans-Serif; // NOTE:: if this changes, update _typography heading classes as well
+	color: #1b365d; // NOTE:: if this changes, update _colors heading classes as well
+}
+
+// For japanese language word break.
+html:lang(ja) body div {
+	word-break: break-all !important; // NOTE: Japanese language - fix wrong word break on new line.
+}
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', 'Fira Sans', sans-serif; // NOTE:: if this changes, update _typography heading classes as well
+	color: #1b365d; // NOTE:: if this changes, update _colors body classes as well
+	scroll-behavior: smooth;
+	word-break: keep-all; // NOTE: Korean language - fix wrong word break on new line.
+	line-break: strict;
+
+	&.overflow-hidden {
+		overflow: hidden;
+	}
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+p {
+	margin: initial;
+}
+
+// Global Styles below - limit as much as possible.
+
+.css-class-1 {
+	background-color: green;
+}
+
+.css-class-2 {
+	background-color: red;
+}
+
+.pink-module {
+	color: pink;
+}
+
+// Global Styles input Form
+input[type='text'] {
+	appearance: none;
+	outline: none;
+
+	&:focus {
+		border: 1px solid #0087ae;
+	}
+}
+
+//global Style Select
+
+.mktoFieldWrap {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	label {
+		position: absolute;
+		top: 4px;
+		left: 9px;
+		font-weight: 400;
+		font-size: 12px;
+		transition: 0.25s all ease;
+		display: flex;
+	}
+
+	select {
+		padding: 16px 16px 10px;
+		font-size: rem-calc(14);
+		line-height: rem-calc(20);
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: 2px 2px 10px rgb(6 39 57 / 12%);
+		appearance: none;
+		outline: none;
+		background-image: url('/icons/arrow-down-blue-small.png');
+		background-position: right 18px center;
+		margin-bottom: 15px;
+
+		&::placeholder {
+			color: #1b365d;
+			font-size: rem-calc(14);
+			line-height: rem-calc(20);
+			letter-spacing: 0.2px;
+		}
+
+		&:focus {
+			border: 1px solid #0087ae;
+		}
+	}
+}
+
+.mktoFieldWrap {
+	input {
+		appearance: none;
+		outline: none;
+		padding: 16px 16px 10px;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		letter-spacing: 0.2px;
+		width: 100%;
+		border: 1px solid #f1f1f1;
+		box-shadow: 2px 2px 10px rgb(6 39 57 / 12%);
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		outline: none;
+		transition: all 200ms ease-in;
+		margin-bottom: 15px;
+
+		&:focus {
+			border: 1px solid #0087ae;
+		}
+	}
+
+	input[type='password'] {
+		&:visited {
+			& ~ span {
+				opacity: 0;
+			}
+		}
+	}
+}
+
+#mktoAppendTosca {
+	#Password {
+		min-height: 75px;
+	}
+}
+
+//Labels
+.mktoLabel,
+.mktoFormRow--optin .mktoRequiredField .mktoLabel {
+	.mktoAsterix {
+		display: none;
+	}
+}
+
+.mktoRequiredField {
+	position: relative;
+
+	.mktoLabel {
+		position: absolute;
+		top: 4px;
+		left: 9px;
+		font-weight: 400;
+		font-size: 12px;
+		transition: 0.25s all ease;
+		display: flex;
+		.mktoAsterix {
+			display: block;
+		}
+	}
+
+	.mktoHtmlText {
+		left: 20px !important;
+	}
+
+	.label-up {
+		font-size: 10px !important;
+	}
+}
+
+//Span message password
+.label-up ~ span {
+	display: none;
+
+	@media (max-width: 470px) {
+		display: block;
+	}
+}
+
+//Message Help
+.mktoFieldHelp,
+.mktoFieldDescription {
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.mktoFieldHelp {
+	position: absolute;
+	z-index: -10;
+	top: 30%;
+	left: 15px;
+	text-align: left;
+	opacity: 0.4;
+
+	@media (max-width: 470px) {
+		position: initial;
+		margin-bottom: 10px;
+	}
+}
+
+#Domain {
+	position: relative;
+}
+
+.mktoFieldDescription {
+	position: absolute;
+	right: 15px;
+	top: 16px;
+}
+
+// Second form on qTest
+.secondForm {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	padding-bottom: 35px;
+	.mktoFieldWrap {
+		select.mktoField,
+		input.mktoField.mktoTextField {
+			margin: 0;
+		}
+		.mktoValidation {
+			position: absolute;
+			bottom: -20px;
+			left: 0;
+			font-style: italic;
+			&.invalid,
+			&.valid {
+				font-size: 10px;
+				font-style: italic;
+				margin: 0;
+			}
+		}
+		.mktoLabel,
+		.mktoLabel {
+			left: 15px;
+			&.label-down {
+				top: 16px !important;
+			}
+			&.label-up ~ span {
+				display: block;
+			}
+		}
+	}
+	form.mktoForm {
+		.mktoFormRow {
+			.mktoFieldWrap {
+				.label-down {
+					top: 16px !important;
+				}
+			}
+		}
+	}
+	#LblqTESTDataStorageLocation.label-down {
+		top: 16px !important;
+	}
+}
+
+//Errors
+.invalid,
+.mktoMessage {
+	font-size: 10px;
+	color: #b52555;
+	margin-bottom: 5px;
+	text-align: start;
+	display: block !important;
+}
+input[type='password'],
+input[type='text'] {
+	&:focus,
+	&:focus-visible {
+		& ~ .mktoFieldHelp {
+			opacity: 0;
+		}
+	}
+}
+input[type='password'] + .mktoFieldHelp {
+	top: 25%;
+	font-size: 11px;
+	line-height: 10px;
+}
+
+.mkto-notice {
+	font-size: 11px;
+	padding-left: 15px;
+	text-align: left;
+}
+//Message Notice
+.mkto-tooltip {
+	display: inline-block;
+	width: fit-content;
+	max-width: fit-content;
+	position: relative;
+
+	&:hover {
+		.mkto-tooltip__link {
+			color: #ff6c0e;
+		}
+		.mkto-tooltip__content {
+			display: inline-block;
+			opacity: 1;
+			z-index: 5;
+			text-align: left;
+		}
+	}
+}
+.mkto-input-tooltip {
+	position: relative;
+	input:focus {
+		~ .mkto-tooltip__content {
+			display: inline-block;
+			opacity: 1;
+			z-index: 5;
+			text-align: left;
+		}
+	}
+}
+.mkto-input-tooltip,
+.mkto-tooltip {
+	@media (max-width: 600px) {
+		grid-template-columns: 100%;
+	}
+
+	.mkto-tooltip__link {
+		padding-top: 10px;
+		color: #004c97;
+		text-decoration: underline;
+		transition: all 500ms;
+		font-weight: 400;
+		width: fit-content;
+		display: inline-block;
+	}
+	.mkto-tooltip__content {
+		background-color: #ffff;
+		display: none;
+		opacity: 0;
+		transition: 0.3s all ease;
+		border: 1px solid #f1f1f1;
+		box-shadow: 2px 2px 10px rgb(6 39 57 / 12%);
+		padding: 15px;
+		position: absolute;
+		z-index: -10;
+		max-width: 315px;
+		min-width: 100px;
+		height: min-content;
+
+		font-size: 14px;
+		line-height: 20px;
+		&.mkto-tooltip-bottom {
+			top: 70px;
+			left: 0;
+			&::after {
+				top: -16px;
+				left: 50%;
+				margin-left: -15px;
+				transform: rotate(133deg);
+			}
+		}
+
+		@media (max-width: 550px) {
+			bottom: initial;
+			top: 150%;
+			left: 0;
+		}
+
+		&::after {
+			content: '';
+			width: 30px;
+			height: 30px;
+			background-color: #ffff;
+			display: block;
+			position: absolute;
+			border-left: 1px solid #f1f1f1;
+			border-bottom: 1px solid #f1f1f1;
+			box-shadow: -5px 5px 10px -5px rgb(6 39 57 / 12%);
+			top: 60%;
+			left: -15px;
+			transform: rotate(45deg);
+
+			@media (max-width: 600px) {
+				top: -15px;
+				left: 5px;
+				transform: rotate(131deg);
+			}
+		}
+
+		a {
+			color: #004c97;
+			text-decoration: underline;
+			transition: all 500ms;
+
+			&:hover {
+				color: #ff6c0e;
+			}
+		}
+	}
+}
+
+//form preference-test
+#mktoForm_530 {
+	.mktoFieldDescriptor {
+		.mktoFieldWrap {
+			display: flex;
+			justify-content: flex-end;
+
+			label {
+				font-style: italic;
+				font-weight: 400;
+				font-size: 13px;
+				line-height: 18px;
+				width: fit-content;
+				margin-left: 17px;
+				text-align: start;
+				display: flex;
+				align-items: baseline;
+				max-height: fit-content;
+				margin-bottom: 15px;
+				&.label-up {
+					font-size: 10px;
+				}
+			}
+
+			.mktoLogicalField {
+				input {
+					&::before {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	.mktoHtmlText {
+		margin-bottom: 20px;
+	}
+}
+
+// this is for buzzsprout podcast embed
+iframe[src*='buzzsprout.com'] {
+	margin-bottom: 15px;
+	min-height: 200px;
+
+	// this adjusts height for playlist
+	&#player_iframe {
+		min-height: 375px;
+	}
+}
+
+.navLinkPadding {
+	display: block;
+	position: relative;
+	top: -180px;
+	visibility: hidden;
+}
+
+.plain-text-onetrust-legal {
+	@include respond-above($bp-lg) {
+		.otnotice-menu {
+			height: -webkit-fit-content;
+			margin-left: 0 !important;
+			position: sticky;
+			top: 126px;
+			z-index: 10;
+		}
+
+		.otnotice-sections {
+			margin-right: 0 !important;
+		}
+
+		.otnotice-content .otnotice-section .otnotice-section-content tr,
+		.otnotice-content .otnotice-section .otnotice-section-content th,
+		.otnotice-content .otnotice-section .otnotice-section-content td {
+			border: 1px solid #ccc;
+			padding: 15px 15px !important;
+		}
+		.otnotice-content .otnotice-section .otnotice-section-content th {
+			background: #ececec !important;
+		}
+
+		.otnotice-content .otnotice-sections .otnotice-section-content p {
+			margin: 0 0 5px !important;
+		}
+	}
+}
+
+.onetrust-floating-button {
+	position: fixed;
+	bottom: 50px;
+	left: 50px;
+	z-index: 1000;
+	width: 50px !important;
+	height: 50px !important;
+	border-radius: 50% !important;
+	background-image: url('../public/icons/cookie.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border: unset !important;
+	color: transparent !important;
+	@include respond-to($bp-sm) {
+		bottom: 15px;
+		left: 15px;
+	}
+}

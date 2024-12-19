@@ -1,0 +1,40 @@
+@import '../../../styles/baseline/_styles';
+
+.content-card-module {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+
+	@include respond-to($bp-lg) {
+		grid-template-columns: repeat(2, 1fr);
+		justify-items: center;
+	}
+
+	@include respond-to($bp-md) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.basic {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.basic {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	@include respond-to($bp-sm) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	.card {
+		max-width: 606px;
+		max-height: 540px;
+
+		img {
+			width: 606px !important;
+			height: 540px !important;
+		}
+	}
+}

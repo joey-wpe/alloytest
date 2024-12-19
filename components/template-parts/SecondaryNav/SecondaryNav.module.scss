@@ -1,0 +1,281 @@
+@import '../../../styles/baseline/_styles';
+
+.nav-simple {
+	max-height: 60px;
+	min-height: 60px;
+
+	.secondary-nav__item {
+		&::before {
+			top: calc(100% + 12px);
+		}
+
+		.item--active {
+			&::before {
+				top: calc(100% + 14px);
+			}
+		}
+	}
+
+	@include respond-to($bp-lg) {
+		max-height: initial;
+	}
+}
+
+.nav-whit-logo {
+	min-height: 90px;
+}
+
+.secondary-nav {
+	background-color: $blaze-color;
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 12;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 11px 24px -16px $shadow-primary-dark, 0 1px 2px 0 $shadow-secondary-dark;
+
+	@include respond-to($bp-xl) {
+		padding: 22px 0 22px;
+	}
+
+	@include respond-to($bp-lg) {
+		min-height: initial;
+	}
+
+	@include respond-to($bp-lg) {
+		padding: initial;
+		width: 100%;
+		display: block;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		max-width: 1262px;
+		margin: 0 auto;
+		padding: 0 20px;
+
+		@include respond-to($bp-xl) {
+			justify-content: space-between;
+		}
+
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__header {
+		@include respond-to($bp-lg) {
+			width: 100%;
+			padding: 32px 0 35px;
+			z-index: 1;
+			position: relative;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__caret {
+		display: none;
+
+		@include respond-to($bp-lg) {
+			display: block;
+		}
+
+		&--rotate {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__logo {
+		max-width: 350px;
+		max-height: 50px;
+		margin-right: 90px;
+		display: flex;
+
+		span {
+			span {
+				display: none !important;
+			}
+			img {
+				position: initial !important;
+				width: 100% !important;
+				height: 100% !important;
+				max-height: 50px !important;
+				object-fit: contain;
+			}
+		}
+		@include respond-to($bp-lg) {
+			display: none;
+		}
+	}
+
+	&__mobile-logo {
+		display: none;
+		font-weight: $bold;
+		font-size: rem-calc(14);
+		line-height: rem-calc(16);
+		letter-spacing: rem-calc(0.15);
+		color: $white-color;
+
+		@include respond-to($bp-lg) {
+			display: block;
+		}
+	}
+
+	&__dropdown {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-grow: 1;
+
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+			width: 100%;
+			pointer-events: none;
+			background-color: $blaze-color;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: -1;
+			opacity: 0;
+
+			&--open {
+				transform: translateY(0);
+				opacity: 1;
+				pointer-events: initial;
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		box-shadow: 0 11px 24px -16px $shadow-primary-dark, 0 1px 2px 0 $shadow-secondary-dark;
+
+		@include respond-to($bp-xl) {
+			flex-grow: initial;
+		}
+
+		@include respond-to($bp-lg) {
+			flex-direction: column;
+			width: 100%;
+		}
+	}
+
+	&__item {
+		margin-right: $sp-medium;
+		position: relative;
+
+		a {
+			color: $white-color;
+			font-size: rem-calc(14);
+			line-height: rem-calc(16);
+			font-weight: $bold;
+			letter-spacing: rem-calc(0.5);
+			cursor: pointer;
+		}
+
+		.item--active {
+			position: relative;
+
+			@include respond-to($bp-lg) {
+				color: $blaze-color;
+				background-color: $truster-color;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: calc(100% + 29px);
+				width: 100%;
+				height: 6px;
+				background-color: $truster-color;
+				pointer-events: none;
+				@extend .hover-animation-basic;
+
+				@include respond-to($bp-lg) {
+					display: none;
+				}
+			}
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: calc(100% + 27px);
+			width: 100%;
+			height: 6px;
+			background-color: $accelerate-color;
+			opacity: 0;
+			pointer-events: none;
+			@extend .hover-animation-basic;
+		}
+
+		&:last-child {
+			margin-right: initial;
+		}
+
+		&:hover {
+			&::before {
+				opacity: 1;
+				pointer-events: initial;
+			}
+		}
+
+		@include respond-to($bp-lg) {
+			margin-right: initial;
+
+			a {
+				padding: 19px 49px;
+				width: 100%;
+				display: block;
+			}
+
+			&::before {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $truster-color;
+
+				a {
+					color: $blaze-color;
+				}
+			}
+		}
+	}
+
+	//Secondary nav cta-group for desktop resolution
+	&-cta {
+		display: flex;
+		gap: 20px;
+
+		@include respond-to($bp-lg) {
+			display: none;
+		}
+	}
+
+	//Secondary nav cta-group for mobile
+	&-mobileCta {
+		display: flex;
+		flex-direction: column;
+
+		& > div {
+			width: -webkit-fill-available;
+		}
+
+		@include respond-above($bp-sm) {
+			flex-direction: row;
+		}
+
+		@include respond-above($bp-lg) {
+			display: none;
+		}
+	}
+}

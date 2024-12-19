@@ -1,0 +1,138 @@
+@import '../../../styles/baseline/_styles';
+
+.language-select {
+	display: flex;
+	gap: 5px;
+	position: relative;
+	align-items: center;
+	cursor: pointer;
+
+	&--secondary {
+		padding: 0 7px;
+		position: relative;
+		gap: initial;
+
+		&::after {
+			z-index: 1;
+			content: '';
+			position: absolute;
+			top: -9px;
+			left: 0;
+			width: 100%;
+			height: calc(100% + 17px);
+			background-color: $white-color;
+			opacity: 0;
+
+			@include respond-to($bp-lg) {
+				display: none;
+			}
+		}
+
+		.icon {
+			display: none;
+		}
+
+		.arrow {
+			position: relative;
+			z-index: 2;
+
+			path {
+				fill: $white-color;
+			}
+		}
+
+		.language {
+			position: relative;
+			z-index: 2;
+			color: $white-color;
+		}
+
+		@include respond-to($bp-lg) {
+			width: 100%;
+			padding: 23px 0;
+			border-bottom: 1px solid #425c82;
+			margin-bottom: rem-calc(24);
+			justify-content: space-between;
+		}
+
+		.options {
+			width: 100%;
+			bottom: initial;
+			top: calc(100% + 8px);
+			left: 0;
+
+			@include respond-to($bp-lg) {
+				top: 100%;
+			}
+		}
+
+		&.language-select--open {
+			.language {
+				color: $blaze-color;
+			}
+
+			.arrow {
+				transform: rotate(180deg);
+
+				path {
+					fill: $blaze-color;
+				}
+			}
+
+			&::after {
+				opacity: 1;
+			}
+
+			@include respond-to($bp-lg) {
+				.language {
+					color: $white-color;
+				}
+
+				.arrow {
+					path {
+						fill: $white-color;
+					}
+				}
+			}
+		}
+	}
+
+	&--open {
+		.options {
+			opacity: 1;
+			pointer-events: initial;
+		}
+	}
+}
+
+.language {
+	font-size: rem-calc(14);
+	line-height: rem-calc(24);
+	font-weight: $regular;
+	color: #a7bbd0;
+	min-width: 18.3px;
+	cursor: pointer;
+}
+
+.options {
+	position: absolute;
+	bottom: calc(100% + 18px);
+	left: 7px;
+	z-index: 500;
+	opacity: 0;
+	pointer-events: none;
+	box-shadow: 1.82479px 6.38675px 18.2479px rgba(0, 56, 87, 0.2);
+}
+
+.option {
+	font-size: rem-calc(13);
+	line-height: rem-calc(24);
+	font-weight: $regular;
+	padding: 8px 12px;
+	background-color: $white-color;
+	min-width: 47px;
+
+	&:hover {
+		color: $accelerate-color;
+	}
+}

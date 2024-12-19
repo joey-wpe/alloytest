@@ -1,0 +1,40 @@
+@import '../../../styles/baseline/_styles';
+
+.toggle {
+	&-container {
+		display: flex;
+		align-items: flex-start;
+		flex-shrink: 0;
+		padding: 4px;
+		gap: 4px;
+		border-radius: 2px;
+		border: 1px solid $mist-color;
+		background: #f2f5fa;
+	}
+	&-switch {
+		display: flex;
+		padding: 4px 10px;
+		border-radius: 1px;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		transition: all 0.5s;
+		font-weight: bold;
+		flex: 1 1 0;
+		width: 0;
+		color: $blaze-color;
+		opacity: 0.35;
+
+		&:hover {
+			color: $blaze-color;
+			background: $white-button-hover-color;
+		}
+
+		&.active {
+			opacity: 1;
+			background: $white-color;
+			color: $dark-color;
+			font-weight: bolder;
+		}
+	}
+}

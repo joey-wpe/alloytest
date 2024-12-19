@@ -1,0 +1,56 @@
+query MyQuery {
+  page(id: "cG9zdDoy", asPreview: true) {
+    id
+    menuOrder
+    slug
+    title
+    uri
+    template {
+      ... on ModularTemplate {
+        templateName
+        contentBlocksModules {
+          modules {
+            ... on ModularTemplate_Contentblocksmodules_Modules_LeftRight {
+              additionalClasses
+              anchor
+              contentSide
+              contentSize
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+========================
+
+This one doesn't work as it is by URI:
+https://github.com/wp-graphql/wp-graphql/issues/1673
+
+query MyQuery {
+  page(id: "sample-page", idType: URI, asPreview: true) {
+    id
+    menuOrder
+    slug
+    title
+    uri
+    template {
+      ... on ModularTemplate {
+        templateName
+        contentBlocksModules {
+          modules {
+            ... on ModularTemplate_Contentblocksmodules_Modules_LeftRight {
+              additionalClasses
+              anchor
+              contentSide
+              contentSize
+              description
+            }
+          }
+        }
+      }
+    }
+  }
+}

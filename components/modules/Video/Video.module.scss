@@ -1,0 +1,104 @@
+@import '../../../styles/baseline/__styles';
+.video-module {
+	text-align: center;
+	z-index: 11;
+	@include respond-to($bp-sm) {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+	@include respond-to($bp-xs) {
+		padding-left: 9px;
+		padding-right: 9px;
+	}
+
+	.content {
+		max-width: 812px;
+		margin: 0 auto;
+	}
+
+	.h2 {
+		margin-top: 0;
+		margin-bottom: 10px;
+		@include respond-to($bp-md) {
+			margin-bottom: 48px;
+			line-height: rem-calc(38);
+		}
+	}
+	.subhead {
+		text-transform: capitalize;
+		margin-bottom: 2px;
+		display: block;
+	}
+	.description {
+		margin-bottom: 59px;
+	}
+	.subhead.wrap {
+		color: $warp-color;
+	}
+	.subhead.white {
+		color: $white-color;
+	}
+	.subhead.bolt {
+		color: $bolt-color;
+	}
+	.white {
+		color: $white-color;
+	}
+	.blue {
+		color: $blaze-color;
+	}
+	.p.blue {
+		color: $charcoal-color;
+	}
+	.primary {
+		color: $white-color;
+		border: none;
+	}
+	.secondary {
+		color: $blaze-color;
+		border: none;
+	}
+	.video-card-wrapper {
+		width: 100%;
+		display: grid;
+		grid-auto-columns: 33%;
+		grid-gap: 22px;
+		justify-content: center;
+		grid-auto-flow: column;
+		@include respond-to($bp-md) {
+			grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+			grid-auto-flow: unset;
+		}
+	}
+	.content-button {
+		padding-top: 48px;
+	}
+	.video-one {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		> div {
+			> div {
+				&:last-child {
+					display: flex;
+					@include respond-to($bp-md) {
+						flex-direction: column;
+					}
+					b {
+						padding-right: 10px;
+						@include respond-to($bp-md) {
+							padding: 0;
+						}
+					}
+				}
+				&:first-child {
+					> div {
+						height: 574px !important;
+						@include respond-to($bp-md) {
+							height: 206px !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

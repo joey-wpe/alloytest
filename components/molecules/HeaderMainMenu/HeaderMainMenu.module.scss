@@ -1,0 +1,263 @@
+@import '../../../styles/baseline/_styles';
+
+.main-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	padding: 20px 0 20px 20px;
+	background-color: $white-color;
+	max-width: 1262px;
+	margin: 0 auto;
+
+	&--reduced {
+		.main-menu__nav {
+			@include respond-to($bp-lg) {
+				background-color: initial;
+			}
+		}
+	}
+
+	@include respond-to($bp-lg) {
+		padding: 0;
+	}
+
+	&__menus-container {
+		@include respond-to($bp-lg) {
+			position: fixed;
+			top: 72px;
+			left: 0;
+			height: 0;
+			width: 100vw;
+			display: flex;
+			flex-direction: column;
+			transform: translateY(-100%);
+			transition: all 0.4s;
+			background-color: $white-color;
+			overflow-y: auto;
+			overflow-x: hidden;
+
+			&--open {
+				transform: translateY(0%);
+				height: calc(100% - 72px);
+			}
+
+			&--inactive {
+				overflow: hidden;
+			}
+		}
+
+		&--reduced {
+			position: static;
+			transform: initial;
+
+			@include respond-to($bp-lg) {
+				overflow: visible;
+			}
+		}
+	}
+
+	&__logo {
+		position: relative;
+		display: flex;
+		height: 32px;
+
+		span {
+			position: relative !important;
+		}
+
+		img {
+			max-height: 32px !important;
+			position: relative !important;
+			object-fit: cover; // Optional
+			height: initial !important;
+			width: 100% !important;
+		}
+	}
+
+	&__columns {
+		padding-left: initial;
+
+		&::after {
+			content: '';
+			display: inline-block;
+			width: rem-calc(236);
+			margin-right: 50px;
+
+			@include respond-to($bp-xl) {
+				width: rem-calc(188);
+			}
+		}
+
+		@include respond-to($bp-lg) {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 32px 25px 0;
+		}
+	}
+
+	.column {
+		margin-right: 60px;
+
+		&:last-child {
+			margin-right: initial;
+		}
+
+		@include respond-to($bp-xl) {
+			margin-right: rem-calc(30);
+		}
+
+		@include respond-to($bp-lg) {
+			margin-right: initial;
+			margin-bottom: rem-calc(32);
+			width: 100%;
+		}
+	}
+
+	&__nav {
+		@include respond-to($bp-lg) {
+			position: relative;
+			z-index: 5;
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			background-color: $white-color;
+			padding: 20px;
+			min-height: rem-calc(72);
+		}
+	}
+
+	&__top {
+		display: none;
+
+		@include respond-to($bp-lg) {
+			display: block;
+		}
+
+		> div {
+			@include respond-to($bp-lg) {
+				display: flex;
+				padding-bottom: rem-calc(72);
+				flex-direction: column;
+
+				ul {
+					order: 3;
+
+					&::after {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	&__hamburger {
+		display: none;
+
+		@include respond-to($bp-lg) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			z-index: 2;
+		}
+
+		svg:nth-child(2) {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	div.main-menu__flag {
+		position: absolute;
+		right: 0;
+		top: 0;
+		height: 100%;
+		padding: 0 12px 0 74px;
+		width: rem-calc(236);
+		z-index: 2;
+		overflow: hidden;
+		align-items: flex-end;
+
+		&::before {
+			left: 39px;
+			transform: skew(-43deg);
+		}
+
+		&::after {
+			width: 50%;
+			left: 90%;
+		}
+
+		&:after {
+			background-color: $color-secondary;
+		}
+
+		.line {
+			display: none;
+		}
+
+		@include respond-above(1262px) {
+			margin-right: -1px;
+		}
+
+		@include respond-to(1300px) {
+			padding-right: 22px;
+		}
+
+		@include respond-to($bp-lg) {
+			position: relative;
+			bottom: 0;
+			margin-top: -72px;
+			max-height: rem-calc(72);
+			top: initial;
+			width: 100%;
+			align-items: center;
+			padding-top: 36px;
+			padding-bottom: 36px;
+		}
+
+		&--mobile {
+			@include respond-to($bp-lg) {
+				position: absolute;
+				bottom: initial;
+				margin-top: initial;
+				max-height: initial;
+				top: 0;
+				width: rem-calc(236);
+				align-items: center;
+				padding-top: 0;
+				padding-bottom: 0;
+
+				a {
+					position: relative !important;
+					top: 0 !important;
+					left: 0 !important;
+					transform: initial !important;
+				}
+			}
+		}
+	}
+}
+
+.hamburgers__default {
+	svg:nth-child(1) {
+		opacity: 1;
+	}
+
+	svg:nth-child(2) {
+		opacity: 0;
+	}
+}
+.hamburgers__change {
+	svg:nth-child(1) {
+		opacity: 0;
+	}
+
+	svg:nth-child(2) {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,57 @@
+@import '../../../styles/baseline/_styles';
+
+.pagination {
+	display: flex;
+	list-style: none;
+	justify-content: space-around;
+	gap: 4px;
+	align-items: center;
+	padding: 0;
+
+	.pagination-button {
+		width: auto;
+		min-width: 34px;
+		font-size: 0.9375rem;
+		font-weight: 600;
+		color: $tricentis-color;
+
+		@include respond-to($bp-md) {
+			min-width: 28px;
+		}
+
+		&:hover {
+			color: $accelerate-color;
+		}
+
+		div,
+		span,
+		a {
+			min-width: auto;
+			width: 42px;
+			padding: 20px 0px;
+
+			@include respond-to($bp-md) {
+				width: 28px;
+			}
+		}
+
+		&.prev-link,
+		&.next-link {
+			width: 28px;
+
+			path {
+				transition: all $hover-duration ease;
+				fill: $tricentis-color;
+			}
+			&:hover {
+				path {
+					fill: $accelerate-color;
+				}
+			}
+		}
+
+		&.active {
+			color: $accelerate-color;
+		}
+	}
+}

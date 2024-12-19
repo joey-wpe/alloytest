@@ -1,0 +1,76 @@
+@import '../../../styles/baseline/_styles';
+
+$accordion-expand-duration: $duration-short;
+
+.accordion {
+	background-color: $white-color;
+	padding: rem-calc(32);
+	-webkit-box-shadow: 2px 7px 20px 0px rgba($blaze-color, 0.15);
+	box-shadow: 2px 7px 20px 0px rgba($blaze-color, 0.15);
+	max-width: 1031px;
+	margin: 0 auto rem-calc(24);
+	&:last-child {
+		margin-bottom: 0;
+	}
+	@include respond-to($bp-lg) {
+		max-width: calc(100% - 54px);
+	}
+}
+.accordion-body.active {
+	display: block;
+	transition: $accordion-expand-duration ease-out, border $accordion-expand-duration ease-out,
+		transform $accordion-expand-duration ease-out;
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+}
+
+.accordion-body.hide {
+	opacity: 0;
+	height: 0;
+	visibility: hidden;
+	padding: 0;
+}
+.accordion-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	cursor: pointer;
+	.h5 {
+		line-height: rem-calc(30);
+		color: $blaze-color;
+	}
+}
+.accordion-header.active {
+	> .h5 {
+		color: $tricentis-color;
+	}
+	span.h5 {
+		color: $accelerate-color;
+	}
+}
+.accordion-body {
+	padding: rem-calc(16) 0 0;
+	.accordion-content {
+		p {
+			margin-bottom: rem-calc(24);
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a {
+				color: $tricentis-color;
+				text-decoration: underline;
+				&:hover {
+					color: $color-secondary;
+				}
+			}
+		}
+		ul,
+		ol {
+			margin-bottom: 0;
+			li {
+				color: $body-color;
+			}
+		}
+	}
+}

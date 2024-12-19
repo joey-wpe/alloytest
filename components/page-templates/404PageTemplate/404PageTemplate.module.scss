@@ -1,0 +1,10 @@
+@import '../../../styles/baseline/__styles';
+
+.flip-cards-wrapper {
+	> div {
+		padding-bottom: 90px;
+		@include respond-to($bp-md) {
+			padding-bottom: 67px;
+		}
+	}
+}

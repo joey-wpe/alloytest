@@ -1,0 +1,43 @@
+@import '../../../styles/baseline/_styles';
+
+.slider-wrapper {
+	display: flex;
+	flex: 1;
+	padding: rem-calc(42) 0;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1439px;
+	margin: 0 auto;
+	gap: 24px 0;
+	@include respond-above($bp-lg) {
+		padding: rem-calc(32) 83px;
+	}
+	@include respond-to($bp-md) {
+		justify-content: center;
+		width: 100%;
+	}
+	a {
+		display: inline-block;
+		img {
+			object-fit: contain;
+		}
+		@include respond-to($bp-md) {
+			width: 100%;
+		}
+	}
+}
+.next-arrow {
+	display: none;
+}
+
+.justify-left {
+	justify-content: start;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-right {
+	justify-content: end;
+}

@@ -1,0 +1,21 @@
+{
+    "title": "Title Social media disruptor",
+    "content": "Content social media disruptor",
+    "globalSocialChannels": [
+        {
+            "socialType": "facebook",
+            "website": "https://facebook.com",
+            "title": "Facebook "
+        },
+        {
+            "socialType": "twitter",
+            "website": "https://twitter.com",
+            "title": "Twitter"
+        }
+    ],
+    "background": {
+        "color": "blaze",
+        "pattern": null,
+        "type": "color"
+    }
+}

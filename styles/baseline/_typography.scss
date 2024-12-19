@@ -1,0 +1,171 @@
+// Constants - Font Families
+$font-family-headings: 'Open Sans', Calibri, Tahoma, Sans-Serif; // NOTE:: if this changes, update heading tags in globals.scss as well
+$font-family-body: 'Open Sans', sans-serif; // NOTE:: if this changes, update html/body tags in globals.scss as well
+$font-family-quotes: $font-family-headings;
+$font-family-subhead: $font-family-body;
+
+// Constants - Font Weights
+$bold: 700;
+$semibold: 600;
+$medium: 500;
+$regular: 400;
+// $light: 300; // currently unused - if we need it, be sure to update the Google Font include to add the weight in (in _document.js)
+
+// Styles
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-weight: $bold;
+	font-family: $font-family-headings;
+	color: $heading-color;
+	letter-spacing: 0;
+}
+.h1 {
+	font-size: rem-calc(36);
+	line-height: rem-calc(46);
+	@include respond-above($bp-lg) {
+		font-size: rem-calc(46);
+		line-height: rem-calc(56);
+	}
+}
+
+.h2 {
+	font-size: rem-calc(32);
+	line-height: rem-calc(40);
+	@include respond-above($bp-md) {
+		font-size: rem-calc(34);
+		line-height: rem-calc(40);
+	}
+	@include respond-above($bp-lg) {
+		font-size: rem-calc(38);
+		line-height: rem-calc(46);
+	}
+}
+
+.h3 {
+	font-size: rem-calc(28);
+	line-height: rem-calc(30);
+	@include respond-above($bp-lg) {
+		font-size: rem-calc(30);
+		line-height: rem-calc(40);
+	}
+}
+
+.h4 {
+	font-size: rem-calc(24);
+	line-height: rem-calc(66);
+}
+
+.h5 {
+	font-size: rem-calc(20);
+	line-height: rem-calc(30);
+}
+
+.h6 {
+	font-size: rem-calc(18);
+	line-height: rem-calc(24);
+}
+
+:global(.midtone-theme),
+:global(.dark-theme) {
+	.body-p,
+	.p,
+	.h1,
+	.h2,
+	.h3,
+	.h4,
+	.h5,
+	.h6 {
+		color: $white-color;
+	}
+	.p {
+		a {
+			color: $bolt-color;
+		}
+	}
+	.subhead {
+		color: $bolt-color;
+	}
+}
+
+.body-p {
+	font-family: $font-family-body;
+	letter-spacing: 0;
+	color: $body-color;
+	font-weight: $regular;
+	font-size: rem-calc(16);
+	line-height: rem-calc(26);
+	@include respond-above($bp-lg) {
+		font-size: rem-calc(18);
+		line-height: rem-calc(28);
+	}
+}
+
+.p {
+	font-family: $font-family-body;
+	font-size: rem-calc(16);
+	line-height: rem-calc(26);
+	letter-spacing: 0;
+	color: $body-color;
+	font-weight: $regular;
+	a {
+		color: $tricentis-color;
+		text-decoration: underline;
+		&:hover {
+			color: $color-secondary;
+		}
+	}
+}
+
+.sub-p {
+	font-family: $font-family-body;
+	font-size: rem-calc(14);
+	line-height: rem-calc(24);
+	letter-spacing: 0;
+	color: $body-color;
+	font-weight: $regular;
+}
+
+.pull-quote,
+.block-quote {
+	font-weight: $semibold;
+	font-family: $font-family-quotes;
+	@include respond-to($bp-md) {
+		font-size: rem-calc(45);
+		line-height: rem-calc(51);
+		letter-spacing: 0.12px;
+	}
+}
+
+.subhead {
+	font-family: $font-family-subhead;
+	font-size: rem-calc(14);
+	letter-spacing: rem-calc(0.5);
+	line-height: rem-calc(24);
+	color: $preheader-color;
+	font-weight: $bold;
+
+	:global(.accessibility-colors .light-theme) & {
+		color: $preheader-light;
+	}
+}
+
+.secondary-font {
+	font-weight: inherit !important;
+	font-family: $font-family-body;
+}
+
+// accessibility class for screen readers (this will hide from normal users)
+.screen-reader-text {
+	position: absolute;
+	height: 1px;
+	width: 1px;
+	clip: rect(1px 1px 1px 1px); // IE 6 and 7
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	-webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px);
+	overflow: hidden !important;
+}

@@ -1,0 +1,11 @@
+mutation LoginUser {
+  login(
+    input: {clientMutationId: "[removed - put PREVIEW_JWT here]", username: "[removed - put PREVIEW_USER here]", password: "[removed - put PREVIEW_PASS here]"}
+  ) {
+    authToken
+    user {
+      id
+      name
+    }
+  }
+}

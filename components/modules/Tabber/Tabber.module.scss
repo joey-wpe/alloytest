@@ -1,0 +1,502 @@
+@import '../../../styles/baseline/__styles';
+
+%tabber-buttons {
+	.button-tabber {
+		background-color: $white-color;
+		position: relative;
+		z-index: 9;
+		padding-left: 8px;
+		margin-right: 60px;
+		display: flex;
+		flex-direction: column;
+
+		@include respond-to($bp-md) {
+			max-width: 90%;
+			width: 100%;
+			margin: 20px 0;
+			padding: 20px 24px;
+		}
+
+		.title-button {
+			margin-bottom: 32px;
+			cursor: pointer;
+
+			&:hover {
+				.button-tabber-heading {
+					transition: all $duration-medium;
+					color: $accelerate-color;
+				}
+			}
+
+			@include respond-to($bp-md) {
+				margin-bottom: initial;
+				display: flex;
+			}
+		}
+
+		.title-button--active {
+			@include respond-to($bp-md) {
+				margin-bottom: 16px;
+			}
+		}
+
+		.button-tabber-heading {
+			color: $blaze-color;
+			position: relative;
+
+			@include respond-to($bp-md) {
+				display: none;
+				margin-bottom: initial;
+			}
+		}
+
+		.sub-p {
+			transition: all 200ms ease;
+
+			@include respond-to($bp-md) {
+				display: none;
+				color: $blaze-color;
+				font-weight: $bold;
+			}
+		}
+
+		.sub-p--active {
+			display: block;
+			color: $tricentis-color;
+		}
+
+		.dropdown-active {
+			display: flex;
+		}
+
+		&::after {
+			content: '';
+			width: 1px;
+			height: 200%;
+			background-color: $mist-color;
+			display: block;
+			position: absolute;
+			top: -80px;
+			right: -20px;
+
+			@include respond-to($bp-md) {
+				display: none;
+			}
+		}
+
+		.active-button-tabber {
+			color: $tricentis-color;
+			display: flex;
+
+			&::after {
+				width: 24px;
+				height: 24px;
+				content: '';
+				display: block;
+				background-color: $accelerate-color;
+				position: absolute;
+				left: -53px;
+				top: 5%;
+				transform: rotate(135deg);
+
+				@include respond-to($bp-md) {
+					display: none;
+				}
+			}
+		}
+
+		.arrow-down {
+			position: absolute;
+			right: 24px;
+			top: 22px;
+			transition: all $duration-medium;
+			display: none;
+
+			@include respond-to($bp-md) {
+				display: block;
+			}
+		}
+
+		.arrow-down--active {
+			transform: rotateX(-180deg);
+		}
+	}
+}
+
+.component-tabber {
+	@include respond-to($bp-md) {
+		padding: 0;
+	}
+}
+
+//Orientation Hotizontal
+.tabber {
+	box-shadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+	display: flex;
+	padding: 28px;
+	overflow: hidden;
+	background-color: $white-color;
+
+	@include respond-to($bp-md) {
+		background-image: url(/img/backgrounds/pattern-blaze.svg);
+		background-size: cover;
+		flex-direction: column;
+		padding: initial;
+		align-items: center;
+	}
+
+	//Buttons Tabber
+	@extend %tabber-buttons;
+	.image-tabber {
+		position: relative;
+		height: fit-content;
+
+		@include respond-to($bp-sm) {
+			display: block;
+		}
+
+		span {
+			position: relative !important;
+
+			span {
+				display: none !important;
+			}
+		}
+
+		.image-tabber__image {
+			position: relative !important;
+			object-fit: cover;
+			object-position: left;
+			height: initial !important;
+			width: 100% !important;
+			max-width: 850px !important;
+			max-height: 600px !important;
+		}
+	}
+}
+
+//Card Tabber
+.content-tabber {
+	max-width: 920px;
+	width: 100%;
+	position: relative;
+
+	&::after {
+		content: '';
+		width: 20%;
+		height: 280%;
+		background-color: $white-color;
+		display: block;
+		position: absolute;
+		top: -30%;
+		left: -20.1%;
+
+		@include respond-to($bp-md) {
+			display: none;
+		}
+	}
+
+	@include respond-to($bp-md) {
+		background-color: $white-color;
+	}
+
+	.tabber-card {
+		display: none;
+		padding: 32px 32px 20px;
+		grid-template-columns: 397px 441px;
+		gap: 20px;
+
+		@include respond-to($bp-xl) {
+			padding: 0;
+			grid-template-columns: calc(100% - 397px) calc(100% - 280px);
+		}
+
+		@include respond-to($bp-lg) {
+			grid-template-columns: repeat(1, 1fr);
+			padding: 40px 25px;
+		}
+
+		@include respond-to($bp-md) {
+			grid-template-columns: repeat(1, 1fr);
+			padding: 40px;
+		}
+	}
+
+	.full-description {
+		grid-template-columns: 100%;
+
+		.body-p {
+			max-width: initial;
+		}
+	}
+
+	.body-p {
+		max-width: 397px;
+		padding-top: 16px;
+		color: $charcoal-color;
+		font-size: 16px;
+
+		@include respond-to($bp-md) {
+			max-width: initial;
+		}
+
+		ul {
+			li {
+				color: $charcoal-color;
+			}
+		}
+	}
+
+	.tabber-card-active {
+		display: grid;
+	}
+
+	.subhead {
+		color: $warp-color;
+	}
+
+	.h3 {
+		color: $blaze-color;
+	}
+
+	.buttons-content {
+		flex-direction: column;
+		padding-top: 24px;
+		padding-bottom: 0;
+
+		@include respond-to($bp-sm) {
+			align-items: center;
+		}
+	}
+}
+
+//Orientation Vertical
+.tabber-vertical {
+	box-shadow: 2px 5px 20px rgba(6, 39, 57, 0.2);
+	display: flex;
+	overflow: hidden;
+	background-color: $white-color;
+	align-items: flex-start;
+
+	@include respond-to($bp-md) {
+		background-color: transparent;
+		flex-direction: column;
+		padding: initial;
+		align-items: center;
+	}
+
+	//Buttons Tabber
+	@extend %tabber-buttons;
+
+	.button-tabber {
+		padding: 28px 0 8px 24px;
+		margin-right: 43px;
+		max-width: 200px;
+		width: 100%;
+		margin-bottom: 0;
+
+		&::after {
+			display: none;
+		}
+
+		@include respond-to($bp-md) {
+			padding: 28px 24px;
+		}
+
+		.title-button {
+			margin-bottom: 16px;
+
+			&:hover {
+				.button-tabber-heading {
+					color: $accelerate-color;
+				}
+			}
+
+			@include respond-to($bp-md) {
+				margin-bottom: initial;
+			}
+		}
+
+		.title-button--active {
+			@include respond-to($bp-md) {
+				margin-bottom: 16px;
+			}
+		}
+
+		.button-tabber-heading {
+			&::after {
+				left: -42px;
+			}
+
+			@include respond-to($bp-sm) {
+				font-size: 14px;
+			}
+		}
+
+		@include respond-to($bp-md) {
+			max-width: 90%;
+			margin: 20px 0;
+		}
+
+		.arrow-down {
+			top: 30px;
+		}
+	}
+
+	.dividing-line {
+		display: none;
+
+		@include respond-to($bp-md) {
+			display: flex;
+			padding: 0 5px;
+		}
+	}
+
+	.content-tabber {
+		max-width: 920px;
+		width: 100%;
+		margin-left: 43px;
+		position: relative;
+		z-index: 1;
+		&::before {
+			content: '';
+			width: 1px;
+			height: 200%;
+			background-color: $mist-color;
+			display: block;
+			position: absolute;
+			top: -30%;
+			left: -5.1%;
+			z-index: 1;
+
+			@include respond-to($bp-md) {
+				display: none;
+			}
+		}
+
+		@include respond-to($bp-md) {
+			background-color: $white-color;
+			margin: initial;
+		}
+
+		.tabber-card {
+			display: none;
+			padding: 0 10px 0 0;
+			grid-template-columns: repeat(1, 1fr);
+			gap: 45px;
+			align-items: flex-start;
+
+			@include respond-to($bp-xl) {
+				gap: 60px;
+			}
+
+			@include respond-to($bp-md) {
+				gap: 0;
+				padding: 0;
+			}
+		}
+
+		.tabber-card-active {
+			display: grid;
+		}
+
+		.content-information {
+			padding-top: 71px;
+			padding-right: 70px;
+
+			@include respond-to($bp-md) {
+				padding: 60px 30px 30px;
+			}
+		}
+
+		.subhead {
+			color: $warp-color;
+		}
+
+		.content-logo {
+			margin-bottom: 18px;
+		}
+
+		.logo-container {
+			position: relative;
+			display: flex;
+			align-items: center;
+			height: fit-content;
+			margin-bottom: 32px;
+
+			span {
+				position: relative !important;
+			}
+
+			.logo-container__logo {
+				height: initial !important;
+				max-height: 34px !important;
+				min-height: 34px !important;
+				position: relative !important;
+				object-fit: scale-down;
+				object-position: left;
+				width: 100% !important;
+
+				@include respond-to($bp-md) {
+					max-height: 64px !important;
+				}
+			}
+		}
+
+		.h3 {
+			color: $blaze-color;
+		}
+
+		.body-p {
+			max-width: 100%;
+		}
+
+		.buttons-content {
+			flex-direction: initial;
+			padding-top: 32px;
+			padding-bottom: 0;
+
+			@include respond-to($bp-md) {
+				justify-content: center;
+			}
+		}
+
+		.image-tabber {
+			position: relative;
+			height: fit-content;
+			bottom: -25px;
+			padding: 0 30px 0;
+
+			@include respond-to($bp-md) {
+				margin: initial;
+			}
+
+			@include respond-to($bp-sm) {
+				display: block;
+			}
+
+			span {
+				position: relative !important;
+
+				span {
+					display: none !important;
+				}
+			}
+
+			&__wrapper {
+				max-height: 347px;
+				overflow: hidden;
+			}
+
+			.image-tabber__image {
+				position: relative !important;
+				object-fit: cover;
+				object-position: left;
+				height: initial !important;
+				width: 100% !important;
+				max-width: 850px !important;
+				max-height: 600px !important;
+			}
+		}
+	}
+}

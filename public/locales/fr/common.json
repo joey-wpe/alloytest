@@ -1,0 +1,184 @@
+{
+	"generic.readMore": "Lire plus",
+	"generic.showMore": "Voir plus",
+	"generic.loadMore": "Charger plus",
+	"generic.learnMore": "En savoir plus",
+	"generic.Submit": "Soumettre",
+	"generic.view": "Voir",
+	"generic.email": "Email",
+	"generic.tel": "Tel",
+	"generic.download": "Télécharger",
+	"generic.tricentis": "Tricentis",
+	"generic.explore": "Explorer la plateforme",
+	"generic.thankYou": "Merci",
+	"generic.thankYouMessage": "Nous vous contacterons rapidement.",
+	"generic.noResultsFound": "Aucun résultat",
+
+	"accessibilityToggle.turnContrastOn": "Activer le mode contraste élevé",
+	"accessibilityToggle.turnContrastOff": "Désactiver le mode contraste élevé",
+
+	"breadcrumb.home": "Home",
+	"breadcrumb.caseStudies": "Études de cas",
+	"breadcrumb.team": "Team",
+
+	"blogSection.inThisArticle": "Dans cet article",
+	"blogSection.authorTitle": "Auteur",
+	"blogSection.date": "Date",
+	"blogSection.getDemo": "Get a demo",
+
+	"calculatorResult.prehead": "Tricentis",
+	"calculatorResult.title": "Résultats attendus",
+	"calculatorResult.description": "Selon les mesures du secteur et les résultats de Tricentis avec des organisations similaires, vous pouvez obtenir les avantages suivants en automatisant les tests avec Tricentis :",
+	"calculatorResult.btnTitle": "Partager les résultats",
+
+	"card.logoImageAlt": "Logo image",
+
+	"cardSelector.cardCTA": "Voir les détails",
+	"cardSelector.featuredImageAlt": "Image à la Une",
+
+	"caseStudiesMain.title": "Comment Tricentis aide des clients comme vous à réussir",
+
+	"caseStudy.companyOverview": "Présentation de l'entreprise",
+	"caseStudy.companyIndustryString": "Industrie : ",
+	"caseStudy.companyLocationString": "Taille de l'entreprise : ",
+	"caseStudy.companySizeString": "Localisation: ",
+	"caseStudy.companyProductString": "Produits: ",
+	"caseStudy.companyUseCaseString": "Cas d'utilisation: ",
+	"caseStudy.preHead": "Exemples de réussite",
+
+	"caseStudySlider.altTextFallback": "Image de l'étude de cas",
+	"caseStudySlider.viewMore": "Voir d'autres exemples de réussite",
+	"caseStudySlider.keyOutcomes": "Principaux résultats ",
+	"caseStudySlider.postPreHead": "Témoignages de clients",
+
+	"eventDetail.sideRailTitle": "Détails de l’événement",
+	"eventDetail.sideRailWhen": "Quand ?",
+	"eventDetail.sideRailWhere": "Où ?",
+
+	"filterBar.textInputSearch": "Rechercher",
+	"filterBar.titleFilter": "Filtrer par:",
+	"filterBar.selectText": "Tous",
+	"filterBar.searchIconAlt": "Icône de recherche",
+
+	"filterSearch.noResults" : "Aucune <lowercaseText> {{postTypeLabel}} </lowercaseText> n'a été trouvée. Essayez d'élargir la <searchLink>recherche</searchLink> à l'ensemble du site.",
+
+	"flagCTA.trialsDemo": "Démos et essais",
+
+	"footer.tricentisLogo": "Logo Tricentis",
+	"footer.footerCtaText": "Faites passer vos tests à la vitesse supérieure",
+	"footer.footerCtaTitle": "Obtenir une démo ou un essai",
+
+	"nav.arrowDown": "Flèche vers le bas",
+
+	"newsDetail.prehead": "Actualités",
+
+	"newsRoomMain.btnTextPressSetting": "Voir tous les communiqués de presse",
+	"newsRoomMain.btnTextNewsSetting": "Voir toutes les actualités",
+	"newsRoomMain.prehead": "Tricentis",
+	"newsRoomMain.mainTitle": "Salle de presse",
+	"newsRoomMain.awards": "Prix et reconnaissance",
+	"newsRoomMain.news": "Dans l'actualité",
+	"newsRoomMain.featured": "À la Une",
+	"newsRoomMain.release": "Communiqués de presse",
+	"newsRoomMain.mediaKit": "Kit média",
+	"newsRoomMain.release_anchor": "press-releases",
+	"newsRoomMain.news_anchor": "in-the-news",
+	"newsRoomMain.awards_anchor": "awards-and-recognition",
+	"newsRoomMain.mediaKit_anchor": "media-kit",
+
+	"partner.copyTitle": "Trouver un partenaire",
+
+	"postType.resources": "ressource",
+	"postType.caseStudies": "étude de cas",
+	"postType.events": "événement",
+	"postType.partners": "partenaire",
+	"postType.posts": "blog",
+
+	"pressReleases.dateArchiveTitle": "Archives des dates",
+
+	"pricingMain.prehead": "Tarification Tricentis",
+	"pricingMain.mainTitle": "Une tarification simple, transparente, flexible et prévisible",
+
+	"productDemo.title": "Des connaissances plus approfondies, des tests plus efficaces",
+	"productDemo.description": "La vitesse compte, c'est pourquoi Tricentis lui donne la priorité. Pilotée par l'IA, sans code et entièrement automatisée, notre plateforme de test continu vous aide à accélérer la livraison de logiciels et à réduire les coûts en cours de route.",
+	"productDemo.content": "Remplissez le formulaire ci-dessous pour planifier une démonstration. Découvrez comment qTest peut vous aider à augmenter la vitesse, l'efficacité et la collaboration en matière de tests de logiciels.",
+
+	"productDetail.demoVideo": "Vidéo démo",
+
+	"resourceDetail.thankYouMessage": "Votre ressource est disponible ci-dessous.",
+
+	"resourceGrid.featuredImage": "Image à la Une",
+	"resourceGrid.relatedResources": "Ressources connexes",
+
+	"searchPage.pageTitle": "Chercher Tricentis",
+	"searchPage.searchButtonText": "Recherche",
+	"searchPage.searchPlaceholderText": "Recherche",
+	"searchPage.noSearchResultsText": "Aucun résultat trouvé",
+	"searchPage.clearSearchResults": "Effacer les résultats de la recherche",
+
+	"secondaryNav.mobileTitle": "Parcourir",
+
+	"taxonomies.Regions": "Régions",
+	"taxonomies.Industries": "Secteurs",
+	"taxonomies.Products": "Produits",
+	"taxonomies.Topics": "Sujets",
+	"taxonomies.Partners": "Partenaires",
+	"taxonomies.PartnerCertification": "Certificats Partenaires",
+	"taxonomies.ResourceType": "Type de ressource",
+	"taxonomies.Category": "Categorie",
+	"taxonomies.EventTypes": "Types d'événements",
+	"taxonomies.EventMonths": "Mois de l'événement",
+	"taxonomies.Learntype": "Sujets",
+
+	"teamMember.team": "L'équipe Tricentis",
+
+	"mktoI18n.contactMeButton": "Contactez-moi",
+	"mktoI18n.registerButton": "Enregistrez vous",
+	"mktoI18n.reasonForContacting": "Veuillez choisir la raison pour laquelle vous nous contactez",
+
+	"mktoI18n.qtestTrial.emailLabel": "Votre email sera votre Nom d'utilisateur",
+	"mktoI18n.qtestTrial.domainLabel": "Créez votre adresse Web qTest",
+	"mktoI18n.qtestTrial.domainHelp": "Votre compte qTest sera disponible via cette URL",
+	"mktoI18n.qtestTrial.passwordLabel": "Mot de passe",
+	"mktoI18n.qtestTrial.passwordHelp": "Le mot de passe doit comporter 8 à 16 caractères, dont au moins un chiffre et une lettre.",
+	"mktoI18n.qtestTrial.noticeLabel": "Note importante",
+	"mktoI18n.qtestTrial.noticeText": "En sélectionnant l'emplacement de votre centre de données, Tricentis fera des efforts nécessaires pour stocker vos données d'essai dans une juridiction physique qui est acceptable selon les lois de votre pays. Veuillez noter que si vous êtes situé dans une juridiction non-UE, vos données seront stockées aux États-Unis. Pour plus d'informations, veuillez consulter notre %s",
+	"mktoI18n.qtestTrial.privacyPolicyUrl": "/privacy-policy/",
+	"mktoI18n.qtestTrial.privacyPolicyText": "Politique de confidentialité",
+	"mktoI18n.qtestTrial.provisioningMessage": "Veuillez NE PAS fermer cette fenêtre avant que le traitement ne soit terminé. Sinon, vous ne recevrez pas votre e-mail avec les informations de votre compte qTest. Merci de votre patience.",
+	"mktoI18n.qtestTrial.submitButtonLabel": "Démarrer mon essai",
+	"mktoI18n.qtestTrial.emailExistsError": "Utilisateur %s existe déjà.",
+
+	"mktoI18n.qtestTrial.domainValidation.noSubdomains": "Pas de sous-domaines ou de .com, .net, etc.",
+	"mktoI18n.qtestTrial.domainValidation.maxLength": "La longueur maximale est de %d caractères",
+	"mktoI18n.qtestTrial.domainValidation.minLength": "La longueur minimale est de %d caractères",
+	"mktoI18n.qtestTrial.domainValidation.urlTaken": "Cette URL est déjà prise",
+	"mktoI18n.qtestTrial.domainValidation.urlInvalid": "Cette URL n'est pas valide",
+	"mktoI18n.qtestTrial.domainValidation.success": "C'est parti !",
+
+	"mktoI18n.toscaTrial.emailLabel": "Votre email sera votre Nom d'utilisateur",
+	"mktoI18n.toscaTrial.passwordLabel": "Mot de passe",
+	"mktoI18n.toscaTrial.passwordHelp": "Le mot de passe doit comporter au moins 8 caractères, dont au moins un chiffre, une lettre majuscule et une lettre minuscule.",
+	"mktoI18n.toscaTrial.passwordConfirmLabel": "Confirmer le mot de passe",
+	"mktoI18n.toscaTrial.loadingEmailCheck": "Vérification de la validité de l'email...",
+	"mktoI18n.toscaTrial.emailIneligibleError": "Désolé, ce compte a actuellement ou a récemment eu une période d'essai et n'est pas éligible pour une autre période d'essai pour le moment.",
+	"mktoI18n.toscaTrial.verifyEmailRequired": "Verify email required, please check your email.",
+	"mktoI18n.toscaTrial.provisioningMessage": "Veuillez NE PAS fermer cette fenêtre avant la fin du traitement. Sinon, vous ne recevrez pas votre e-mail contenant les informations relatives à votre essai Tosca. Merci de votre patience.",
+	"mktoI18n.toscaTrial.errorStartingTrial": "Une erreur s'est produite lors du démarrage de votre essai. Veuillez contacter le support.",
+
+	"mktoI18n.validationErrors.wrongEmailFormat": "Not properly formatted.",
+	"mktoI18n.validationErrors.enterValidBusEmail": "Veuillez saisir une adresse électronique professionnelle valide.",
+	"mktoI18n.validationErrors.validEmail": "Super ! Votre courriel est valide !",
+	"mktoI18n.validationErrors.unexpectedReload": "Une erreur inattendue s'est produite. Veuillez recharger la page et réessayer.",
+	"mktoI18n.validationErrors.unexpected": "Une erreur inattendue s'est produite.",
+	"mktoI18n.validationErrors.onlyAlphaNumeric": "Seuls les lettres et les chiffres sont autorisés",
+	"mktoI18n.validationErrors.minLength": "Veuillez utiliser au moins %d caractères",
+	"mktoI18n.validationErrors.maxLength": "Veuillez utiliser un maximum de %d caractères \n",
+	"mktoI18n.validationErrors.includeAlphaNum": "Veuillez inclure au moins un numéro et une lettre",
+	"mktoI18n.validationErrors.includeULAlphaNum": "Veuillez inclure au moins une lettre majuscule, une lettre minuscule et un chiffre.",
+	"mktoI18n.validationErrors.invalidChar": "Seuls les lettres, les chiffres et les caractères spéciaux suivants sont autorisés : %s",
+	"mktoI18n.validationErrors.excludeSpecialChar": "Aucun caractère spécial n'est autorisé",
+	"mktoI18n.validationErrors.greatPassRemember": "Excellent mot de passe - ne l'oubliez pas !",
+	"mktoI18n.validationErrors.requiredField": "Ce champ est obligatoire.",
+	"mktoI18n.validationErrors.passwordMismatch": "Les mots de passe ne correspondent pas"
+}
