@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getGlobalSettings } from '../wplib/globalSettings';
 import { getRevalidateOptions, handleInvalidDataResponse } from '../wplib/util';
 import { convertWPLocaleToNextJSLocale, popUrlSegmentsForPathAndLanguages } from '../wplib/util';
-import { getPageTemplateDataByDatabaseID, getAllPagesBasic, getPageDatabaseIDFromUri } from '../wplib/pages';
+//import { getPageTemplateDataByDatabaseID, getAllPagesBasic, getPageDatabaseIDFromUri } from '../wplib/pages';
 import BasePageWrapper from '../components/page-templates/BasePageWrapper/BasePageWrapper';
 import PageTemplateSelector from '../components/page-templates/PageTemplateSelector/PageTemplateSelector';
 import StringConstants from '../StringConstants';
@@ -40,7 +40,7 @@ export default function Page({
 				<PageTemplateSelector
 					templateName={page.template.templateName}
 					pageData={page}
-					postTypeData={postTypeData}
+					//postTypeData={postTypeData}
 					pageCTAData={pageCTAData}
 					globalAlertData={globalAlertData}
 					headerMenuData={menu}
