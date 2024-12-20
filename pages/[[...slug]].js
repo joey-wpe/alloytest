@@ -178,14 +178,14 @@ export async function getStaticProps(context = {}) {
 			paginatedPage = 1;
 		}
 
-		const posts = await getPostsFromJson(
-			postType,
-			pageLocaleSuffix,
-			taxonomies,
-			'',
-			paginatedPage,
-			GlobalConstants.Archive.ResultsPerPage
-		);
+	//	const posts = await getPostsFromJson(
+	//		postType,
+	//		pageLocaleSuffix,
+	//		taxonomies,
+	//		'',
+	//		paginatedPage,
+	//		GlobalConstants.Archive.ResultsPerPage
+	//	);
 
 		postTypeData.paginatedPosts = {
 			...posts,
@@ -308,14 +308,14 @@ export async function getStaticPaths({ locales }) {
 					const taxParams = taxSelector(postType, parsedPostTypes, taxAcf);
 					const taxonomies = taxParams.length > 0 ? taxParams.map((param) => param.term) : [];
 
-					const posts = await getPostsFromJson(
-						postType,
-						pageLocaleSuffix,
-						taxonomies,
-						'',
-						1,
-						GlobalConstants.Archive.ResultsPerPage
-					);
+	//				const posts = await getPostsFromJson(
+	//					postType,
+	//					pageLocaleSuffix,
+	//					taxonomies,
+	//					'',
+	//					1,
+	//					GlobalConstants.Archive.ResultsPerPage
+	//				);
 					const numPaginatedPages = Math.ceil(posts.total_posts_found / GlobalConstants.Archive.ResultsPerPage);
 					const paginatedPageList = Array.from({ length: numPaginatedPages }, (_, i) => ({
 						params: {
