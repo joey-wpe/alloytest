@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { getGlobalSettings } from '../wplib/globalSettings';
 import { getRevalidateOptions, handleInvalidDataResponse } from '../wplib/util';
 import { convertWPLocaleToNextJSLocale, popUrlSegmentsForPathAndLanguages } from '../wplib/util';
-//import { getPageTemplateDataByDatabaseID, getAllPagesBasic, getPageDatabaseIDFromUri } from '../wplib/pages';
+import { getPageTemplateDataByDatabaseID, getAllPagesBasic, getPageDatabaseIDFromUri } from '../wplib/pages';
 import BasePageWrapper from '../components/page-templates/BasePageWrapper/BasePageWrapper';
 import PageTemplateSelector from '../components/page-templates/PageTemplateSelector/PageTemplateSelector';
 import StringConstants from '../StringConstants';
@@ -12,7 +12,7 @@ import { pageHeaderToGlobalAlert } from '../data-mediators/PageHeaderToGlobalAle
 import { globalSettingsAndPageFooterToPageCTAData } from '../data-mediators/PageFooterAndSettingsToPageCTA';
 import { mainMenuToMenu } from '../components/template-parts/Header/Header.datamediator';
 import GlobalConstants from '../GlobalConstants';
-//import { getPostsFromJson } from '../wplib/util';
+import { getPostsFromJson } from '../wplib/util';
 import { taxSelector } from '../components/page-templates/ArchiveTemplate/ArchiveTemplateTaxSelector';
 import { parsePostTypes } from '../components/page-templates/ArchiveTemplate/ArchiveTemplateTaxSelector';
 
@@ -40,7 +40,7 @@ export default function Page({
 				<PageTemplateSelector
 					templateName={page.template.templateName}
 					pageData={page}
-					//postTypeData={postTypeData}
+					postTypeData={postTypeData}
 					pageCTAData={pageCTAData}
 					globalAlertData={globalAlertData}
 					headerMenuData={menu}
@@ -178,14 +178,14 @@ export async function getStaticProps(context = {}) {
 			paginatedPage = 1;
 		}
 
-	//	const posts = await getPostsFromJson(
-	//		postType,
-	//		pageLocaleSuffix,
-	//		taxonomies,
-	//		'',
-	//		paginatedPage,
-	//		GlobalConstants.Archive.ResultsPerPage
-	//	);
+		const posts = await getPostsFromJson(
+			postType,
+			pageLocaleSuffix,
+			taxonomies,
+			'',
+			paginatedPage,
+			GlobalConstants.Archive.ResultsPerPage
+		);
 
 		postTypeData.paginatedPosts = {
 			...posts,
@@ -308,14 +308,14 @@ export async function getStaticPaths({ locales }) {
 					const taxParams = taxSelector(postType, parsedPostTypes, taxAcf);
 					const taxonomies = taxParams.length > 0 ? taxParams.map((param) => param.term) : [];
 
-	//				const posts = await getPostsFromJson(
-	//					postType,
-	//					pageLocaleSuffix,
-	//					taxonomies,
-	//					'',
-	//					1,
-	//					GlobalConstants.Archive.ResultsPerPage
-	//				);
+					const posts = await getPostsFromJson(
+						postType,
+						pageLocaleSuffix,
+						taxonomies,
+						'',
+						1,
+						GlobalConstants.Archive.ResultsPerPage
+					);
 					const numPaginatedPages = Math.ceil(posts.total_posts_found / GlobalConstants.Archive.ResultsPerPage);
 					const paginatedPageList = Array.from({ length: numPaginatedPages }, (_, i) => ({
 						params: {

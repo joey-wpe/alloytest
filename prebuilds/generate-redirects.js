@@ -1,4 +1,4 @@
-const fetch = (...args) => import('node-fetch').then(({ default: fetch }) => fetch(...args));
+const fetch = require('node-fetch');
 const fs = require('fs').promises;
 
 const { loadEnvConfig } = require('@next/env');

@@ -317,10 +317,10 @@ export async function importPublicJsonFileDynamically(fileName) {
 // It is utilized in all page templates as well as detail pages.
 export async function getPostTypeData(locale) {
 	const DEFAULT_LOCALE = 'en-US';
-	//const RECENT_POSTS_FILE = 'recentPosts';
+	const RECENT_POSTS_FILE = 'recentPosts';
 
 	try {
-		//const fileName = locale === DEFAULT_LOCALE ? RECENT_POSTS_FILE : `${RECENT_POSTS_FILE}-${locale}`;
+		const fileName = locale === DEFAULT_LOCALE ? RECENT_POSTS_FILE : `${RECENT_POSTS_FILE}-${locale}`;
 		const localeData = await importPublicJsonFileDynamically(fileName);
 
 		const {
@@ -366,7 +366,7 @@ export const fetchModulePostsDetail = async (modules, locale) => {
 		case_study: `caseStudies-posts${fileByLocale}`,
 		resource: `resources-posts${fileByLocale}`,
 		testimonial: `testimonials-posts${fileByLocale}`,
-	//	logo: `logos-posts${fileByLocale}`,
+		logo: `logos-posts${fileByLocale}`,
 		post: `blog-posts${fileByLocale}`,
 	};
 
@@ -423,48 +423,105 @@ export const handleInvalidDataResponse = (error = new Error('[handleInvalidDataR
 	}
 };
 
-//export const getPostsFromJson = async (post_type, language, taxonomies, searchTerm, page, postPerPage) => {
-//	let jsonFile;
+export const getPostsFromJson = async (post_type, language, taxonomies, searchTerm, page, postPerPage) => {
+	let jsonFile;
 
-//	const posts = require(`../public/posts${language}.json`);
-//	const learn = require(`../public/learn${language}.json`);
-//	const partners = require(`../public/partners${language}.json`);
-//	const resources = require(`../public/resources${language}.json`);
-//	const events = require(`../public/events${language}.json`);
-//	const caseStudies = require(`../public/caseStudies${language}.json`);
+	const posts = require(`../public/posts${language}.json`);
+	const learn = require(`../public/learn${language}.json`);
+	const partners = require(`../public/partners${language}.json`);
+	const resources = require(`../public/resources${language}.json`);
+	const events = require(`../public/events${language}.json`);
+	const caseStudies = require(`../public/caseStudies${language}.json`);
 
 	// Selecting JSON file
-//	if (post_type === 'post') {
-//		jsonFile = posts;
-//	} else if (post_type === 'learn') {
-//		jsonFile = learn;
-//	} else if (post_type === 'partner') {
-//		jsonFile = partners;
-//	} else if (post_type === 'resource') {
-//		jsonFile = resources;
-//	} else if (post_type === 'events') {
-//		jsonFile = events;
-//	} else if (post_type === 'case_study') {
-//		jsonFile = caseStudies;
-//	}
+	if (post_type === 'post') {
+		jsonFile = posts;
+	} else if (post_type === 'learn') {
+		jsonFile = learn;
+	} else if (post_type === 'partner') {
+		jsonFile = partners;
+	} else if (post_type === 'resource') {
+		jsonFile = resources;
+	} else if (post_type === 'events') {
+		jsonFile = events;
+	} else if (post_type === 'case_study') {
+		jsonFile = caseStudies;
+	}
 
-//		};
-//	});
+	const { results: searchResults } = await runRelevanssiSearch(searchTerm, page, postPerPage);
+
+	// Filter results by Lang, Taxonomies and Search
+	const results = {
+		posts: jsonFile?.nodes.filter((post) => {
+			const postToString = JSON.stringify(post).toLowerCase();
+			const postTerms = post.terms?.nodes;
+			const termArray = postTerms?.map((term) => term.slug.toLocaleLowerCase());
+
+			// Check if the post matches the search term and includes all taxonomies
+			const matchesSearchAndTaxonomy =
+				postToString.includes(searchTerm) && taxonomies.every((n) => termArray.includes(n));
+
+			// Check if the post matches any result in searchResults
+			const matchesSearchResults = searchResults?.some((result) => {
+				const resultTitle = result.title.rendered || '';
+				const resultTaxonomies = result.post_type_terms || [];
+
+				const hasMatchingTaxonomy = resultTaxonomies.some((term) => taxonomies.includes(term.taxonomy.toLowerCase()));
+
+				return post.title.includes(resultTitle) && hasMatchingTaxonomy;
+			});
+
+			// Return true if either condition is met
+			return matchesSearchAndTaxonomy || matchesSearchResults;
+		}),
+	};
+	results.total_posts_found = results.posts.length;
+
+	// Parse results
+	results.posts = results.posts.map((post) => {
+		const taxonomies = post?.terms?.nodes?.map((term) => {
+			return {
+				taxonomyName: term.taxonomyName,
+				termName: term.name,
+				termSlug: term.slug,
+				term,
+			};
+		});
+		return {
+			post_type: post_type,
+			taxonomies: taxonomies ?? null,
+			core: {
+				title: post.title,
+				excerpt: post.excerpt ?? null,
+				permalink: post.uri ?? null,
+				post_thumbnail_url: post.featuredImage?.node.sourceUrl ?? null,
+				id: post.id,
+				primary_taxonomy_id: post?.primary_taxonomy_id ?? null,
+				primary_category_id: post?.primary_category_id ?? null,
+			},
+			acf: {
+				exclude_from_archive_page:
+					post.eventsPage?.excludeFromArchivePage ?? post.resourcesPage?.excludeFromArchivePage ?? null,
+				events_details: post.eventsPage?.eventsDetails ?? null,
+				when: post.eventsPage?.when ?? null,
+			},
+		};
+	});
 
 	// Sort Posts
-//	results.posts = results.posts.length ? sortPosts(results.posts) : results.posts;
-//	results.max_pages = Math.floor(results.posts.length / postPerPage) + 1;
+	results.posts = results.posts.length ? sortPosts(results.posts) : results.posts;
+	results.max_pages = Math.floor(results.posts.length / postPerPage) + 1;
 
 	// Pagination
-//	if (page > 1) {
-//		let lastPostPerPage = postPerPage * (page - 1);
-//		let newPostPerPage = postPerPage * page;
-//		results.posts = results.posts.slice(lastPostPerPage, newPostPerPage);
-//	}
-///	results.posts = results.posts.slice(0, postPerPage);
+	if (page > 1) {
+		let lastPostPerPage = postPerPage * (page - 1);
+		let newPostPerPage = postPerPage * page;
+		results.posts = results.posts.slice(lastPostPerPage, newPostPerPage);
+	}
+	results.posts = results.posts.slice(0, postPerPage);
 
-//	return results;
-//};
+	return results;
+};
 
 function sortPosts(posts) {
 	const [{ post_type }] = posts;

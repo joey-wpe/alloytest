@@ -1,4 +1,4 @@
-
+const fetch = require('node-fetch');
 const fs = require('fs').promises;
 const GlobalConstants = require('../GlobalConstants');
 const transformRestToJson = require('../data-mediators/FormatRestToJson');

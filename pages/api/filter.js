@@ -1,9 +1,9 @@
 const url = require('url');
-//const { getPostsFromJson } = require('../../wplib/util');
+const { getPostsFromJson } = require('../../wplib/util');
 import path from 'path';
 
 export async function getPosts(post_type, language, taxonomies, searchTerm, page, postPerPage) {
-	//return getPostsFromJson(post_type, language, taxonomies, searchTerm, page, postPerPage);
+	return getPostsFromJson(post_type, language, taxonomies, searchTerm, page, postPerPage);
 }
 
 // This filter will select any of the JSON files created on the public folder and use the data in it depending on the post type selected.
