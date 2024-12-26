@@ -99,6 +99,9 @@ const PreviewMethod = async (req, res) => {
 
 	// Redirect to the path from the fetched post
 	// We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
+	res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+	res.setHeader('Pragma', 'no-cache');
+	res.setHeader('Expires', '0');
 	res.redirect(previewRedirectSlugUrl);
 };
 
