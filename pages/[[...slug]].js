@@ -69,6 +69,10 @@ export async function getStaticProps(context = {}) {
 	const pageLocaleSuffix = locale === 'en-US' ? '' : `-${locale}`;
 
 	if (isPreview) {
+
+		context.res?.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+        context.res?.setHeader('Pragma', 'no-cache');
+        context.res?.setHeader('Expires', '0');
 		// if we're previewing then we already know the ID
 		databaseID = context?.previewData?.id;
 		token = context?.previewData?.token;
