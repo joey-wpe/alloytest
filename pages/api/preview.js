@@ -1,4 +1,6 @@
 import { getBasicsByDatabaseID } from '../../wplib/general';
+import { purgePaths } from '@wpengine/edge-cache';
+
 
 const PreviewMethod = async (req, res) => {
 	console.log('========= new preview starting =========');
