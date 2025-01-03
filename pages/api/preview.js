@@ -30,7 +30,7 @@ const PreviewMethod = async (req, res) => {
 	// get an updated token by logging in with preview user credentials
 	const token = Buffer.from(process.env.WP_REST_USER + ':' + process.env.WP_REST_PASS).toString('base64');
 
-	res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+	res.setHeader('Cache-Control', 'private, no-store, no-cache, must-revalidate, max-age=0');
   	res.setHeader('Pragma', 'no-cache');
   	res.setHeader('Expires', '0');
 
@@ -107,7 +107,7 @@ const PreviewMethod = async (req, res) => {
 
 	// Redirect to the path from the fetched post
 	// We don't redirect to req.query.slug as that might lead to open redirect vulnerabilities
-	res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+	res.setHeader('Cache-Control', 'private, no-store, no-cache, must-revalidate, max-age=0');
 	res.setHeader('Pragma', 'no-cache');
 	res.setHeader('Expires', '0');
 	res.redirect(previewRedirectSlugUrl);
