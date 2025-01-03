@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@next/bundle-analyzer": "^12.2.5",
+    "@wpengine/edge-cache": "^1.3.1",
     "chart.js": "^3.9.1",
     "chartjs-plugin-datalabels": "^2.1.0",
     "cookies-next": "^4.1.1",

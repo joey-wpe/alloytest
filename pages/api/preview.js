@@ -84,6 +84,14 @@ const PreviewMethod = async (req, res) => {
 		return res.status(401).json({ message: 'Invalid slug' });
 	}
 
+		// Purge the edge cache for the preview path
+		try {
+			await purgePaths([previewRedirectSlugUrl]);
+			console.log(`Successfully purged edge cache for path: ${previewRedirectSlugUrl}`);
+		} catch (error) {
+			console.error('Error purging edge cache:', error);
+		}
+
 	// Enable Preview Mode by setting the cookies
 	res.setPreviewData(
 		{
